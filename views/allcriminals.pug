@@ -1,0 +1,130 @@
+
+//- html(lang="en")
+//-   head
+//-     meta(charset="UTF-8")
+//-     meta(name="viewport" content="width=device-width, initial-scale=1.0")
+//-     link(rel="stylesheet" href='/css/overview.css')
+//-     link(rel="stylesheet" href="/css/navbar.css")
+//-     style.
+//-       .dropdown {
+//-         position: relative;
+//-         display: inline-block;
+//-       }
+//-       .dropbtn {
+//-         background-color: #4CAF50;
+//-         margin: 20px;
+//-         color: white;
+//-         padding: 16px;
+//-         font-size: 16px;
+//-         border: none;
+//-         cursor: pointer;
+//-       }
+//-       .dropbtn:hover, .dropbtn:focus {
+//-         background-color: #3e8e41;
+//-       }
+//-       .dropdown-content {
+//-         display: none;
+//-         position: absolute;
+//-         background-color: #f9f9f9;
+//-         min-width: 160px;
+//-         box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+//-         z-index: 1;
+//-       }
+//-       .dropdown-content a {
+//-         color: black;
+//-         padding: 12px 16px;
+//-         text-decoration: none;
+//-         display: block;
+//-       }
+//-       .dropdown-content a:hover {
+//-         background-color: #f1f1f1;
+//-       }
+//-       .dropdown:hover .dropdown-content {
+//-         display: block;
+//-       }
+//-     title=title 
+//-   body
+//-     include navbar 
+//-     .dropdown
+//-       button.dropbtn Sory by:
+//-       .dropdown-content
+//-         a(href='/api/wanted/wantedlist') Default 
+//-         a(href='?sort=noOfCrimes') Number Of Crimes (low to high)
+//-         a(href='?sort=-noOfCrimes') Number Of Crimes (high to low)
+//-     each x in tour 
+//-       .criminal-box
+//-         img.criminal-photo(src='criminal.png' alt='Criminal Photo')
+//-         .criminal-info
+//-           h2.criminal-name=x.name
+//-           p.criminal-crimes=`Total Crimes: ${x.noOfCrimes}`
+//-           a.btndetails(href=`/api/wanted/${x.slug}`) Details
+
+doctype html
+html(lang="en")
+  head
+    meta(charset="UTF-8")
+    meta(name="viewport" content="width=device-width, initial-scale=1.0")
+    title Document
+    link(rel="stylesheet" href="/CSS/navbar.css")
+    link(rel="stylesheet" href="/CSS/news.css")
+    link(rel="stylesheet" href="/CSS/criminals.css")
+    link(rel="stylesheet" href="/CSS/publish.css")
+    link(rel="stylesheet" href="/CSS/utility.css")
+
+  body
+    include navbar
+
+    div.News-Ann Criminals
+    main.table#customers_table
+      section.table__header
+        .dropdown
+          button.criminals_sorting Sort By
+            img(src="/Icons/Sort.png" alt="")
+          .dropdown-content
+            a(href="/api/wanted/getallwanted" data-sort="name-asc") Default
+            a(href="?sort=name" data-sort="name-asc") Name (Ascending)
+            a(href="?sort=-name" data-sort="name-desc") Name (Descending)
+            a(href="?sort=noOfCrimes" data-sort="crimes-asc") Crimes (Ascending)
+            a(href="?sort=-noOfCrimes" data-sort="crimes-desc") Crimes (Descending)
+            a(href="?sort=pricepool" data-sort="amount-asc") Amount (Ascending)
+            a(href="?sort=-pricepool" data-sort="amount-desc") Amount (Descending)
+        
+        .input-group
+          input(type="search" placeholder="Search By Name...").input
+          img(src="/Icons/search.png" alt="")
+        if user 
+          if user.role === 'Admin'
+            a.add(href="/api/wanted/publishcriminal") 
+              //- button.criminals_publish Publish
+              img(src="/Icons/add.png" alt="") 
+              |  Publish
+ 
+      section.table__body
+        table
+          thead
+            tr
+              th Profile
+              th Name
+                span.icon-arrow 
+              th Crimes
+                span.icon-arrow 
+              th Amount (in $)
+                span.icon-arrow 
+              th View
+              //- th Edit
+          tbody#datatable
+            each x in tour
+              tr
+                td
+                  img(src="/Img/Gta_world_3.jpg" alt="")
+                td=x.name
+                td= x.noOfCrimes
+                td= x.pricepool
+                td
+                  a(href=`/api/wanted/${x.slug}`)
+                    img.scale(src="/Icons/Info.png" alt="")
+                //- td
+                //-   img.rotate(src="/Icons/Edit.png" alt="")
+
+    script(src="/js/criminals.js")
+    script(src="/js/publish.js") 

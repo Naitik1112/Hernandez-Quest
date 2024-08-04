@@ -1,0 +1,501 @@
+body{
+    background: #000;
+    margin: 0;
+    padding: 0;
+    height: 90vh;
+    width: 100vw;
+    /* background-image: url('https://e0.pxfuel.com/wallpapers/946/50/desktop-wallpaper-gta-v-lspdfr-cop-mod-gta-5-police.jpg'); */
+    background-color: #000;
+    background-size: cover; /* Ensures the background image covers the whole page */
+    background-position: center; /* Centers the background image */
+    background-repeat: no-repeat; /* Prevents the background image from repeating */
+    font-family: sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+@font-face{
+    font-family: police-fonts;
+    src:url(/Fonts/Furore.otf)
+}
+
+.back{
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    width: 85%;
+    height: 50px;
+    margin-top: 1%;
+}
+
+.back button{
+    /* width: 80px; */
+    border: 3px solid rgb(222, 222, 222);
+    background: rgb(0, 0, 0);
+    border-radius: 4px;
+    padding: 0.6% 1.5%;
+    font-size: 100%;
+    letter-spacing: 0.5px;
+    color: rgb(222, 222, 222); 
+    cursor: pointer;
+    /* font-weight: bold; */
+    font-family: police-fonts;
+}
+
+.container{
+    width: min(800px,80%);
+    min-height: 550px;  
+    border-radius: 14px;
+    /* margin: 0% 10%; */
+    margin-top: 3%;
+    background: #000000;
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    box-shadow: -1px 1px 20px 10px rgb(243, 189, 124) ;
+    padding: 1% 2%;
+    padding-bottom: 0px;
+}
+
+h2{
+    color: white;
+    text-align: center;
+}
+
+form{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    height: 86%;
+    background-color: black;
+}
+
+.carrer_form{
+    height: 85%;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+}
+
+#input_submit{
+    display: flex;
+    align-items: start;
+    height: 15%;
+}
+
+.box1{
+    width: 33%;
+    /* background-color: azure; */
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* background-color: bisque; */
+}
+
+.box1 img{
+    /* margin-top: 2%; */
+    width: 75%;
+    height: 58%;
+    margin-top: 5%;
+    object-fit: cover;
+    border-radius: 7px;
+}
+
+#imagePreview{
+    border: 5px solid rgb(254, 254, 254);
+    margin-bottom: 5%;
+    background: #ffffff;
+}
+
+#fileInput{ 
+    width: 80%;
+    margin-bottom: 9%;
+    color: white;
+}
+
+.box2{
+    width: 33%;
+    height: 100%;
+    gap: 5%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+
+.box3{
+    width: 33%;
+    height: 100%;
+    gap: 5%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0% 0%;
+}
+
+.one_line{
+    margin: 3% 0;
+    margin-top: 5%;
+}
+
+label{
+    margin-top: 2%;
+    color: rgb(255, 255, 255);
+    margin-bottom: 1%;
+    font-size: 110%;
+}
+
+input{
+    border: 2px solid rgba(255, 255, 255, 0.59);
+    background-color: rgb(0, 0, 0);
+    border-radius: 4px;
+    width: 100%;
+    /* background-color: blue; */
+    font-family: sans-serif;
+    cursor: default
+}
+
+#radio{
+    height: 100%;
+    font-size: 100%;
+    display: flex;
+    display: none;
+    align-items: center;
+    text-align: center;
+    gap: 2%;
+    color: rgb(0, 0, 0);
+    transition: all 5s;
+}
+
+#employment{
+    transition: all 10s;
+}
+
+#radio label{
+    text-wrap: nowrap;
+}
+
+
+textarea{
+    border: 2px solid rgba(255, 255, 255, 0.612);
+    background-color: rgb(1, 1, 1);
+    border-radius: 4px;
+    font-family: sans-serif;
+    cursor: default;
+}
+
+#text-box{
+    top: 18%;
+}
+
+.gender-group{
+    display: flex;
+    position: relative;
+    align-items: center;
+    gap: 1%;
+    /* justify-content: space-between; */
+    font-size: 16px;
+    font-size: 80%;
+    width: 78%;
+    height: 32px;
+    padding: 0% 1%;
+    border: 2px solid rgba(255, 255, 255, 0.618);
+    background-color: rgb(0, 0, 0);
+    color: white;
+    border-radius: 4px;
+    margin-top: 5%;
+}
+
+.gender-group #employment{
+    position: absolute;
+    top: 35%;
+    left: 10px;
+    transform: translateY(-50%);
+    color: white;
+    font-size: 16px;
+    /* background-color: red; */
+    padding: 0 5px;
+    pointer-events: none;
+    transition: 0.4s;
+    z-index: 1;
+}
+
+
+.gender-group.clicked #radio{
+    display: flex;
+}
+
+.gender-group.clicked #employment{
+    top: -35%;
+    font-size: 14px;
+    background: #000;
+    border-radius: 2px;
+    color: rgb(193, 193, 193);
+}
+
+.input-group{
+    position: relative;
+    width: 80%;
+    /* margin-top: 10px; */
+    border-radius: 4px;
+    /* margin-bottom: 30px; */
+}
+
+.input-group label{
+    position: absolute;
+    top: 55%;
+    left: 10px;
+    transform: translateY(-50%);
+    font-size: 16px;
+    /* background-color: red; */
+    padding: 0 5px;
+    pointer-events: none;
+    transition: 0.4s;
+    z-index: 1;
+}
+
+.input-group input{
+    height: 140%;
+    font-size: 16px;
+    color: rgb(255, 255, 255);
+    width: 100%;
+    /* border: 1.2px solid black; */
+    outline: none;
+    border-radius: 4px;
+}
+
+.input-group textarea{
+    width: 102%;
+    height: 40px;
+    font-size: 16px;
+    color: rgb(0, 0, 0);
+    padding: 8px 0px;
+    /* border: 1.2px solid black; */
+    outline: none;
+    border-radius: 4px;
+}
+
+.input-group input:focus~label,
+.input-group input:valid~label{
+    top: -45%;
+    font-size: 14px;
+    background: #000;
+    border-radius: 2px;
+    color: rgb(193, 193, 193);
+}
+
+.input-group textarea:focus~#text-box,
+.input-group textarea:valid~#text-box{
+    top: -10%;
+    font-size: 14px;
+    /* border: 2px solid rgb(211,211,211); */
+    background: #000;
+    border-radius: 3px;
+    color: rgb(255, 255, 255);
+}
+
+
+
+
+#gender{
+    display: flex;
+    align-items: center ;
+    justify-content: start;
+    padding: 2px 10px;
+    height: 25px;
+    border-radius: 2px;
+    width: 100%;
+    margin-bottom: 14px;
+}
+
+textarea{
+    width: 100%;
+    padding: 0px;
+}
+
+#Submit{
+    padding: 5% 10%;
+    border-radius: 4px;
+    font-size: 110%;
+    text-align: center;
+    width: auto;
+    border: 2px solid white;
+    background: white;
+    color: black;
+}
+
+
+@media (max-width: 800px){
+    .container{
+        margin-top: 5%;
+    }
+    .box1 img{
+        height: 40%;
+    }
+    .gender-group #employment,.input-group label{
+        font-size: 14px;
+    }
+    .input-group input:focus~label,
+    .input-group input:valid~label{
+        top: -25%;
+        font-size: 10px;
+        background: #000;
+        border-radius: 2px;
+        color: rgb(255, 255, 255);
+    }
+    .input-group textarea:focus~#text-box,
+    .input-group textarea:valid~#text-box{
+        top: -10%;
+        font-size: 10px;
+        /* border: 2px solid rgb(211,211,211); */
+        background: #000;
+        border-radius: 3px;
+        color: rgb(255, 255, 255);
+    }
+    .gender-group.clicked #employment{
+        top: -20%;
+        font-size: 10px;
+        background: #000;
+        border-radius: 2px;
+        color: white;
+    }
+    #radio{
+        height: 100%;
+        font-size: 70%;
+        display: flex;
+        display: none;
+        align-items: center;
+        text-align: center;
+        gap: 2%;
+        color: rgb(0, 0, 0);
+        transition: all 5s;
+    }
+}
+
+@media (max-width: 740px){
+    .container{
+        margin-top: 5%;
+    }
+    .box1 img{
+        height: 40%;
+    }
+    .gender-group #employment,.input-group label{
+        font-size: 14px;
+    }
+    #text-box{
+        top: 35%;
+    }
+}
+
+
+
+
+
+@media (max-width: 600px){
+    .container{
+        margin-top: 5%;
+        min-height: 1250px; 
+    }
+    .carrer_form{
+        flex-direction: column;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+    .box1,.box2,.box3{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-between;
+        width: 90%;
+    }
+    .box2,.box3{
+        gap: 3%;
+        height: 400px;
+    }
+    .box1 img{  
+        width: 160px;
+        height: 250px;
+    }
+    #imagePreview{
+        margin: 0;
+    }
+    .box1{
+        height: 25%;
+    }
+    #fileInput{
+        margin: 0;
+        width: 50%;
+        margin: 10px 0;
+        margin-bottom: 4%;
+    }
+    .gender-group{
+        margin: 0;
+        height: 42px;
+    }
+    
+    .gender-group #employment,.input-group label{
+        font-size: 16px;
+    }
+    #text-box{
+        top: 35%;
+    }
+    .gender-group #employment,.input-group label{
+        font-size: 16px;
+    }
+    .input-group input:focus~label,
+    .input-group input:valid~label{
+        top: -25%;
+        font-size: 14px;
+        background: #000;
+        border-radius: 2px;
+        color: rgb(255, 255, 255);
+    }
+    .input-group textarea:focus~#text-box,
+    .input-group textarea:valid~#text-box{
+        top: -10%;
+        font-size: 14px;
+        /* border: 2px solid rgb(211,211,211); */
+        background: #000;
+        border-radius: 3px;
+        color: rgb(255, 255, 255);
+    }
+    .gender-group.clicked #employment{
+        top: -30%;
+        font-size: 14px;
+        background: #000;
+        border-radius: 2px;
+        color: white;
+    }
+    #radio{
+        height: 100%;
+        font-size: 100%;
+        display: flex;
+        display: none;
+        align-items: center;
+        text-align: center;
+        gap: 2%;
+        color: rgb(0, 0, 0);
+        transition: all 5s;
+    }
+    
+    #text-box{
+        top: 20%;
+    }
+    #input_submit{
+        align-items: end;
+    }
+    form{
+        height: 90%;
+    }
+    .carrer_form{
+        height: 95%;
+    }
+    
+    #input_submit{
+        height: 5%;
+    }
+}

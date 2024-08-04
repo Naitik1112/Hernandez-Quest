@@ -1,0 +1,324 @@
+body {
+    font-family:  sans-serif;
+}
+
+/* .criminals_publish {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.criminals_publish img {
+    vertical-align: middle;
+    margin-right: 8px;
+}
+
+.criminals_publish:hover {
+    background-color: #45a049;
+} */
+
+.popup {
+    display: none; /* Hide popup initially */
+    position: fixed; /* Fixed position */
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.333); /* Semi-transparent background */
+    justify-content: center;
+    align-items: center;
+    z-index: 1;
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+}
+
+.popup-content {
+    background-color: #13131357;
+    padding: 10px;
+    position: relative;
+    border-radius: 14px;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    animation: slideIn 0.5s;
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+}
+
+.close {
+    /* position: absolute;
+    top: 1px;
+    right: 1px; */
+    display: flex;
+    justify-content: right;
+    color: #aaa;
+    font-size: 24px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.close:hover,
+.close:focus {
+    color: black;
+}
+
+@keyframes fadeIn {
+    from {opacity: 0;}
+    to {opacity: 1;}
+}
+
+@keyframes slideIn {
+    from {transform: translateY(-50px); opacity: 0;}
+    to {transform: translateY(0); opacity: 1;}
+}
+
+body{
+    background: #000;
+}
+
+form{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container{
+    /* margin-top: 3%; */
+    width: 85%;
+    /* background: #292929; */
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    gap: 0%;
+    display: flex;
+    align-items: center;
+    border-radius: 7px;
+    background: transparent;
+    backdrop-filter: blur(1px);
+    -webkit-backdrop-filter: blur(10px);
+    border: 2px solid rgba(255, 255, 255, 0.262);
+}
+
+.box{
+    display: flex;
+    width: 98%;
+    height: 100%;
+    justify-content: center;
+    padding-bottom: 1%;
+    border-radius: 14px;
+    z-index: 5px;
+}
+
+.box1,.box2{
+    border-radius: 14px;
+    height: 100%;
+}
+
+.box1{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 35%;
+    padding: 2% 4%;
+
+}
+
+.box1 h3{
+    text-align: center;
+    margin-top: 6%;
+}
+
+
+.box1 img{
+    /* margin-top: 2%; */
+    width: 90%;
+    height: 250px;
+    object-fit: cover;
+    border-radius: 7px;
+}
+
+#imagePreview{
+    border: 5px solid rgb(190, 188, 188);
+    margin-bottom: 8%;
+    background: #ffffff;
+}
+
+#fileInput{ 
+    width: 80%;
+}
+
+.box2{
+    width: 65%;
+    display: flex;
+    flex-direction: column;
+    gap: 1%;
+    border-radius: 4px;
+    border: none;
+    color: rgba(255, 255, 255, 0.592);
+}
+
+.content_1,.content_2{
+    display: flex;
+    justify-content: flex-start;
+    width: 100%;
+    padding: 1.5% 1%;
+    border-radius: 7px;
+}
+
+.content_1{
+    flex-direction: column;
+    gap: 6px;
+    height: 50%;
+}
+
+.details{
+    display: flex;
+    width: 100%;
+    padding: 1% 1%;
+    font-size: 90%;
+    border: 1px solid rgb(109, 109, 109);
+}
+
+.tag{
+    display: flex;
+    align-items: center;
+    width: 20%;
+}
+
+.content_2{
+    flex-direction: column;
+    padding: 1.5% 0%;
+    font-size: 90%;
+    width: 98%;
+    margin: 0% 1%;
+    height: 30%;
+}
+
+.content_1 h3,.content_2 h3{
+    text-align: left;
+}
+
+.content_2 p{
+    padding: 1% 2%;
+    text-align: left;
+    border: 1px solid rgb(109, 109, 109);
+}
+
+.Submit{
+    margin-top: 2%;
+    border-radius: 7px;
+    padding: 0.8% 2%;
+    background: #00000016;
+    color: white;
+    border: 2px solid #ffffff;
+    
+}
+
+.criminals_input {
+    background-color: rgba(156, 156, 156, 0.689);
+    color: white;
+    border: none;
+    border-radius: 4px;
+    outline: none;
+    padding: 0% 1%;
+}
+
+.criminals_input::placeholder {
+    background-color: transparent;
+    color: white;
+    opacity: 0.7;
+}
+
+
+.details p.tag {
+    margin-right: 10px;
+    width: 100px;
+    color: white; /* Ensure label text is also white */
+}
+
+.details input[type="radio"] {
+    margin: 0px 5px;
+}
+
+#description{
+    margin-top: 2%;
+    height: 60px;
+    text-align: start;
+}
+
+
+
+@media (max-width: 1110px){
+
+    .container{
+        height: 420px;
+    }
+    .box1{
+        width: 35%;
+    }
+
+    .box2{
+        width: 65%;
+    }
+
+    .details_3{
+        width: 75%;
+    }
+}
+
+@media (max-width: 860px){
+    
+
+    .container{
+        height: 400px;
+    }
+}
+
+@media (max-width: 770px){
+    .container{
+        height: 380px;
+    }
+
+    .box1{
+        width: 35%;
+    }
+    
+    .box1 img{
+        height: 55%;
+    }
+
+    .box2{
+        width: 60%;
+    }
+}
+
+@media (max-width: 570px){
+    .box1 img{
+        height: 50%;
+    }
+
+    .tag{
+        width: 45%;
+    }
+
+    .box2{
+        gap: 1%;
+    }
+
+    .details{
+        border: none;
+        font-size: 95%;
+    }
+
+    .content_2 p{
+        font-size: 80%;
+    }
+
+    .content_2{
+        padding: 1.5% 2%;
+    }
+}

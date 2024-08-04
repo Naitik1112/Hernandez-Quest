@@ -1,0 +1,89 @@
+doctype html
+html(lang="en")
+  head
+    meta(charset="UTF-8")
+    meta(name="viewport" content="width=device-width, initial-scale=1.0")
+    title Document
+    link(rel="stylesheet" href="/CSS/Carrers_pubish.css")
+  body
+    .back
+      button#btnback Back
+    .container
+      h2 Publish Job
+      form(action="")
+        .carrer_form
+          .box1
+            img#imagePreview(src="/Img/Profile.png" alt="")
+            input(type="file" id="fileInput" name="name" required)
+            .gender-group
+              label#employment(for="") Employment
+              #radio
+                input.radio(type="radio" name="gender" id="male" value="male")
+                label(for="male") Full time
+                input.radio(type="radio" name="gender" id="female" value="female")
+                label(for="female") Part time
+          .box2
+            .input-group.one_line
+              input(type="text" name="" id="" required)
+              label(for="") Job Title
+            .input-group
+              textarea(name="" id="" required)
+              label#text-box(for="") Job Description
+            .input-group
+              textarea(name="" id="" required)
+              label#text-box(for="") Department
+            .input-group
+              textarea(name="" id="" required)
+              label#text-box(for="") Education
+            .input-group
+              textarea(name="" id="" required)
+              label#text-box(for="") Required experience
+          .box3
+            .input-group.one_line
+              input(type="number" name="" id="" required)
+              label(for="") Salary
+            .input-group
+              textarea(name="" id="" required)
+              label#text-box(for="") Benefits
+            .input-group
+              textarea(name="" id="" required)
+              label#text-box(for="") Skills Required
+            .input-group
+              textarea(name="" id="" required)
+              label#text-box(for="") Application Procedure
+            .input-group
+              textarea(name="" id="" required)
+              label#text-box(for="") Other Information
+        #input_submit
+          input#Submit(type="submit" value="Submit")
+    script.
+      document.addEventListener("DOMContentLoaded", function() {
+          const fileInput = document.getElementById("fileInput");
+          const imagePreview = document.getElementById("imagePreview");
+      
+          fileInput.addEventListener("change", function(event) {
+              const file = event.target.files[0];
+              if (file && (file.type === "image/png" || file.type === "image/jpeg" || file.type === "image/jpg" || file.type === "image/webp")) {
+                  const reader = new FileReader();
+                  reader.onload = function(e) {
+                      imagePreview.src = e.target.result;
+                  };
+                  reader.readAsDataURL(file);
+              } else {
+                  alert("Please select a valid image file (PNG, JPG, JPEG, WEBP).");
+              }
+          });
+      })
+
+      const genderGroup = document.querySelector('.gender-group');
+
+      // Click inside the gender-group
+      genderGroup.addEventListener('click', function(event) {
+          event.stopPropagation(); // Prevent the click from propagating to the document
+          this.classList.add('clicked');
+      });
+
+      // Click outside the gender-group
+      document.addEventListener('click', function() {
+          genderGroup.classList.remove('clicked');
+      });

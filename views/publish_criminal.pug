@@ -1,0 +1,97 @@
+//- doctype html
+//- html(lang="en")
+//-   head
+//-     meta(charset="UTF-8")
+//-     meta(name="viewport" content="width=device-width, initial-scale=1.0")
+//-     title Document
+//-     link(rel="stylesheet" href="/CSS/Criminals_Publish.css")
+
+//-   body
+//-     .back
+//-       button#btnback Back
+
+//-     .container(USER=user.role)
+//-       h2 Add Criminal
+//-       form
+//-         .content1
+//-           .box1
+//-             img#imagePreview(src="/Img/Profile.png" alt="")
+//-             input(type="file" id="fileInput" name="photo" required)
+
+//-           .box2
+//-             .input-group
+//-               input(type="text" name="name" id="name" required)
+//-               label(for="") Criminal Name
+
+//-             .input-group
+//-               input(type="number" name="noOfCrimes" id="crimes" required)
+//-               label(for="") Total Crimes
+
+//-             .input-group
+//-               input(type="number" name="height" id="height" required)
+//-               label(for="") Height
+
+//-             #gender
+//-               label(for="") Gender |
+//-               input.radio(type="radio" name="gender" id="male" value="male")
+//-               label(for="male") Male
+//-               input.radio(type="radio" name="gender" id="female" value="female")
+//-               label(for="female") Female
+
+//-             .input-group
+//-               input(type="number" name="pricepool" id="pricepool" required)
+//-               label(for="") Pricepool
+
+//-             .input-group
+//-               textarea(name="description" id="description" cols="70" required)
+//-               label(for="") Description
+
+//-         .content2
+//-           input.Submit#Submit(type="submit" value="Submit")
+
+//-     script(src="/js/publish.js") 
+//-     script(src="/js/wanted.js") 
+doctype html
+html(lang="en")
+  head
+    meta(charset="UTF-8")
+    meta(name="viewport", content="width=device-width, initial-scale=1.0")
+    title Document
+    link(rel="stylesheet", href="/CSS/Criminals_Publish.css")
+  body
+    .back
+      button#btnback Back
+    .container(USER=user.role)
+      h2 Add Criminal
+      form
+        .content1
+          .box1
+            img#imagePreview(src="/Img/Profile.png" alt="")
+            input(type="file" id="fileInput" name="name" required)
+          .box2
+            .input-group
+              input(type="text" name="name" id="name" required)
+              label(for="name") Criminal Name
+            .input-group
+              input(type="number" name="crimes" id="crimes" required)
+              label(for="") Total Crimes
+            .input-group
+              input(type="number" name="height" id="height" required)
+              label(for="") Height
+            #gender
+              label(for="") Gender |
+              input.radio(type="radio" name="gender" id="male" value="male")
+              label(for="male") Male
+              input.radio(type="radio" name="gender" id="female" value="female")
+              label(for="female") Female
+            .input-group
+              input(type="number" name="pricepool" id="pricepool" required)
+              label(for="") Pricepool
+            .input-group
+              textarea(name="description" id="description" required)
+              label#Des(for="") Description
+        .content2
+          input#Submit.Submit(type="submit" value="Submit")
+
+    script(src="/js/publish.js") 
+    script(src="/js/wanted.js") 

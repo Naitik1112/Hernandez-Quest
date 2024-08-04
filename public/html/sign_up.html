@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/CSS/navbar.css">
+    <link rel="stylesheet" href="/CSS/sign_up.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <nav>
+        <input type="checkbox" id="check">
+        <label for="check" class="checkbtn">
+          <i class="fas fa-bars"></i>
+          <img src="/Icons/Hamburger.png" alt="">
+        </label>
+        <label class="logo"><img src="/Logo_1.png" alt=""></label>
+        <ul>
+          <li><a class="active" href="/index.html">Home</a></li>
+          <li><a href="/news.html">News</a></li>
+          <li><a href="/Criminals.html">Criminals</a></li>
+          <li><a href="/carrers.html">Carrers</a></li>
+          <li><a href="/Submit_Tip.html">Submit Tip</a></li>
+          <li id="sign_In"><a href="#">Sign In</a></li>
+          <li id="sign_Up"><a href="#">Sign Up</a></li>
+          <li id="Profile_log"><a id="Profile" href="/Profile.html"><img src="/Img/Profile.png" alt=""></a></li>
+        </ul>
+    </nav>
+    <div class="container">
+        <form action="">
+            <h1>Sign Up</h1>
+            <div class="input-group">
+                <input type="text" name="" id="" required>
+                <label for="">Name</label>
+            </div>
+            <div class="input-group">
+                <input type="email" name="" id="" required>
+                <label for="">Email</label>
+            </div>
+            <div class="input-group">
+                <input type="password" name="" id="password1" class="password" required>
+                <button type="button" id="togglePassword1">
+                    <i><img src="/Icons/eye.png" alt=""></i>
+                </button>
+                <label for="">Password</label>
+            </div>
+            <div class="input-group">
+                <input type="password" name="" id="password2" class="password" required>
+                <button type="button" id="togglePassword2">
+                    <i><img src="/Icons/eye.png" alt=""></i>
+                </button>
+                <label for="">Confrim Password</label>
+            </div>
+            <a class="sign_in">Forget Password ?</a>
+            <input id="Submit" type="submit" value="SIGN UP">
+            <p>Already have your account ? <a class="sign_in" href="">Sign In</a></p>
+        </form>
+    </div>
+    <script>
+        const togglePassword1 = document.querySelector('#togglePassword1');
+        const password1 = document.querySelector('#password1');
+
+        togglePassword1.addEventListener('click', function (e) {
+            // Toggle the type attribute
+            const type = password1.getAttribute('type') === 'password' ? 'text' : 'password';
+            password1.setAttribute('type', type);
+            
+            // Toggle the eye icon
+            this.querySelector('i').classList.toggle('fa-eye');
+            this.querySelector('i').classList.toggle('fa-eye-slash');
+        });
+
+        const togglePassword2 = document.querySelector('#togglePassword2');
+        const password2 = document.querySelector('#password2');
+
+        togglePassword2.addEventListener('click', function (e) {
+            // Toggle the type attribute
+            const type = password2.getAttribute('type') === 'password' ? 'text' : 'password';
+            password2.setAttribute('type', type);
+            
+            // Toggle the eye icon
+            this.querySelector('i').classList.toggle('fa-eye');
+            this.querySelector('i').classList.toggle('fa-eye-slash');
+        });
+    </script>
+</body>
+</html>

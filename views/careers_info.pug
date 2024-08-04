@@ -1,0 +1,165 @@
+//- doctype html
+//- html(lang="en")
+//-   head
+//-     meta(charset="UTF-8")
+//-     meta(name="viewport" content="width=device-width, initial-scale=1.0")
+//-     title Document
+//-     link(rel="stylesheet" href="/CSS/carrers_info.css")
+//-     link(rel="stylesheet" href="/CSS/navbar.css")
+//-     link(rel="stylesheet" href="/CSS/utility.css")
+//-     link(rel="stylesheet" href="/CSS/news.css")
+
+//-   body
+//-     include navbar
+
+//-     .News-Ann= job.title
+
+//-     .Quicklinks
+//-       button.links_button Quicklinks
+//-         .Links 
+//-           a(href="#job-description") Job Application
+//-           a(href="#salary-benefits") Salary and Benefits
+//-           a(href="#requirements") Requirements
+//-           a(href="#application-procedure") Application Procedure
+
+    //- .carrers_info
+    //-   .carrer_nav
+    //-     //- .carrer_img
+    //-     //-   img(src="/Img/car.jpg" alt="")
+    //-     .carrer_links
+    //-       a(href="#job-description") Job Description
+    //-       a(href="#salary-benefits") Salary and Benefits
+    //-       a(href="#requirements") Requirements
+    //-       a(href="#application-procedure") Application Procedure
+
+    //-   .carrer_info
+    //-     h2#job-description Job Description
+    //-     h3 Description
+    //-     p= job.description
+    //-     h3 Department
+    //-     p= job.department
+    //-     h3 Other Information
+    //-     p Lorem ipsum dolor sit amet.
+
+    //-     h2#salary-benefits Salary and Benefits
+    //-     p= `Salary: ${job.salary.base}`
+    //-     h3 Benifits
+    //-         p
+    //-         each x in job.salary.benefits 
+    //-             li= x 
+
+    //-     h2#requirements Requirements
+    //-     button.accordion Education
+    //-     .panel
+    //-       p 
+    //-         li= job.requirements.education
+
+    //-     button.accordion Experience
+    //-     .panel
+    //-       p 
+    //-         li= job.requirements.experience
+
+    //-     button.accordion Skills Required
+    //-     .panel
+    //-       p
+    //-       each x in job.requirements.skills 
+    //-         li= x
+
+    //-     button.accordion Other Information
+    //-     .panel
+    //-       p 
+    //-         each x in job.requirements.otherreq
+    //-             li= x
+
+    //-     h2#application-procedure Application Procedure
+    //-     p
+    //-     each x in job.application_process.steps
+    //-         li= x
+    //-     a#Apply(href=`${job.slug}/applyform`) Apply
+    //-     .space
+
+//-     script(src="/js/profile_2.js") 
+doctype html
+html(lang="en")
+  head
+    meta(charset="UTF-8")
+    meta(name="viewport" content="width=device-width, initial-scale=1.0")
+    title Document
+    link(rel="stylesheet" href="/css/navbar.css")
+    link(rel="stylesheet" href="/CSS/criminals-info.css")
+    link(rel="stylesheet" href="/CSS/news.css")
+    link(rel="stylesheet" href="/CSS/carrers_info.css")
+  body
+    include navbar
+
+    .News-Ann= job.title
+    .Quicklinks
+      button.links_button Quicklinks 
+        .Links
+          a(href="#job-description") Job Application
+          a(href="#salary-benefits") Salary and Benefits
+          a(href="#requirements") Requirements
+          a(href="#application-procedure") Application Procedure
+    .back
+      button#btnback Back
+    .edit
+      if user.role === 'Admin'
+        a(href="") Edit
+    .carrers_info
+      .carrer_nav
+        .carrer_img
+          img(src="/Img/car.jpg" alt="")
+        .carrer_links
+          a(href="#job-description") Job Description
+          a(href="#salary-benefits") Salary and Benefits
+          a(href="#requirements") Requirements
+          a(href="#application-procedure") Application Procedure
+
+      .carrer_info
+        h2#job-description Job Description
+        h3 Description
+        p= job.description
+        h3 Department
+        p= job.department
+        h3 Other Information
+        p Lorem ipsum dolor sit amet.
+
+        h2#salary-benefits Salary and Benefits
+        p= `Salary: ${job.salary.base}`
+        h3 Benifits
+            p
+            each x in job.salary.benefits 
+                li= x 
+
+        h2#requirements Requirements
+        button.accordion Education
+        .panel
+          p 
+            li= job.requirements.education
+
+        button.accordion Experience
+        .panel
+          p 
+            li= job.requirements.experience
+
+        button.accordion Skills Required
+        .panel
+          p
+          each x in job.requirements.skills 
+            li= x
+
+        button.accordion Other Information
+        .panel
+          p 
+            each x in job.requirements.otherreq
+                li= x
+
+        h2#application-procedure Application Procedure
+        p
+        each x in job.application_process.steps
+            li= x
+        a#Apply(href=`${job.slug}/applyform`) Apply
+        .space
+
+    script(src="/js/profile_2.js") 
+    script(src="/js/wanted.js") 

@@ -1,0 +1,259 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: sans-serif;
+}
+
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: rgb(0, 0, 0);
+}
+
+.container {
+  /* position: relative;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    width: 100%;
+    gap: 100px 20px;
+    padding: 100px 0px;
+    background: #601a1a; */
+  margin-top: 5%;
+}
+
+.card_1 {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 360px;
+  background-color: #141414;
+  border-radius: 7px;
+  transition: 0.5s;
+  z-index: 10;
+  border: 2px solid rgb(244, 172, 44);
+  border: 2px solid rgb(95, 95, 95);
+  /* box-shadow: 0 3px 10px 7px rgba(255, 255, 255, 0.508); */
+}
+
+.card_1:hover {
+  height: 400px;
+}
+
+.card_1 .imgBx_1 {
+  position: absolute;
+  top: 20px;
+  width: 85%;
+  height: 70%;
+  background-color: black;
+  border-radius: 7px;
+  transition: 0.5s;
+  overflow: hidden;
+}
+
+.card_1:hover .imgBx_1 {
+  top: -70px;
+  scale: 0.8;
+  box-shadow: 0px 15px 45px 10px rgba(218, 175, 100, 0.532);
+}
+
+.card_1 .imgBx_1 img {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.card_1:hover .imgBx_1 img {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 10px;
+  border: 6px solid white;
+  object-fit: cover;
+}
+
+.card_1 .content {
+  position: absolute;
+  top: 260px;
+  width: 100%;
+  padding: 0 30px;
+  height: 35px;
+  /* overflow: hidden; */
+  text-align: center;
+  transition: 0.4s;
+  color: white;
+}
+
+.card_1 .content h3 {
+  font-size: 75%;
+  width: 100%;
+  margin: 0 0%;
+  display: block;
+  text-align: center;
+}
+
+.card_1 .content h4,
+.card_1 .content p {
+  margin-top: 15px;
+  color: lightgrey;
+  display: none;
+}
+
+.card_1 .content a {
+  display: none;
+}
+
+.card_1:hover .content {
+  top: 140px;
+  height: 250px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.card_1:hover .content a {
+  margin-top: 10px;
+  padding: 2% 2%;
+  width: 120px;
+  text-decoration: none;
+  text-align: center;
+  border-radius: 7px;
+  border: 1px solid rgb(244, 171, 44);
+  color: rgb(245, 206, 139);
+  background-color: transparent;
+}
+
+.card_1:hover .content h4,
+.card_1:hover .content p {
+  margin-top: 5px;
+  font-size: 90%;
+  line-height: 140%;
+  display: block;
+}
+
+.card_1:hover .content a {
+  display: block;
+}
+
+h1 {
+  width: 90%;
+  margin: 0% 5%;
+  margin-bottom: 10px;
+  color: white;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,500;0,700;1,400&display=swap');
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  /* background-image: url(/Img/car_6.webp); */
+  background-position: center;
+  background-size: cover;
+  background-color: black;
+}
+
+.slider-wrapper_1 {
+  overflow: hidden;
+  max-width: 1380px;
+  margin: 0 70px 55px;
+}
+
+.card-list_1 .card-item_1 {
+  color: #fff;
+  user-select: none;
+  margin-top: 80px;
+  /* padding: 35px; */
+  border-radius: 8px;
+  /* background: rgba(255,255,255, 0.2);
+    border:1px solid rgba(255,255,255, 0.5); */
+  display: flex;
+  height: 320px;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  backdrop-filter: blur(30px);
+  position: relative;
+}
+
+.card-list_1 .card-item_1 .user-image {
+  width: 140px;
+  height: 140px;
+  border-radius: 50%;
+  margin-bottom: 40px;
+  border: 3px solid #fff;
+  padding: 4px;
+}
+
+.card-list_1 .card-item_1 .user-profession {
+  font-size: 1.15rem;
+  color: #e3e3e3;
+  font-weight: 500;
+  margin: 14px 0 40px;
+}
+
+.card-list_1 .card-item_1 .message-button {
+  font-size: 1.25rem;
+  padding: 10px 35px;
+  color: #030728;
+  border-radius: 6px;
+  font-weight: 500;
+  cursor: pointer;
+  background: #fff;
+  border: 1px solid transparent;
+  transition: 0.2s ease;
+}
+
+.card-list_1 .card-item_1 .message-button:hover {
+  background: rgba(255, 255, 255, 0.1);
+  color: #fff;
+  border: 1px solid #fff;
+}
+
+.slider-wrapper_1 .swiper-pagination-bullet {
+  background: #fff;
+  height: 15px;
+  width: 15px;
+}
+
+.slider-wrapper_1 .swiper-slider-button {
+  color: #ffffff;
+  margin-top: -22px;
+  transition: 0.2s ease;
+}
+
+.slider-wrapper_1 .swiper-slider-button:hover,
+.swiper-button-next:hover {
+  color: #868686;
+}
+
+.swiper-button-next {
+  color: white;
+}
+
+/* ======MEDIA QUERIES======== */
+
+@media (max-widht: 768px) {
+  .slider-wrapper_1 {
+    margin: 0 10px 40px;
+  }
+
+  .slider-wrapper_1 .swiper-slider-button {
+    display: none;
+  }
+}

@@ -1,0 +1,39 @@
+doctype html
+html(lang="en")
+  head
+    meta(charset="UTF-8")
+    meta(name="viewport" content="width=device-width, initial-scale=1.0")
+    title Document
+    link(rel="stylesheet" href="/CSS/Add_Admin.css")
+  body
+    .back
+      button#btnback back
+    .container
+      form
+        h2 Add Admin
+        .input-group
+          input(type="text" name="name" id="name" required)
+          label(for="name") Name
+        .input-group
+          input(type="email" name="email" id="email" required)
+          label(for="email") E-Mail
+        .input-group
+          input(type="text" name="" id="role" value="Admin" readonly required)
+          //- label(for="") Email
+        .input-group
+          input(type="password" name="password" id="password" class="password" required)
+          button(type="button" class="eye" id="togglePassword1")
+            i
+              img(src="/Icons/eye.png" alt="")
+          label(for="password") Password
+        .input-group
+          input(type="password" name="passwordConfirm" id="confirmPassword" class="password" required)
+          button(type="button" class="eye" id="togglePassword2")
+            i
+              img(src="/Icons/eye.png" alt="")
+          label(for="") Confirm Password
+        //- a.sign_in Forget Password ?
+        input#Submit(type="submit" value="Submit")
+    
+    script(src="/js/add_admin.js") 
+    script(src="/js/wanted.js") 

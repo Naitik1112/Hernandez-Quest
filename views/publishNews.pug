@@ -1,0 +1,57 @@
+//- doctype html
+//- html(lang="en")
+//-   head
+//-     meta(charset="UTF-8")
+//-     meta(name="viewport" content="width=device-width, initial-scale=1.0")
+//-     title Document
+//-     link(rel="stylesheet" href="/CSS/News_Publish.css")
+//-   body
+//-     .back
+//-       button#btnback Back
+//-     .container.containern(User=user.role)
+//-       h2 Publish News
+//-       form
+//-         .box1
+//-           img#imagePreview(src="/Img/Profile.png" alt="")
+//-           input(type="file" id="fileInput" name="photo" required)
+//-         .box2
+//-           .input-group
+//-             textarea(name="headline" id="headline" required)
+//-             label(for="") HeadLine
+//-           .input-group
+//-             textarea(name="description" id="description" required)
+//-             label(for="") Description
+//-           input.Submitnews#Submitnews(type="submit" value="Submit")
+    
+//-     script(src="/js/wanted.js") 
+//-     script(src="/js/publishnews.js") 
+
+doctype html
+html(lang="en")
+  head
+    meta(charset="UTF-8")
+    meta(name="viewport" content="width=device-width, initial-scale=1.0")
+    title Document
+    link(rel="stylesheet", href="/CSS/News_Publish.css")
+  body
+    .back
+      button#btnback Back
+    .container.containern(User=user.role)
+      h2 Publish News
+      form
+        .news
+          .box1
+            img#imagePreview(src="/Img/Profile.png", alt="")
+            input#fileInput(type="file", name="photo", required=true)
+          .box2
+            .input-group
+              textarea(name="", id="headline", required=true)
+              label(for="") Title
+            .input-group
+              textarea(name="", id="description", required=true)
+              label(for="") Description
+        #input_submit
+          input.Submitnews#Submitnews(type="submit", value="Submit")
+    
+    script(src="/js/wanted.js") 
+    script(src="/js/publishnews.js") 

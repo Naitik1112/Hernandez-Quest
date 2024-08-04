@@ -1,0 +1,40 @@
+doctype html
+html(lang="en")
+  head
+    meta(charset="UTF-8")
+    meta(name="viewport" content="width=device-width, initial-scale=1.0")
+    title Document
+    link(rel="stylesheet" href="/CSS/utility.css")
+    link(rel="stylesheet" href="/CSS/Accepted.css")
+  body
+    .News-Ann
+      | Accepted-Applications
+    .back
+      button#btnback Back
+      button.add Records :#{data.app.length}
+    section.job_applications
+        each x in data.app
+            .application
+                .content1
+                    h2.status Status - Accepted
+                    .details
+                        .field Name :
+                        .text= x.name 
+                    .details
+                        .field Email :
+                        .text= x.email
+                    .details
+                        .field Job Role :
+                        .text= x.job_name
+                    .details
+                        .field Education :
+                        .text= x.education
+                    .details
+                        .field Experience :
+                        .text #{x.experience} years 
+                    .details
+                        .field Applied On :
+                        .text= x.date
+    
+    script(src="/js/wanted.js") 
+    

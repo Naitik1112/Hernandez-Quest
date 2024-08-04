@@ -1,0 +1,181 @@
+body {
+  background: #000;
+}
+@font-face {
+  font-family: police-fonts;
+  src: url(/Fonts/Furore.otf);
+}
+
+.back {
+  display: flex;
+  align-items: center;
+  justify-content: start;
+  width: 85%;
+  height: 50px;
+  margin: 0% 7.5%;
+  margin-top: 1%;
+}
+
+.back button {
+  /* width: 80px; */
+  border: 2px solid rgb(147, 147, 147);
+
+  border-radius: 4px;
+  padding: 0.4% 1%;
+  font-size: 90%;
+  letter-spacing: 0.5px;
+  background: #000;
+  color: rgb(148, 148, 148);
+  cursor: pointer;
+  font-family: police-fonts;
+}
+
+.container {
+  margin-top: 3%;
+  width: 100%;
+  /* background: #292929; */
+  display: flex;
+  flex-direction: row;
+  height: 450px;
+  gap: 1%;
+  display: flex;
+  justify-content: center;
+  font-family: sans-serif;
+  color: rgb(168, 168, 168);
+}
+
+.box1,
+.box2 {
+  border-radius: 7px;
+}
+
+.box1 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 22%;
+  height: 90%;
+  padding: 1% 1.5%;
+  background: rgb(40, 40, 40);
+}
+
+.box1 h3 {
+  text-align: center;
+  margin-top: 6%;
+}
+
+.box1 img {
+  margin-top: 2%;
+  width: 100%;
+  height: 67%;
+  object-fit: cover;
+  border-radius: 7px;
+}
+
+.box2 {
+  width: 50%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 5%;
+}
+
+.content_1,
+.content_2 {
+  display: flex;
+  justify-content: flex-start;
+  width: 100%;
+  padding: 1.5% 1%;
+  background: rgb(40, 40, 40);
+  border-radius: 7px;
+}
+
+.content_1 {
+  flex-direction: column;
+  gap: 10px;
+}
+
+.details {
+  display: flex;
+  width: 100%;
+  padding: 1% 1%;
+  font-size: 90%;
+  border: 1px solid rgb(109, 109, 109);
+}
+
+.tag {
+  display: flex;
+  align-items: center;
+  width: 20%;
+}
+
+.content_2 {
+  flex-direction: column;
+  padding: 1.5% 2%;
+}
+
+.content_2 p {
+  margin: 2% 0;
+  text-align: left;
+}
+
+@media (max-width: 1110px) {
+  .box1 {
+    width: 35%;
+  }
+
+  .box2 {
+    width: 65%;
+  }
+
+  .details_3 {
+    width: 75%;
+  }
+}
+
+@media (max-width: 860px) {
+  .container {
+    height: 34vh;
+  }
+}
+
+@media (max-width: 770px) {
+  .container {
+    height: 40vh;
+  }
+
+  .box1 {
+    width: 40%;
+  }
+
+  .box2 {
+    width: 60%;
+  }
+}
+
+@media (max-width: 570px) {
+  .box1 img {
+    height: 50%;
+  }
+
+  .tag {
+    width: 45%;
+  }
+
+  .box2 {
+    gap: 1%;
+  }
+
+  .details {
+    border: none;
+    font-size: 95%;
+  }
+
+  .content_2 p {
+    font-size: 80%;
+  }
+
+  .content_2 {
+    padding: 1.5% 2%;
+  }
+}

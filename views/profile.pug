@@ -1,0 +1,166 @@
+doctype html
+html(lang="en")
+  head
+    meta(charset="UTF-8")
+    meta(name="viewport" content="width=device-width, initial-scale=1.0")
+    title Document
+    link(rel="stylesheet" href="/CSS/navbar.css")
+    link(rel="stylesheet" href="/CSS/Profile.css")
+    link(rel="stylesheet" href="/CSS/tabs.css")
+    link(rel="stylesheet" href="/CSS/news.css")
+    link(rel="stylesheet" href="/CSS/utility.css")
+    link(rel="stylesheet" href="/CSS/popUp.css")
+    link(rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css")
+
+  body
+    include navbar
+    include popUp
+
+    .News-Ann
+      | Profile
+    .container(USER=user.role)
+      .box1
+        img(src=`/images/users/${user.photo}` alt="")
+        button#Edit_image Edit Image
+        .upload
+          input(type="file" id="fileInput" name="name" required)
+          .Submit
+            button#Confrim Confrim
+            button#Cancel Cancel
+      .box2
+        .content_1
+          .logout#btnlogout
+            h2 Genral Information
+            button Logout
+          .details
+            p.tag Name
+            p.field#namee= user.name
+          .details
+            p.tag Email Id
+            p.field#emaill= user.email
+          .details
+            p.tag Role
+            p.field= user.role
+          .details
+            p.tag Jobs Applied
+            p.field= doc.length
+        .content_2
+          button#Edit_Content Edit Information
+          .upload1
+            .Submit
+              button#Confrim_1 Confrim
+              button#Cancel_1 Cancel
+
+    if user.role !== 'Admin'
+      .buttons
+        .button5 Jobs-Applied
+
+      #Jobs-Applied.tabcontent
+      main.table#customers_table_5
+        section.table__header
+          .input-group
+            input(type="search" placeholder="Search Data...")
+            img(src="/Icons/search.png" alt="")
+        section.table__body
+          table 
+            thead
+              tr
+                th Date
+                  span.icon-arrow &UpArrow;
+                th Time
+                  span.icon-arrow &UpArrow;
+                th Job Role
+                  span.icon-arrow &UpArrow;
+                th Status
+                  span.icon-arrow &UpArrow;
+            tbody#datatable_5
+
+    if user.role === 'Admin'
+      .buttons
+        .button1 Job-Applications
+        .button2 Admin
+        .button3 User
+        .button4 Tips
+      
+      //- Tab content
+      #Job-Applications.tabcontent
+        main.table#customers_table_1
+          section.table__header
+            a#accepted.accepted_rejected(href="/api/users/getacceptedapplications") Accepted
+            .input-group
+              input(type="search" placeholder="Search Data...")
+              img(src="/Icons/search.png" alt="")
+            a#rejected.accepted_rejected(href=`/api/users/getrejectedapplications`) Rejected
+            //- .input-group
+            //-   input(type="search" placeholder="Search Data...")
+            //-   img(src="/Icons/search.png" alt="")
+          section.table__body
+            table
+              thead
+                tr
+                  th Name
+                    span.icon-arrow &UpArrow;
+                  th Email
+                    span.icon-arrow &UpArrow;
+                  th No. Of Applications
+                    span.icon-arrow &UpArrow;
+                  th View
+              tbody#datatable_1
+      
+      #Admin.tabcontent
+        main.table#customers_table_2
+          section.table__header
+            .input-group
+              input(type="search" placeholder="Search Data...")
+              img(src="/Icons/search.png" alt="")
+            button.add Add Admin
+              img(src="/Icons/add.png" alt="")
+          section.table__body
+            table
+              thead
+                tr
+                  th Profile
+                  th Name
+                    span.icon-arrow &UpArrow;
+                  th Email
+                    span.icon-arrow &UpArrow;
+                  th Delete
+              tbody#datatable_2
+      
+      #User.tabcontent
+        main.table#customers_table_3
+          section.table__header
+            .input-group
+              input(type="search" placeholder="Search Data...")
+              img(src="/Icons/search.png" alt="")
+          section.table__body
+            table
+              thead
+                tr
+                  th Profile
+                  th Name
+                    span.icon-arrow &UpArrow;
+                  th Email
+                    span.icon-arrow &UpArrow;
+                  th Delete
+              tbody#datatable_3
+      
+      #Tips.tabcontent
+        main.table#customers_table_4
+          section.table__header
+            .input-group
+              input(type="search" placeholder="Search Data...")
+              img(src="/Icons/search.png" alt="")
+          section.table__body
+            table
+              thead
+                tr
+                  th Index
+                  th Title
+                    span.icon-arrow &UpArrow;
+                  th Description
+              tbody#datatable_4
+    
+    script(src="/js/Profile.js")
+    script(src="/js/loadProfiledata.js")
+    script(src="/js/logout.js")

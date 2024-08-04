@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/CSS/navbar.css">
+    <link rel="stylesheet" href="/CSS/Profile.css">
+    <link rel="stylesheet" href="/CSS/tabs.css">
+</head>
+<body>
+    <nav>
+        <input type="checkbox" id="check">
+        <label for="check" class="checkbtn">
+          <i class="fas fa-bars"></i>
+          <img src="/Icons/Hamburger.png" alt="">
+        </label>
+        <label class="logo"><img src="/Logo_1.png" alt=""></label>
+        <ul>
+          <li><a class="active" href="/index.html">Home</a></li>
+          <li><a href="/news.html">News</a></li>
+          <li><a href="/Criminals.html">Criminals</a></li>
+          <li><a href="/carrers.html">Carrers</a></li>
+          <li><a href="/Submit_Tip.html">Submit Tip</a></li>
+          <li id="sign_In"><a href="#">Sign In</a></li>
+          <li id="sign_Up"><a href="#">Sign Up</a></li>
+          <li id="Profile_log"><a id="Profile" href="/Profile.html"><img src="/Img/Profile.png" alt=""></a></li>
+        </ul>
+    </nav>
+    <div class="logout">
+        <button>Logout</button>
+    </div>
+    <div class="container">
+        <div class="box1">
+            <img src="/Img/Profile.png" alt="">
+            <button id="Edit_image">Edit Image</button>
+            <div class="upload">
+                <input type="file" id="fileInput" name="name" required>
+                <div class="Submit">
+                    <button id="Confrim" >Confrim</button>
+                    <button id="Cancel">Cancel</button>
+                </div>
+            </div>
+        </div>
+        <div class="box2">
+            <div class="content_1">
+                <h2>Genral Information</h2>
+                <div class="details"><p class="tag">Name</p><p class="field" >Naitik Shah</p></div>
+                <div class="details"><p class="tag">Email Id</p><p class="field" >naitik.s@ahduni.edu.in</p></div>
+                <div class="details"><p class="tag">Role</p><p class="field" >User</p></div>
+                <div class="details"><p class="tag">Password</p><p class="field" >abcd@1234</p></div>
+                <div class="details"><p class="tag">Jobs Applied</p><p class="field" >60</p></div>
+            </div>
+            <div class="content_2">
+                <button id="Edit_Content">Edit Information</button>
+                <div class="upload1">
+                    <div class="Submit">
+                        <button id="Confrim_1" >Confrim</button>
+                        <button id="Cancel_1">Cancel</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="buttons">
+        <!-- <div class="button1">Job Applications</div>
+        <div class="button2">Admin</div>
+        <div class="button3">User</div>
+        <div class="button4">Tips</div> -->
+        <div class="button5">Jobs Applied</div>
+    </div>
+    <!-- Tab links -->
+    <!-- <div class="tab">
+        <button class="tablinks" onclick="openCity(event, 'Jobs')">Job Applications</button>
+        <button class="tablinks" onclick="openCity(event, 'Admin')">Admins</button>
+        <button class="tablinks" onclick="openCity(event, 'User')">Users</button>
+        <button class="tablinks" onclick="openCity(event, 'Tips')">Views Tips</button>
+    </div> -->
+    
+    <!-- Tab content -->
+    <div id="Job Applications" class="tabcontent">
+        <main class="table" id="customers_table_1">
+            <section class="table__header">
+                <!-- <div class="dropdown">
+                    <button class="criminals_sorting">Sort by<img src="/Icons/Sort.png" alt=""></button>
+                    <button class="dropbtn">Name (Ascending)</button>
+                    <div class="dropdown-content">
+                        <a href="#" data-sort="name-asc">Name (Ascending)</a>
+                        <a href="#" data-sort="name-desc">Name (Descending)</a>
+                        <a href="#" data-sort="email-asc">Email (Ascending)</a>
+                        <a href="#" data-sort="email-desc">Email (Descending)</a>
+                        <a href="#" data-sort="job-role-asc">Job-Role (Ascending)</a>
+                        <a href="#" data-sort="job-role-desc">Job-Role (Descending)</a>
+                    </div>
+                </div> -->
+                <div class="input-group">
+                    <input type="search" placeholder="Search Data...">
+                    <img src="/Icons/search.png" alt="">
+                </div>
+            </section>
+            <section class="table__body">
+                <table>
+                    <thead>
+                        <tr>
+                            <th> Profile </th>
+                            <th> Name <span class="icon-arrow">&UpArrow;</span></th>
+                            <th> Email <span class="icon-arrow">&UpArrow;</span></th>
+                            <th> Job Role <span class="icon-arrow">&UpArrow;</span></th>
+                            <th> Accept </th>
+                            <th> Reject </th>
+                        </tr>
+                    </thead>
+                    <tbody id="datatable_1">
+                        <!-- Rows will go here -->
+                    </tbody>
+                </table>
+            </section>
+        </main>
+    </div>
+    
+    <div id="Admin" class="tabcontent">
+        <main class="table" id="customers_table_2">
+            <section class="table__header">
+                <!-- <div class="dropdown">
+                    <button class="criminals_sorting">Sort by<img src="/Icons/Sort.png" alt=""></button>
+                    <button class="dropbtn">Name (Ascending)</button>
+                    <div class="dropdown-content">
+                        <a href="#" data-sort="name-asc">Name (Ascending)</a>
+                        <a href="#" data-sort="name-desc">Name (Descending)</a>
+                        <a href="#" data-sort="email-asc">Email (Ascending)</a>
+                        <a href="#" data-sort="email-desc">Email (Descending)</a>
+                        <a href="#" data-sort="job-role-asc">Job-Role (Ascending)</a>
+                        <a href="#" data-sort="job-role-desc">Job-Role (Descending)</a>
+                    </div>
+                </div> -->
+                <div class="input-group">
+                    <input type="search" placeholder="Search Data...">
+                    <img src="/Icons/search.png" alt="">
+                </div>
+
+                <button class="add" ><img  src="/Icons/add.png" alt=""> Add Admin</button>
+            </section>
+            <section class="table__body">
+                <table>
+                    <thead>
+                        <tr>
+                            <th> Profile </th>
+                            <th> Name <span class="icon-arrow">&UpArrow;</span></th>
+                            <th> Email <span class="icon-arrow">&UpArrow;</span></th>
+                            <th> Demote </th>
+                            <th> Delete </th>
+                        </tr>
+                    </thead>
+                    <tbody id="datatable_2">
+                        <!-- Rows will go here -->
+                    </tbody>
+                </table>
+            </section>
+        </main>
+    </div>
+    
+    <div id="User" class="tabcontent">
+        <main class="table" id="customers_table_3">
+            <section class="table__header">
+                <!-- <div class="dropdown">
+                    <button class="criminals_sorting">Sort by<img src="/Icons/Sort.png" alt=""></button>
+                    <button class="dropbtn">Name (Ascending)</button>
+                    <div class="dropdown-content">
+                        <a href="#" data-sort="name-asc">Name (Ascending)</a>
+                        <a href="#" data-sort="name-desc">Name (Descending)</a>
+                        <a href="#" data-sort="email-asc">Email (Ascending)</a>
+                        <a href="#" data-sort="email-desc">Email (Descending)</a>
+                        <a href="#" data-sort="job-role-asc">Job-Role (Ascending)</a>
+                        <a href="#" data-sort="job-role-desc">Job-Role (Descending)</a>
+                    </div>
+                </div> -->
+                <div class="input-group">
+                    <input type="search" placeholder="Search Data...">
+                    <img src="/Icons/search.png" alt="">
+                </div>
+            </section>
+            <section class="table__body">
+                <table>
+                    <thead>
+                        <tr>
+                            <th> Profile </th>
+                            <th> Name <span class="icon-arrow">&UpArrow;</span></th>
+                            <th> Email <span class="icon-arrow">&UpArrow;</span></th>
+                            <th> Promote </th>
+                            <th> Delete </th>
+                        </tr>
+                    </thead>
+                    <tbody id="datatable_3">
+                        <!-- Rows will go here -->
+                    </tbody>
+                </table>
+            </section>
+        </main>
+    </div>
+
+    <div id="Tips" class="tabcontent">
+        <main class="table" id="customers_table_4">
+            <section class="table__header">
+                <!-- <div class="dropdown">
+                    <button class="criminals_sorting">Sort by<img src="/Icons/Sort.png" alt=""></button>
+                    <button class="dropbtn">Name (Ascending)</button>
+                    <div class="dropdown-content">
+                        <a href="#" data-sort="name-asc">Name (Ascending)</a>
+                        <a href="#" data-sort="name-desc">Name (Descending)</a>
+                        <a href="#" data-sort="email-asc">Email (Ascending)</a>
+                        <a href="#" data-sort="email-desc">Email (Descending)</a>
+                        <a href="#" data-sort="job-role-asc">Job-Role (Ascending)</a>
+                        <a href="#" data-sort="job-role-desc">Job-Role (Descending)</a>
+                    </div>
+                </div> -->
+                <div class="input-group">
+                    <input type="search" placeholder="Search Data...">
+                    <img src="/Icons/search.png" alt="">
+                </div>
+            </section>
+            <section class="table__body">
+                <table>
+                    <thead>
+                        <tr>
+                            <th> Index </th>
+                            <th> Title <span class="icon-arrow">&UpArrow;</span></th>
+                            <th> Description </th>
+                        </tr>
+                    </thead>
+                    <tbody id="datatable_4">
+                        <!-- Rows will go here -->
+                    </tbody>
+                </table>
+            </section>
+        </main>
+    </div>
+
+    <div id="Jobs Applied" class="tabcontent">
+        <main class="table" id="customers_table_5">
+            <section class="table__header">
+                <!-- <div class="dropdown">
+                    <button class="criminals_sorting">Sort by<img src="/Icons/Sort.png" alt=""></button>
+                    <button class="dropbtn">Name (Ascending)</button>
+                    <div class="dropdown-content">
+                        <a href="#" data-sort="name-asc">Name (Ascending)</a>
+                        <a href="#" data-sort="name-desc">Name (Descending)</a>
+                        <a href="#" data-sort="email-asc">Email (Ascending)</a>
+                        <a href="#" data-sort="email-desc">Email (Descending)</a>
+                        <a href="#" data-sort="job-role-asc">Job-Role (Ascending)</a>
+                        <a href="#" data-sort="job-role-desc">Job-Role (Descending)</a>
+                    </div>
+                </div> -->
+                <div class="input-group">
+                    <input type="search" placeholder="Search Data...">
+                    <img src="/Icons/search.png" alt="">
+                </div>
+            </section>
+            <section class="table__body">
+                <table>
+                    <thead>
+                        <tr>
+                            <th> Date <span class="icon-arrow">&UpArrow;</span></th>
+                            <th> Time <span class="icon-arrow">&UpArrow;</span></th>
+                            <th> Job Role <span class="icon-arrow">&UpArrow;</span></th>
+                            <th> Status <span class="icon-arrow">&UpArrow;</span></th>
+                        </tr>
+                    </thead>
+                    <tbody id="datatable_5">
+                        <!-- Rows will go here -->
+                    </tbody>
+                </table>
+            </section>
+        </main>
+    </div>
+
+    <script src="/Profile.js"></script>
+    <script src="/loadProfiledata.js"></script>
+</body>
+</html>

@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/CSS/navbar.css">
+    <link rel="stylesheet" href="/CSS/news.css">
+    <link rel="stylesheet" href="/CSS/criminals.css">
+</head>
+
+<body>
+    <nav>
+        <input type="checkbox" id="check">
+        <label for="check" class="checkbtn">
+          <i class="fas fa-bars"></i>
+          <img src="/Icons/Hamburger.png" alt="">
+        </label>
+        <label class="logo"><img src="/Logo_1.png" alt=""></label>
+        <ul>
+          <li><a class="active" href="/index.html">Home</a></li>
+          <li><a href="/news.html">News</a></li>
+          <li><a href="/Criminals.html">Criminals</a></li>
+          <!-- <li><a href="#">Carrers</a></li>
+          <li><a href="#">Submit Tip</a></li>
+          <li id="sign_In"><a href="#">Sign In</a></li>
+          <li id="sign_Up"><a href="#">Sign Up</a></li> -->
+        </ul>
+    </nav>
+
+    <div class="News-Ann">
+        Criminals
+    </div>
+    <main class="table" id="customers_table">
+        <section class="table__header">
+            <!-- <h1>Customer's Orders</h1> -->
+            <div class="dropdown">
+                <button class="criminals_sorting" >Sort by<img src="/Icons/Sort.png" alt=""> </button>
+                <button class="dropbtn">Name (Ascending)</button>
+                <div class="dropdown-content">
+                    <a href="#" data-sort="name-asc">Name (Ascending)</a>
+                    <a href="#" data-sort="name-desc">Name (Descending)</a>
+                    <a href="#" data-sort="age-asc">Age (Ascending)</a>
+                    <a href="#" data-sort="age-desc">Age (Descending)</a>
+                    <a href="#" data-sort="crimes-asc">Crimes (Ascending)</a>
+                    <a href="#" data-sort="crimes-desc">Crimes (Descending)</a>
+                    <a href="#" data-sort="amount-asc">Amount (Ascending)</a>
+                    <a href="#" data-sort="amount-desc">Amount (Descending)</a>
+                </div>    
+            </div>
+
+            </div> 
+            <div class="input-group">
+                <input type="search" placeholder="Search Data...">
+                <img src="/Icons/search.png" alt="">
+            </div>
+            <button class="criminals_publish" ><img src="/Icons/add.png" alt="">Publish</button>
+        </section>
+        <section class="table__body">
+            <table>
+                <thead>
+                    <tr>
+                        <th> Profile </th>
+                        <th> Name <span class="icon-arrow">&UpArrow;</span></th>
+                        <th> Age <span class="icon-arrow">&UpArrow;</span></th>
+                        <th> Crimes <span class="icon-arrow">&UpArrow;</span></th>
+                        <th> Amount (in $) <span class="icon-arrow">&UpArrow;</span></th>
+                        <th> View </th>
+                        <th> Edit </th>
+                    </tr>
+                </thead>
+            </table>
+        </section>
+    </main>
+
+    
+    <script src="criminals.js"></script>
+</body>
+
+</html>

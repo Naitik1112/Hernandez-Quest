@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/CSS/News_Publish.css">
+</head>
+<body>
+    <div class="back">
+        <button>Back</button>
+    </div>
+    <div class="container">
+        <h2>Publish News</h2>
+        <form action="">
+            <div class="box1">
+                <img id="imagePreview" src="/Img/Profile.png"  alt="">
+                <input type="file" id="fileInput" name="name" required>
+            </div>
+            <div class="box2">
+                <div class="input-group">
+                    <textarea name="" id=""  required></textarea>
+                    <label  for="">Title</label>
+                </div>
+                <div class="input-group">
+                    <textarea name="" id=""  required></textarea>
+                    <label  for="">Description</label>
+                </div>
+                <input id="Submit" type="submit" value="Submit">
+            </div>
+        </form>
+    </div>
+    <Script>
+        document.addEventListener("DOMContentLoaded", function() {
+            const fileInput = document.getElementById("fileInput");
+            const imagePreview = document.getElementById("imagePreview");
+        
+            fileInput.addEventListener("change", function(event) {
+                const file = event.target.files[0];
+                if (file && (file.type === "image/png" || file.type === "image/jpeg" || file.type === "image/jpg" || file.type === "image/webp")) {
+                    const reader = new FileReader();
+                    reader.onload = function(e) {
+                        imagePreview.src = e.target.result;
+                    };
+                    reader.readAsDataURL(file);
+                } else {
+                    alert("Please select a valid image file (PNG, JPG, JPEG, WEBP).");
+                }
+            });
+        })
+    </Script>
+</body>
+</html>

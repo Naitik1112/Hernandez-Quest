@@ -1,0 +1,316 @@
+//- doctype html
+//- html(lang="en")
+//-   head
+//-     meta(charset="UTF-8")
+//-     meta(name="viewport" content="width=device-width, initial-scale=1.0")
+//-     title=title
+//-     link(rel="stylesheet" href="CSS/navbar.css")
+//-     link(rel="stylesheet" href="CSS/style.css")
+//-     link(rel="stylesheet" href="CSS/utility.css")
+//-   body
+//-     script(src="app.js")
+//-     include navbar
+
+//-     .carousel
+//-       // list item
+//-       .list
+//-         .item
+//-           img(src="/Img/Helicopter_2.png")
+//-           .content
+//-             .topic= top2criminals[0].name
+//-             .des= `${top2criminals[0].name}, responsible for ${top2criminals[0].noOfCrimes} heinous crimes, has terrorized Los Angeles. A $${top2criminals[0].pricepool} bounty awaits those who bring justice.`
+//-             a(href=`/api/wanted/${top2criminals[0].slug}`) 
+//-               .buttons
+//-                 button SEE MORE
+//-         .item
+//-           img(src="/Img/Helicopter_1.jpg")
+//-           .content
+//-             .topic= top2criminals[1].name
+//-             .des= `${top2criminals[1].name}, with a chilling record of ${top2criminals[1].noOfCrimes} brutal offenses, remains a top threat. Help capture and earn a $${top2criminals[1].pricepool} reward.`
+//-             a(href=`/api/wanted/${top2criminals[1].slug}`) 
+//-               .buttons
+//-                 button SEE MORE
+//-         .item
+//-           img(src="/Img/Sunset.png")
+//-           .content
+//-             .topic CRIME RATES ARE INCREASING
+//-             .des= top3newss[0].truncatedHeadline
+//-             .buttons
+//-               button SEE MORE
+//-         .item
+//-           img(src="/Img/car_1.jpg")
+//-           .content
+//-             .topic CRIME RATES ARE INCREASING
+//-             .des= top3newss[1].truncatedHeadline
+//-             .buttons
+//-               button SEE MORE
+//-       // list thumbnail
+//-       .thumbnail
+//-         .item
+//-           img(src="/Img/Helicopter_2.png")
+//-           .content
+//-             .title City's Wanted
+//-             //- .description Description
+//-         .item
+//-           img(src="/Img/Helicopter_1.jpg")
+//-           .content
+//-             .title In Our Sights
+//-             //- .description Description
+//-         .item
+//-           img(src="/Img/Sunset.png")
+//-           .content
+//-             .title City Update
+//-             //- .description Description
+//-         .item
+//-           img(src="/Img/car_1.jpg")
+//-           .content
+//-             .title Breaking Alert
+//-             //- .description Description
+//-       // next prev
+//-       .arrows
+//-         button#prev <
+//-         button#next >
+//-       // time running
+//-       //- .time
+//-     //- script(src="/js/navbar.js")   
+
+doctype html
+html(lang="en")
+  head
+    meta(charset="UTF-8")
+    meta(name="viewport" content="width=device-width, initial-scale=1.0")
+    title Police Department Website
+    link(rel="stylesheet" href="/CSS/navbar.css")
+    link(rel="stylesheet" href="/CSS/style.css")
+    link(rel="shortcut icon" href="/fav-icon_2.png" type="image/x-icon")
+    link(rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css")
+    link(rel="stylesheet" href="/CSS/criminals_style.css")
+    link(rel="stylesheet" href="/CSS/Expandable-News-card.css")
+  body
+    include navbar 
+
+    .carousel
+      // list item
+      .list
+        .item
+          img(src="/Img/Helicopter_2.png")
+          .content
+            .topic= top2criminals[0].name
+            .des= `${top2criminals[0].name}, responsible for ${top2criminals[0].noOfCrimes} heinous crimes, has terrorized Los Angeles. A $${top2criminals[0].pricepool} bounty awaits those who bring justice.`
+            a(href=`/api/wanted/${top2criminals[0].slug}`) 
+              .buttons
+                button SEE MORE
+        .item
+          img(src="/Img/Helicopter_1.jpg")
+          .content
+            .topic= top2criminals[1].name
+            .des= `${top2criminals[1].name}, with a chilling record of ${top2criminals[1].noOfCrimes} brutal offenses, remains a top threat. Help capture and earn a $${top2criminals[1].pricepool} reward.`
+            a(href=`/api/wanted/${top2criminals[1].slug}`) 
+              .buttons
+                button SEE MORE
+        .item
+          img(src="/Img/Sunset.png")
+          .content
+            .topic CRIME RATES ARE INCREASING
+            .des= top3newss[0].truncatedHeadline
+            .buttons
+              button SEE MORE
+        .item
+          img(src="/Img/car_1.jpg")
+          .content
+            .topic CRIME RATES ARE INCREASING
+            .des= top3newss[1].truncatedHeadline
+            .buttons
+              button SEE MORE
+      // list thumbnail
+      .thumbnail
+        .item
+          img(src="/Img/Helicopter_2.png")
+          .content
+            .title City's Wanted
+            //- .description Description
+        .item
+          img(src="/Img/Helicopter_1.jpg")
+          .content
+            .title In Our Sights
+            //- .description Description
+        .item
+          img(src="/Img/Sunset.png")
+          .content
+            .title City Update
+            //- .description Description
+        .item
+          img(src="/Img/car_1.jpg")
+          .content
+            .title Breaking Alert
+            //- .description Description
+      // next prev
+      .arrows
+        button#prev <
+        button#next >
+
+    .container.swiper
+      h1 Most Recent News
+      .slider-wrapper_1
+        .card-list_1.swiper-wrapper
+          .card-item_1.swiper-slide
+            .card_1
+              .imgBx_1
+                img(src="/Img/car.jpg" alt="")
+              .content
+                h3 Lorem, ipsum dolor sit amet consectetur adipisicing elit. Vero, saepe.
+                h4 Likes 10 | views 20
+                a(href="") Read More
+
+          .card-item_1.swiper-slide
+            .card_1
+              .imgBx_1
+                img(src="/Img/car.jpg" alt="")
+              .content
+                h3 Taj-Mahal
+                h4 Likes 10 | views 20
+                a(href="") Read More
+
+          .card-item_1.swiper-slide
+            .card_1
+              .imgBx_1
+                img(src="/Img/car.jpg" alt="")
+              .content
+                h3 Taj-Mahal
+                h4 Likes 10 | views 20
+                a(href="") Read More
+
+          .card-item_1.swiper-slide
+            .card_1
+              .imgBx_1
+                img(src="/Img/car.jpg" alt="")
+              .content
+                h3 Taj-Mahal
+                h4 Likes 10 | views 20
+                a(href="") Read More
+
+          .card-item_1.swiper-slide
+            .card_1
+              .imgBx_1
+                img(src="/Img/car.jpg" alt="")
+              .content
+                h3 Taj-Mahal
+                h4 Likes 10 | views 20
+                a(href="") Read More
+
+          .card-item_1.swiper-slide
+            .card_1
+              .imgBx_1
+                img(src="/Img/car.jpg" alt="")
+              .content
+                h3 Taj-Mahal
+                h4 Likes 10 | views 20
+                a(href="") Read More
+
+          .card-item_1.swiper-slide
+            .card_1
+              .imgBx_1
+                img(src="/Img/car.jpg" alt="")
+              .content
+                h3 Taj-Mahal Lorem ipsum dolor sit amet.
+                h4 Likes 10 | views 20
+                a(href="") Read More
+
+        .swiper-pagination
+        .swiper-slider-button.swiper-button-prev
+        .swiper-button-next
+
+    .container.swiper
+      h1 Top Criminals
+      .slider-wrapper
+        .card-list.swiper-wrapper
+          .card-item.swiper-slide
+            .card
+              .number
+              .circle
+              .content
+                h3 Lorem, ipsum dolor.
+                a(href="#") Read More
+              img(src="/Img/World16.png" alt="")
+
+          .card-item.swiper-slide
+            .card
+              .number
+              .circle
+              .content
+                h3 Criminals Name
+                a(href="#") Read More
+              img(src="/Img/World16.png" alt="")
+
+          .card-item.swiper-slide
+            .card
+              .number
+              .circle
+              .content
+                h3 Criminals Name
+                a(href="#") Read More
+              img(src="/Img/World16.png" alt="")
+
+          .card-item.swiper-slide
+            .card
+              .number
+              .circle
+              .content
+                h3 Criminals Name
+                a(href="#") Read More
+              img(src="/Img/World16.png" alt="")
+
+          .card-item.swiper-slide
+            .card
+              .number
+              .circle
+              .content
+                h3 Criminals Name
+                a(href="#") Read More
+              img(src="/Img/World16.png" alt="")
+
+          .card-item.swiper-slide
+            .card
+              .number
+              .circle
+              .content
+                h3 Criminals Name
+                a(href="#") Read More
+              img(src="/Img/World16.png" alt="")
+
+          .card-item.swiper-slide
+            .card
+              .number
+              .circle
+              .content
+                h3 Criminals Name
+                a(href="#") Read More
+              img(src="/Img/World16.png" alt="")
+
+          .card-item.swiper-slide
+            .card
+              .number
+              .circle
+              .content
+                h3 Criminals Name
+                a(href="#") Read More
+              img(src="/Img/World16.png" alt="")
+
+          .card-item.swiper-slide
+            .card
+              .number
+              .circle
+              .content
+                h3 Criminals Name
+                a(href="#") Read More
+              img(src="/Img/World16.png" alt="")
+
+        .swiper-pagination
+        .swiper-slider-button.swiper-button-prev
+        .swiper-button-next
+
+      
+    script(src="app.js")
+    script(src="/js/overview.js")
+    script(src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js")
+    script(src="/js/navbar.js")

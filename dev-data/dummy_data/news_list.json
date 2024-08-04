@@ -1,0 +1,102 @@
+[
+  {
+    "headline": "Local Community Garden Wins National Award",
+    "photo": "community_garden.jpg",
+    "description": "The local community garden has been awarded the prestigious National Garden of the Year award.",
+    "keywords": ["community", "garden", "award"],
+    "date": "13-07-2024",
+    "time": "10:00 AM",
+    "likes": ["6693902dc8b456c789903d05"],
+    "views": 1500
+  },
+  {
+    "headline": "New Technology Promises to Revolutionize Healthcare",
+    "photo": "healthcare_tech.jpg",
+    "description": "A breakthrough in medical technology is set to change the way healthcare is delivered.",
+    "keywords": ["technology", "healthcare", "breakthrough"],
+    "date": "12-07-2024",
+    "time": "09:30 AM",
+    "likes": ["6693902dc8b456c789903d05"],
+    "views": 2500
+  },
+  {
+    "headline": "City Council Approves New Park Development",
+    "photo": "new_park.jpg",
+    "description": "The city council has approved plans for a new park development in the downtown area.",
+    "keywords": ["city", "park", "development"],
+    "date": "11-07-2024",
+    "time": "02:00 PM",
+    "likes": [],
+    "views": 1200
+  },
+  {
+    "headline": "Historic Building to be Converted into Museum",
+    "photo": "historic_building.jpg",
+    "description": "A historic building in the city will be converted into a museum showcasing local history.",
+    "keywords": ["historic", "museum", "city"],
+    "date": "10-07-2024",
+    "time": "11:00 AM",
+    "likes": [],
+    "views": 950
+  },
+  {
+    "headline": "Local School Achieves Top Marks in National Exams",
+    "photo": "school_exams.jpg",
+    "description": "A local school has achieved top marks in the recent national exams, making it one of the best in the country.",
+    "keywords": ["school", "exams", "achievement"],
+    "date": "0-07-2024",
+    "time": "08:00 AM",
+    "likes": ["6693902dc8b456c789903d05"],
+    "views": 1700
+  },
+  {
+    "headline": "Art Exhibition Opens to Rave Reviews",
+    "photo": "art_exhibition.jpg",
+    "description": "The new art exhibition at the city gallery has opened to rave reviews from critics and visitors alike.",
+    "keywords": ["art", "exhibition", "gallery"],
+    "date": "08-07-2024",
+    "time": "05:00 PM",
+    "likes": [],
+    "views": 2000
+  },
+  {
+    "headline": "Mayor Announces New Environmental Initiatives",
+    "photo": "environmental_initiatives.jpg",
+    "description": "The mayor has announced a series of new environmental initiatives aimed at reducing the city's carbon footprint.",
+    "keywords": ["mayor", "environment", "initiatives"],
+    "date": "07-07-2024",
+    "time": "03:00 PM",
+    "likes": [],
+    "views": 1600
+  },
+  {
+    "headline": "Sports Team Wins Regional Championship",
+    "photo": "sports_team.jpg",
+    "description": "The local sports team has won the regional championship in a thrilling final match.",
+    "keywords": ["sports", "team", "championship"],
+    "date": "06-07-2024",
+    "time": "06:00 PM",
+    "likes": ["6693902dc8b456c789903d05"],
+    "views": 3000
+  },
+  {
+    "headline": "New Restaurant Opens Downtown",
+    "photo": "new_restaurant.jpg",
+    "description": "A new restaurant has opened downtown, offering a unique culinary experience to residents and visitors.",
+    "keywords": ["restaurant", "downtown", "opening"],
+    "date": "05-07-2024",
+    "time": "12:00 PM",
+    "likes": [],
+    "views": 1400
+  },
+  {
+    "headline": "Charity Event Raises Thousands for Local Causes",
+    "photo": "charity_event.jpg",
+    "description": "A recent charity event has raised thousands of dollars for local causes, thanks to the generosity of the community.",
+    "keywords": ["charity", "event", "community"],
+    "date": "18-07-2024",
+    "time": "07:00 PM",
+    "likes": ["6693902dc8b456c789903d05"],
+    "views": 2100
+  }
+]

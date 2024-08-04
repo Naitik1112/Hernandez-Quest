@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/CSS/Criminals_Publish.css">
+</head>
+<body>
+    <div class="back">
+        <button>Back</button>
+    </div>
+    <div class="container">
+        <h2>Add Criminal</h2>
+        <form action="">
+            <div class="content1">
+                <div class="box1">
+                    <img id="imagePreview" src="/Img/Profile.png"  alt="">
+                    <input type="file" id="fileInput" name="name" required>
+                </div>
+                <div class="box2">
+                    <!-- <label for="Name">Criminals Name</label>
+                    <input type="text" name="Criminals_Name" id="Name">
+                    <label for="Crimes">Total Crimes</label>
+                    <input type="number" name="Criminals_crimes" id="Crimes">
+                    <label for="Height">Height</label>
+                    <input type="number" name="Criminals_height" id="Height">
+                    <label for="Weight">Weight</label>
+                    <input type="number" name="Criminals_weight" id="Weight">
+                    <label >Gender</label>
+                    <div id="radio">
+                        <input class="radio" type="radio" name="gender" id="male" value="male">
+                        <label for="male">Male</label>
+                        <input class="radio" type="radio" name="gender" id="female" value="female">
+                        <label for="female">Female</label>
+                    </div> -->
+                    <div class="input-group">
+                        <input type="text" name="" id="" required>
+                        <label for="">Criminal Name</label>
+                    </div>
+                    <div class="input-group">
+                        <input type="number" name="" id="" required>
+                        <label for="">Total Crimes</label>
+                    </div>
+                    <div class="input-group">
+                        <input type="number" name="" id="" required>
+                        <label for="">Height</label>
+                    </div>
+                    <div class="input-group">
+                        <input type="number" name="" id="" required>
+                        <label for="">Weight</label>
+                    </div>
+                    <div id="gender">
+                        <label for="">Gender |</label>
+                        <input class="radio" type="radio" name="gender" id="male" value="male">
+                        <label for="male">Male</label>
+                        <input class="radio" type="radio" name="gender" id="female" value="female">
+                        <label for="female">Female</label>
+                    </div>
+                    <div class="input-group">
+                        <input type="number" name="" id="" required>
+                        <label for="">Pricepool</label>
+                    </div>
+                    <div class="input-group">
+                        <textarea name="" id="" cols="70" required></textarea>
+                        <label for="">Description</label>
+                    </div>
+                </div>
+            </div>
+            <div class="content2">
+                <input id="Submit" type="submit" value="Submit">
+            </div>
+            
+            
+        </form>
+    </div>
+    <Script>
+        document.addEventListener("DOMContentLoaded", function() {
+            const fileInput = document.getElementById("fileInput");
+            const imagePreview = document.getElementById("imagePreview");
+        
+            fileInput.addEventListener("change", function(event) {
+                const file = event.target.files[0];
+                if (file && (file.type === "image/png" || file.type === "image/jpeg" || file.type === "image/jpg" || file.type === "image/webp")) {
+                    const reader = new FileReader();
+                    reader.onload = function(e) {
+                        imagePreview.src = e.target.result;
+                    };
+                    reader.readAsDataURL(file);
+                } else {
+                    alert("Please select a valid image file (PNG, JPG, JPEG, WEBP).");
+                }
+            });
+        })
+    </Script>
+</body>
+</html>

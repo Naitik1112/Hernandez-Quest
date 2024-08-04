@@ -1,0 +1,148 @@
+//- doctype html
+//- html(lang="en")
+//-   head
+//-     meta(charset="UTF-8")
+//-     meta(name="viewport" content="width=device-width, initial-scale=1.0")
+//-     title Document
+//-     link(rel="stylesheet" href="/css/navbar.css")
+//-     link(rel="stylesheet" href="/css/news.css")
+//-     style.
+//-       .dropdown {
+//-         position: relative;
+//-         display: inline-block;
+//-       }
+//-       .dropbtn {
+//-         border: 4px solid whitesmoke;
+//-         font-size: 140%;
+//-         font-weight: bold;
+//-         height: 50px;
+//-         border-radius: 14px;
+//-         background-color: #ddc577;
+//-         color: #363636;
+//-         display: flex;
+//-         justify-content: center;
+//-         align-items: center;
+//-         gap: 14%;
+//-       }
+//-       .dropbtn:hover, .dropbtn:focus {
+//-         background-color: #ffffff;
+//-       }
+//-       .dropdown-content {
+//-         display: none;
+//-         position: absolute;
+//-         background-color: #f9f9f9;
+//-         min-width: 160px;
+//-         box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+//-         z-index: 1;
+//-       }
+//-       .dropdown-content a {
+//-         color: black;
+//-         padding: 12px 16px;
+//-         text-decoration: none;
+//-         display: block;
+//-       }
+//-       .dropdown-content a:hover {
+//-         background-color: #f1f1f1;
+//-       }
+//-       .dropdown:hover .dropdown-content {
+//-         display: block;
+//-       }
+//-   body
+//-     // script(src="app.js")
+//-     include navbar 
+
+//-     .News-Ann News and Announcements
+//-     .fliter_add_news
+//-       //- button
+//-       //-   img(src="/Icons/filter.png" alt="")
+//-       //-   |  Filter
+//-       .dropdown
+//-         button.dropbtn Sort By:
+//-         .dropdown-content
+//-           a(href='/api/news/getallnews') Default 
+//-           a(href='?sort=date') Date (low to high)
+//-           a(href='?sort=-date') Date (high to low)
+//-           a(href='?sort=likes') Number Of likes (low to high)
+//-           a(href='?sort=-likes') Number Of Likes (high to low)
+
+//-         if user 
+//-           if user.role === 'admin'
+//-             button.add
+//-               img(src="/Icons/add.png" alt="")
+//-               |  Publish
+    
+//-     section.news-section
+//-         each x in news 
+//-             .card.middle
+//-                 .card-front
+//-                     img(src="/Img/car_1.jpg" alt="Images are here")
+//-                     .news-content
+//-                         h3=x.headline 
+//-                         p=`${x.date} | ${x.time}`
+//-                 .card-back
+//-                     h3 News Heading 
+//-                     p=x.description
+//-                     .like-view
+//-                         .likes=x.likes 
+//-                             img(src="/Icons/heart.png" alt="")
+//-                         a(href=`/api/news/${x._id}`).view-more View More
+
+doctype html
+html(lang="en")
+  head
+    meta(charset="UTF-8")
+    meta(name="viewport" content="width=device-width, initial-scale=1.0")
+    title Document
+    link(rel="stylesheet" href="/CSS/navbar.css")
+    link(rel="stylesheet" href="/CSS/news.css")
+    link(rel="stylesheet" href="/CSS/utility.css")
+  body
+    include navbar
+
+    .News-Ann
+      | News and Announcements
+
+    .fliter_add_news(User=user.role)
+      .dropdown
+          button.criminals_sorting Sort By
+            img(src="/Icons/Sort.png" alt="")
+          //- button.dropbtn Name (Ascending)
+          .dropdown-content
+            a(href="/api/news/getallnews" data-sort="name-asc") Default
+            a(href="?sort=likes" data-sort="name-asc") Like (Ascending)
+            a(href="?sort=-likes" data-sort="name-desc") Like (Descending)
+            a(href="?sort=date" data-sort="crimes-asc") Date (Ascending)
+            a(href="?sort=-date" data-sort="crimes-desc") Date (Descending)
+      if user.role === "Admin"
+        a.add(href="getallnews/publishnews") 
+            img(src="/Icons/add.png" alt="")
+            |  Publish
+
+    section.news-section
+      each x in news 
+        .card.middle
+          .card-front
+            .front-likes
+              span= x.likes.length 
+              img(src="/Icons/heart-filled.png" alt="")
+              
+            img(src="/Img/Gta_world_0.jpg" alt="")
+            .news-content
+              h3= x.headline
+              p=`${x.date} | ${x.time}`
+          .card-back
+            h3 News Heading - 1
+            p= x.truncatedDescription
+            .like-view
+              div.likes
+                if x.likes.includes(user._id)
+                  img(src="/Icons/heart-filled.png" alt="")#like-button.like-button(data-news-id=x._id data-liked=true)
+                  p= x.likes.length
+                else 
+                  img(src="/Icons/heart.png" alt="")#like-button.like-button(data-news-id=x._id  data-liked=false)
+                  p= x.likes.length
+              a.view-more(href=`/api/news/${x._id}`) View More
+
+    script(src="/js/like.js") 
+
+        

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/CSS/Submit_Tip.css">
+    <link rel="stylesheet" href="/CSS/navbar.css">
+    <link rel="stylesheet" href="/CSS/utility.css">
+</head>
+<body>
+    <nav>
+        <input type="checkbox" id="check">
+        <label for="check" class="checkbtn">
+          <i class="fas fa-bars"></i>
+          <img src="/Icons/Hamburger.png" alt="">
+        </label>
+        <label class="logo"><img src="/Logo_1.png" alt=""></label>
+        <ul>
+          <li><a href="/index.html">Home</a></li>
+          <li><a href="/news.html">News</a></li>
+          <li><a href="/Criminals.html">Criminals</a></li>
+          <li><a class="active" href="/carrers.html">Carrers</a></li>
+          <!-- <li><a href="#">Submit Tip</a></li> -->
+          <li id="sign_In"><a href="#">Sign In</a></li>
+          <li id="sign_Up"><a href="#">Sign Up</a></li>
+        </ul>
+    </nav>
+    <div class="News-Ann">
+        Submit Tip
+    </div>
+    <div class="container">
+        <form action="">
+            <label class="block" for="Title">Title</label>
+            <textarea name="submit_title" id="Title" cols="20" rows="2"></textarea>
+            <label class="block" for="Description">Description</label>
+            <textarea name="submit_des" id="Description" cols="20" rows="4" ></textarea>
+            <div id="Submit"><input type="submit" value="Submit Tip"></div>            
+        </form>
+    </div>
+</body>
+</html>

@@ -1,0 +1,30 @@
+doctype html
+html(lang="en")
+head
+    meta(charset="UTF-8")
+    meta(name="viewport" content="width=device-width, initial-scale=1.0")
+    title Document
+    link(rel="stylesheet" href="/CSS/navbar.css")
+    link(rel="stylesheet" href="/CSS/news.css")
+    link(rel="stylesheet" href="/CSS/carrers.css")
+    link(rel="stylesheet" href="/CSS/utility.css")
+body
+    include navbar
+    .News-Ann Carrers
+    if user.role === 'Admin'
+        .fliter_add_news
+            a.add(href="/api/career/getalljobs/publishcareer") 
+                img(src="/Icons/add.png" alt="") 
+                |  Publish
+    .main_container
+    each x in doc
+        .box
+            img.image(src="/Img/Gta_world_1.jpg" alt="")
+            .heading
+                p= x.title 
+            .content
+                h2= x.title 
+                div= x.truncatedDescription
+                a.carrer_view_more(href=`${x.slug}`) View More
+                    
+    script(src="/js/career.js") 

@@ -1,0 +1,30 @@
+{
+    "name": "avalynx/avalynx-alert",
+    "description": "AvalynxAlert is a simple alert system for web applications. Based on Bootstrap >=5.3 without any framework dependencies.",
+    "keywords": [
+        "avalynx",
+        "alert",
+        "bootstrap",
+        "bootstrap5",
+        "component",
+        "notification",
+        "popup"
+    ],
+    "homepage": "https://github.com/avalynx/avalynx-alert",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Juergen Schwind an the Avalynx-Alert authors",
+            "homepage": "https://github.com/avalynx/avalynx-alert/graphs/contributors"
+        }
+    ],
+    "require": {
+        "twbs/bootstrap": "^5.3"
+    },
+    "repositories": [
+        {
+            "type": "vcs",
+            "url": "https://github.com/avalynx/avalynx-alert.git"
+        }
+    ]
+}

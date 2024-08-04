@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/CSS/navbar.css">
+    <link rel="stylesheet" href="/CSS/sign_in.css">
+</head>
+<body>
+    <nav>
+        <input type="checkbox" id="check">
+        <label for="check" class="checkbtn">
+          <i class="fas fa-bars"></i>
+          <img src="/Icons/Hamburger.png" alt="">
+        </label>
+        <label class="logo"><img src="/Logo_1.png" alt=""></label>
+        <ul>
+          <li><a class="active" href="/index.html">Home</a></li>
+          <li><a href="/news.html">News</a></li>
+          <li><a href="/Criminals.html">Criminals</a></li>
+          <li><a href="/carrers.html">Carrers</a></li>
+          <li><a href="/Submit_Tip.html">Submit Tip</a></li>
+          <li id="sign_In"><a href="#">Sign In</a></li>
+          <li id="sign_Up"><a href="#">Sign Up</a></li>
+          <li id="Profile_log"><a id="Profile" href="/Profile.html"><img src="/Img/Profile.png" alt=""></a></li>
+        </ul>
+    </nav>
+    <div class="container">
+        <form action="">
+            <h1>Sign In</h1>
+            <div class="input-group">
+                <input type="text" name="" id="" required>
+                <label for="">Username</label>
+            </div>
+            <div class="input-group">
+                <input type="password" name="" id="password" required>
+                <button type="button" id="togglePassword">
+                    <i><img src="/Icons/eye.png" alt=""></i>
+                </button>
+                <label for="">Password</label>
+            </div>
+            <a class="sign_in">Forget Password ?</a>
+            <input id="Submit" type="submit" value="SIGN IN">
+            <p>Don't have your account ? <a class="sign_in" href="">Sign Up</a></p>
+        </form>
+    </div>
+    <script>
+        const togglePassword = document.querySelector('#togglePassword');
+        const password = document.querySelector('#password');
+
+        togglePassword.addEventListener('click', function (e) {
+            // Toggle the type attribute
+            const type = password.getAttribute('type') === 'password' ? 'text' : 'password';
+            password.setAttribute('type', type);
+            
+            // Toggle the eye icon
+            this.classList.toggle('visible');
+        });
+    </script>
+</body>
+</html>

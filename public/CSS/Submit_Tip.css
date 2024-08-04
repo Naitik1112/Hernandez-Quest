@@ -1,0 +1,153 @@
+body{
+    background: #000;
+    margin: 0;
+    padding: 0;
+    height: 90vh;
+    width: 100vw;
+    /* background-image: url('https://e0.pxfuel.com/wallpapers/946/50/desktop-wallpaper-gta-v-lspdfr-cop-mod-gta-5-police.jpg'); */
+    background-color: #000;
+    background-size: cover; /* Ensures the background image covers the whole page */
+    background-position: center; /* Centers the background image */
+    background-repeat: no-repeat; /* Prevents the background image from repeating */
+    font-family: sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+@font-face{
+    font-family: police-fonts;
+    src:url(/Fonts/Furore.otf)
+}
+
+.back{
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    width: 85%;
+    height: 50px;
+    margin-top: 1%;
+}
+
+.back button{
+    /* width: 80px; */
+    border: 3px solid rgb(0, 0, 0);
+    background: rgba(222, 222, 222, 0.636);
+    border-radius: 4px;
+    padding: 0.6% 1.5%;
+    font-size: 100%;
+    letter-spacing: 0.5px;
+    color: rgb(0, 0, 0); 
+    cursor: pointer;
+    /* font-weight: bold; */
+    font-family: police-fonts;
+}
+
+.container{
+    width: min(500px,70%);
+    height: 30  0px;
+    border-radius: 14px;
+    margin-top: 50px;
+    background: #000000c8;
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    box-shadow: -1px 1px 30px 7px rgb(243, 189, 124) ;
+    padding: 1% 2%;
+}
+
+form{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 4px 0px;
+}
+
+textarea{
+    background-color: rgb(211, 211, 211);
+    border-radius: 4px;
+    font-family: sans-serif;
+    cursor: default;
+}
+
+label{
+    margin-top: 2%;
+    color: rgb(0, 0, 0);
+    margin-bottom: 1%;
+    font-size: 110%;
+}
+
+
+.input-group{
+    position: relative;
+    width: 80%;
+    margin-top: 25px;
+    border-radius: 4px;
+    /* margin-bottom: 30px; */
+}
+
+.input-group label{
+    position: absolute;
+    top: 10%;
+    left: 10px;
+    transform: translateY(-50%);
+    font-size: 16px;
+    /* background-color: red; */
+    padding: 0 5px;
+    pointer-events: none;
+    transition: 0.4s;
+    z-index: 1;
+    color: white;
+}
+
+.input-group textarea{
+    /* width: 100%; */
+    height: 70px;
+    font-size: 16px;
+    background: transparent;
+    color: rgb(255, 255, 255);
+    padding: 8px 10px;
+    border: 1px solid rgb(255, 255, 255);
+    outline: none;
+    border-radius: 4px;
+}
+
+.input-group textarea:focus~#text-box,
+.input-group textarea:valid~#text-box{
+    top: -15%;
+    font-size: 14px;
+    /* border: 2px solid rgb(211,211,211); */
+    background: #000;
+    border-radius: 3px;
+    color: rgb(255, 255, 255);
+}
+
+textarea{
+    width: 100%;
+    padding: 0px;
+}
+
+#Submit{
+    margin-top: 5%;
+    padding: 1% 4.5%;
+    border-radius: 4px;
+    font-size: 105%;
+    text-align: center;
+    width: auto;
+    border: 2px solid white;
+    background: white;
+    color: rgb(0, 0, 0);
+    cursor: pointer;
+}
+
+@media (max-width: 510px){
+    .input-group label{
+        top: 15%;
+    }
+    .container{
+        height: 300px;
+        border-radius: 7px;
+    }
+    .form{
+        border-radius: 7px;
+    }
+}

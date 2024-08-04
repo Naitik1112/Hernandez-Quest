@@ -1,0 +1,68 @@
+//- doctype html
+//- html(lang="en")
+//-   head
+//-     meta(charset="UTF-8")
+//-     meta(name="viewport" content="width=device-width, initial-scale=1.0")
+//-     title Criminal Details
+//-     link(rel="stylesheet" href="/css/criminal.css")
+//-     link(rel="stylesheet" href="/css/navbar.css")
+//-   body
+//-     include navbar 
+//-     .criminal-container 
+//-       .criminal-photo
+//-         img#criminal-photo(src="" alt="Criminal Photo")
+//-       .criminal-details
+//-         h1#criminal-name= tour.name
+//-         p
+//-           strong Number of Crimes: 
+//-           span#criminal-noOfCrimes= tour.noOfCrimes
+//-         p
+//-           strong Price Pool: 
+//-           span#criminal-pricepool= tour.pricepool 
+//-         p
+//-           strong Gender: 
+//-           span#criminal-gender= tour.gender
+//-         p
+//-           strong Height: 
+//-           span#criminal-height= tour.height 
+//-         p
+//-           strong Description: 
+//-           span#criminal-description= tour.description 
+
+doctype html
+html(lang="en")
+  head
+    meta(charset="UTF-8")
+    meta(name="viewport" content="width=device-width, initial-scale=1.0")
+    title Document
+    link(rel="stylesheet" href="/CSS/criminals-info.css")
+    link(rel="stylesheet" href="/CSS/navbar.css")
+  body
+      
+    .back
+      button#btnback back
+    .container
+      .box1
+        img(src=`/images/criminals/${tour.photo}` alt="Criminal Photo")
+        h3= tour.name
+      .box2
+        .content_1
+          h3 Genral Information
+          .details
+            p.tag Total Crimes
+            p= tour.noOfCrimes
+          .details
+            p.tag Height
+            p= tour.height
+          .details
+            p.tag Gender
+            p=tour.gender
+          .details
+            p.tag Pricepool
+            p= tour.pricepool
+        .content_2
+          h3 Description
+          p= tour.description
+
+    script(src="/js/wanted.js") 
+    script(src="/js/criminals.js") 

@@ -1,0 +1,123 @@
+//- doctype html
+//- html(lang="en")
+//-   head
+//-     meta(charset="UTF-8")
+//-     meta(name="viewport" content="width=device-width, initial-scale=1.0")
+//-     title Document
+//-     link(rel="stylesheet" href="/CSS/utility.css")
+//-     link(rel="stylesheet" href="/CSS/Job_applications.css")
+//-     link(rel="stylesheet" href="/CSS/popUp.css")
+//-     link(rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css")
+
+//-   body
+//-     .News-Ann
+//-       | Job-Applications
+//-     .back
+//-       button#btnback Back
+//-       button.add Status Pending :#{app.length}
+//-     each temp in app
+//-       section.job_applications
+//-         .application(ID=temp._id)
+//-           h2.status Status - Pending
+//-           .content1
+//-             .box1 
+//-               img(src="/Img/Profile.png" alt="")
+//-             .box2
+//-               .details
+//-                 .field Name :
+//-                 .text=temp.name
+//-               .details
+//-                 .field Email :
+//-                 .text= temp.email
+//-               .details
+//-                 .field Job Role :
+//-                 .text= temp.title 
+//-               .details
+//-                 .field Education :
+//-                 .text= temp.education
+//-               .details
+//-                 .field Experience :
+//-                 .text= temp.experience
+//-               .details
+//-                 .field Applied On :
+//-                 .text= temp.date
+//-             .content2
+//-               button#accept Accept 
+//-                 img(src="/Icons/Correct.png" alt="")
+//-               button#reject(href=`/api/career/rejectrequest/${temp._id}`) Reject 
+//-                 img(src="/Icons/Wrong.png" alt="")
+//-     .popup.center
+//-       .icon
+//-         i.fa.fa-check
+//-       .title
+//-         | Success!!
+//-       .description
+//-         | You have successfully submitted tip
+//-       .dismiss-btn
+//-         button#dismiss-popup-btn Okay!!
+
+    
+//-     script(src="/js/getaccepted.js") 
+//-     script(src="/js/wanted.js") 
+doctype html
+html(lang="en")
+  head
+    meta(charset="UTF-8")
+    meta(name="viewport" content="width=device-width, initial-scale=1.0")
+    title Document
+    link(rel="stylesheet" href="/CSS/utility.css")
+    link(rel="stylesheet" href="/CSS/Job_applications.css")
+    link(rel="stylesheet" href="/CSS/popUp.css")
+    link(rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css")
+  body
+    .News-Ann
+      | Job-Applications
+
+    .back
+      button#btnback Back
+      button.add Status Pending :#{app.length}
+
+    section.job_applications
+      each temp in app
+        .application(ID=temp._id)
+          h2.status Status - Pending
+          .content1
+            .box1
+              img(src="/Img/Profile.png" alt="")
+            .box2
+              .details
+                .field Name :
+                .text= temp.name
+              .details
+                .field Email :
+                .text= temp.email
+              .details
+                .field Job Role :
+                .text= temp.title
+              .details
+                .field Education :
+                .text= temp.education
+              .details
+                .field Exprience :
+                .text= temp.experience || 0
+              .details
+                .field Applied On :
+                .text= temp.date
+
+          .content2
+            a#accept Accept
+              img(src="/Icons/Correct.png" alt="")
+            a#reject Reject
+              img(src="/Icons/Wrong.png" alt="")
+    .popup.center
+      .icon
+        i.fa.fa-check
+      .title
+        | Success!!
+      .description
+        | You have successfully submitted tip
+      .dismiss-btn
+        button#dismiss-popup-btn Okay!!
+    
+    script(src="/js/getaccepted.js") 
+    script(src="/js/wanted.js") 

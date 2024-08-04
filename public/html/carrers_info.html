@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/css/navbar.css">
+    <link rel="stylesheet" href="/CSS/utility.css">
+    <link rel="stylesheet" href="/CSS/carrers_info.css">
+</head>
+
+<body>
+
+    <nav>
+        <input type="checkbox" id="check">
+        <label for="check" class="checkbtn">
+            <i class="fas fa-bars"></i>
+            <img src="/Icons/Hamburger.png" alt="">
+        </label>
+        <label class="logo"><img src="/Logo_1.png" alt=""></label>
+        <ul>
+            <li><a href="/index.html">Home</a></li>
+            <li><a href="/news.html">News</a></li>
+            <li><a href="/Criminals.html">Criminals</a></li>
+            <li><a class="active" href="/carrers.html">Carrers</a></li>
+            <!-- <li><a href="#">Submit Tip</a></li> -->
+            <li id="sign_In"><a href="#">Sign In</a></li>
+            <li id="sign_Up"><a href="#">Sign Up</a></li>
+        </ul>
+    </nav>
+
+    <div class="News-Ann">
+        Job Title
+    </div>
+    <div class="Quicklinks"><button class="links_button" >Quicklinks <div class="Links"> <a href="#job-description">Job Application</a><a href="#salary-benefits">Salary and Benifits</a><a href="#requirements">Requirements</a><a href="#application-procedure">Application Procedure</a> </div></button> </div>
+    <div class="edit"><a href="">Back</a><a href="">Edit</a></div>
+    <div class="carrers_info">
+        <div class="carrer_nav">
+            <div class="carrer_img">
+                <img src="/Img/car.jpg" alt="">
+            </div>
+            <div class="carrer_links">
+                <a href="#job-description">Job Description</a>
+                <a href="#salary-benefits">Salary and Benefits</a>
+                <a href="#requirements">Requirements</a>
+                <a href="#application-procedure">Application Procedure</a>
+            </div>
+        </div>
+        <div class="carrer_info">
+            <h2 id="job-description">Job Description</h2>
+            <h3>Description</h3>
+            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. A quia qui sunt quaerat veritatis, dolor harum culpa? Dolor, quasi minima perferendis earum, officiis quam aperiam veritatis saepe enim accusantium repudiandae?</p>
+            <h3>Department</h3>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing.</p>
+            <h3>Other Information</h3>
+            <p>Lorem ipsum dolor sit amet.</p>
+
+            <h2 id="salary-benefits">Salary and Benefits</h2>
+            
+            <p>Salary - 3000 $</p>
+            <h3>Benifits</h3>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing.</p>
+
+            <h2 id="requirements">Requirements</h2>
+            <button class="accordion">Education</button>
+            <div class="panel">
+                <p><li>Lorem ipsum dolor sit amet.</li>
+                <li>Lorem ipsum dolor sit amet.</li>
+                <li>Lorem ipsum dolor sit amet.</li>
+                <li>Lorem ipsum dolor sit amet.</li></p>
+            </div>
+
+            <button class="accordion">Exprience</button>
+            <div class="panel">
+                <p><li>Lorem ipsum dolor sit amet.</li>
+                <li>Lorem ipsum dolor sit amet.</li>
+                <li>Lorem ipsum dolor sit amet.</li>
+                <li>Lorem ipsum dolor sit amet.</li></p>
+            </div>
+
+            <button class="accordion">Skills Required</button>
+            <div class="panel">
+                <p><li>Lorem ipsum dolor sit amet.</li>
+                <li>Lorem ipsum dolor sit amet.</li>
+                <li>Lorem ipsum dolor sit amet.</li>
+                <li>Lorem ipsum dolor sit amet.</li></p>
+            </div>
+
+            <button class="accordion">Other Information</button>
+            <div class="panel">
+                <p><li>Lorem ipsum dolor sit amet.</li>
+                <li>Lorem ipsum dolor sit amet.</li>
+                <li>Lorem ipsum dolor sit amet.</li>
+                <li>Lorem ipsum dolor sit amet.</li></p>
+            </div>
+
+            <h2 id="application-procedure">Application Procedure</h2>
+            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nobis voluptatem velit optio tempora. A, aliquam! Est iste, placeat optio temporibus nesciunt provident hic dolorum tempora exercitationem repudiandae animi sequi beatae consequuntur facilis. Nihil, perferendis vero.</p>
+            <a href="/Apply_Job.html" id="Apply" >Apply</a>
+            <div class="space"></div>
+        </div>
+    </div>
+
+    <script>
+        var acc = document.getElementsByClassName("accordion");
+        var i;
+
+        for (i = 0; i < acc.length; i++) {
+            acc[i].addEventListener("click", function () {
+                // Check if the clicked accordion is already active
+                var isActive = this.classList.contains("active_carrer");
+
+                // Remove the active class from all accordion elements
+                for (var j = 0; j < acc.length; j++) {
+                    acc[j].classList.remove("active_carrer");
+                }
+
+                // If the clicked accordion is not active, toggle the active class on it
+                if (!isActive) {
+                    this.classList.toggle("active_carrer");
+                }
+
+                // Close all panels
+                var allPanels = document.querySelectorAll(".accordion + div");
+                allPanels.forEach(p => p.style.maxHeight = null);
+
+                // If the clicked accordion is not active, open its panel
+                if (!isActive) {
+                    var panel = this.nextElementSibling;
+                    if (panel) {
+                        panel.style.maxHeight = panel.scrollHeight + "px";
+                    }
+                }
+            });
+        }
+
+        document.querySelectorAll('.carrer_links a').forEach(link => {
+            console.log("CLICKED")
+            link.addEventListener('click', function(event) {
+                event.preventDefault();
+                console.log(this.getAttribute('href').substring(1))
+                const targetId = this.getAttribute('href').substring(1);
+                const targetElement = document.getElementById(targetId);
+                if (targetElement) {
+                    targetElement.scrollIntoView({ behavior: 'smooth' });
+                }
+            });
+        });
+
+    </script>
+</body>
+
+</html>

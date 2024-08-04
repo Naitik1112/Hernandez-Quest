@@ -1,0 +1,132 @@
+//- doctype html
+//- html
+//-   head
+//-     title News Details
+//-     meta(charset="UTF-8")
+//-     meta(name="viewport" content="width=device-width, initial-scale=1.0")
+//-     link(rel="stylesheet" href="/css/navbar.css")
+//-   body
+//-     include navbar 
+//-     .container
+//-       h1 News Details
+//-       .news-item
+//-         h2= news.headline
+//-         img(src='#', alt='News Photo', class='img-fluid')
+//-         p=`Description: ${news.description}` 
+//-         p=`Date: ${news.date}`
+//-         p=`Time: ${news.time}`
+//-         p=`Likes: ${news.likes || 0}`
+//-         p=`Views: ${news.views || 0}`
+//- **********************************************************************************************
+
+doctype html
+html(lang="en")
+  head
+    meta(charset="UTF-8")
+    meta(http-equiv="X-UA-Compatible" content="IE=edge")
+    meta(name="viewport" content="width=device-width, initial-scale=1.0")
+    title View More
+    link(rel="stylesheet" href="https://unpkg.com/swiper@8/swiper-bundle.min.css")
+    link(rel="stylesheet" href="/CSS/news-view-more.css")
+    link(rel="stylesheet" href="/CSS/navbar.css")
+
+  body
+    .center
+      .back
+        a#btnback Back
+        a Edit
+
+    .title
+      h2= news.headline
+
+    .center
+      .like_view_date
+        .upper
+          div Likes
+          div Views
+          div Date
+        .lower
+          div= news.likes.length
+          div= news.views
+          div= news.date
+
+    .center
+    .content 
+      div= news.description
+
+    .center
+      h2.tag Most Liked News
+    
+    section#tranding
+      .container
+        .swiper.tranding-slider
+          .swiper-wrapper
+            // Slide-start
+            .swiper-slide.tranding-slide
+              .tranding-slide-img
+                img(src="/Img/Most_Wanted_Criminal_2.jpg" alt="Tranding")
+              .tranding-slide-content
+                h3.food-price
+                  img(src="/Icons/heart-filled.png" alt="")
+                  | #{topNews[0].likesCount}
+                .tranding-slide-content-bottom
+                  h2.food-name= topNews[0].headline
+            // Slide-end
+            // Slide-start
+            .swiper-slide.tranding-slide
+              .tranding-slide-img
+                img(src="/Img/car.jpg" alt="Tranding")
+              .tranding-slide-content
+                h1.food-price
+                  img(src="/Icons/heart-filled.png" alt="")
+                  | #{topNews[1].likesCount}
+                .tranding-slide-content-bottom
+                  h2.food-name= topNews[1].headline
+            // Slide-end
+            // Slide-start
+            .swiper-slide.tranding-slide
+              .tranding-slide-img
+                img(src="/Img/Gta_world_0.jpg" alt="Tranding")
+              .tranding-slide-content
+                h1.food-price
+                  img(src="/Icons/heart-filled.png" alt="")
+                  | #{topNews[2].likesCount}
+                .tranding-slide-content-bottom
+                  h2.food-name= topNews[2].headline
+            // Slide-end
+            // Slide-start
+            .swiper-slide.tranding-slide
+              .tranding-slide-img
+                img(src="/Img/Helicopter_1.jpg" alt="Tranding")
+              .tranding-slide-content
+                h1.food-price
+                  img(src="/Icons/heart-filled.png" alt="")
+                  | #{topNews[3].likesCount}
+                .tranding-slide-content-bottom
+                  h2.food-name= topNews[3].headline
+            // Slide-end
+            // Slide-start
+            .swiper-slide.tranding-slide
+              .tranding-slide-img
+                img(src="/Img/Most_Wanted_Criminal_1.jpg" alt="Tranding")
+              .tranding-slide-content
+                h1.food-price
+                  img(src="/Icons/heart-filled.png" alt="")
+                  | #{topNews[4].likesCount}
+                .tranding-slide-content-bottom
+                  h2.food-name= topNews[4].headline
+            // Slide-end
+            
+
+          .tranding-slider-control
+            .swiper-button-prev.slider-arrow
+              ion-icon(name="arrow-back-outline")
+            .swiper-button-next.slider-arrow
+              ion-icon(name="arrow-forward-outline")
+            .swiper-pagination
+
+    script(type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js")
+    script(nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js")
+    script(src="https://unpkg.com/swiper@8/swiper-bundle.min.js")
+    script(src="/view-more.js")
+    script(src="/js/wanted.js")

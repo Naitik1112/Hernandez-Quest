@@ -1,0 +1,64 @@
+//- doctype html
+//- html(lang="en")
+//-   head
+//-     meta(charset="UTF-8")
+//-     meta(name="viewport" content="width=device-width, initial-scale=1.0")
+//-     title Document
+//-     link(rel="stylesheet" href="/CSS/Apply_Job.css")
+//-   body
+//-     .back
+//-       button#btnback back
+//-     .container(ID=user._id)
+//-       form(action="window.history.back()")
+//-         h2 Apply for Job
+//-         .inputs
+//-           div 
+//-             label(for="name") Name
+//-           input(type="text" name="candidates_name" id="name" value=`${user.name}` readonly required)
+//-           div
+//-             label(for="email") Email Id
+//-           input(type="email" name="candidates_email" id="email" value=`${user.email}` readonly required)
+//-           div
+//-             label(for="education") Highest level of Education
+//-           input(type="text" name="candidates_education" id="education" required)
+//-           div
+//-             label(for="experience") Work Exprience (in yrs)
+//-           input(type="number" name="candidates_exprience" id="experience" required)
+//-         input#Submit(type="submit" value="Submit")
+
+//-     script(src="/js/wanted.js") 
+//-     script(src="/js/applyJob.js") 
+doctype html
+html(lang="en")
+  head
+    meta(charset="UTF-8")
+    meta(name="viewport" content="width=device-width, initial-scale=1.0")
+    title Document
+    link(rel="stylesheet" href="/CSS/Apply_Job.css")
+    link(rel="stylesheet" href="/CSS/popUp.css")
+    link(rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css")
+
+  body
+    include popUp
+    .back
+      button#btnback back
+    .container(ID=user._id)
+      form
+        h2 Apply for Job
+        .inputs
+          .input-group.one_line
+            input(type="text" name="" id="name" value=`${user.name}` readonly required)
+            //- label(for="") Name
+          .input-group.one_line
+            input(type="text" name="" id="email" value=`${user.email}` readonly required)
+            //- label(for="") Email
+          .input-group.one_line
+            input(type="text" name="" id="education" required)
+            label(for="") Education
+          .input-group.one_line
+            input(type="number" name="" id="experience" required)
+            label(for="") Experience
+        input#Submit(type="submit" value="Submit")
+
+  script(src="/js/wanted.js") 
+  script(src="/js/applyJob.js") 

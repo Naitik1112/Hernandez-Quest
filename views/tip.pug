@@ -1,0 +1,29 @@
+doctype html
+html(lang="en")
+  head
+    meta(charset="UTF-8")
+    meta(name="viewport" content="width=device-width, initial-scale=1.0")
+    title Document
+    link(rel="stylesheet" href="/CSS/Submit_Tip.css")
+    link(rel="stylesheet" href="/CSS/navbar.css")
+    link(rel="stylesheet" href="/CSS/utility.css")
+    link(rel="stylesheet" href="/CSS/popUp.css")
+    link(rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css")
+  
+  body
+    include navbar
+    include popUp 
+    
+    .News-Ann Submit Tip
+    
+    .container
+      form(action="")
+        .input-group
+          textarea.titlee(required)
+          label#text-box(for="") Title
+        .input-group
+          textarea.descriptionn(required)
+          label#text-box(for="") Description
+        input#Submit.btnsubmit(type="submit" value="Submit")
+
+    script(type="module" src="/js/tip.js") 

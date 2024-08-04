@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/CSS/criminals-info.css">
+    <link rel="stylesheet" href="/CSS/navbar.css">
+</head>
+<body>
+    
+    <nav>
+        <input type="checkbox" id="check">
+        
+        </ul>
+    </nav>
+    
+    <div class="back">
+        <button>back</button>
+    </div>
+    <div class="container">
+        <div class="box1">
+            <img src="/Img/Most_Wanted_Criminal_1.jpg" alt="">
+            <h3>Naitik Shah</h3>
+        </div>
+        <div class="box2">
+            <div class="content_1">
+                <h3>Genral Information</h3>
+                <div class="details"><p class="tag">Total Crimes</p><p>123</p></div>
+                <div class="details"><p class="tag">Height</p><p>5'10</p></div>
+                <div class="details"><p class="tag">Weight</p><p>60 kgs</p></div>
+                <div class="details"><p class="tag">Gender</p><p>Male</p></div>
+                <div class="details"><p class="tag">Pricepool</p><p>3000</p></div>
+            </div>
+            <div class="content_2">
+                <h3>Description</h3>
+                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Reprehenderit velit expedita perferendis magnam tempora nobis eum, esse corporis possimus id.</p>
+            </div>
+        </div>
+    </div>
+    <script>
+        window.onload = function() {
+            // Get the heights of the content sections
+            const content1Height = document.querySelector(".content_1").offsetHeight;
+            const content2Height = document.querySelector(".content_2").offsetHeight;
+            
+            // Set the image height
+            document.querySelector(".box1").style.height = (content1Height + content2Height+20) + "px";
+        }
+        document.addEventListener("DOMContentLoaded", function() {
+            // Get the width and height of the screen
+            const screenWidth = window.innerWidth;
+            const screenHeight = window.innerHeight;
+        
+            // Log the width and height to the console
+            console.log("Screen width: " + screenWidth + "px");
+            console.log("Screen height: " + screenHeight + "px");
+        });
+        
+    </script>
+</body>
+</html>

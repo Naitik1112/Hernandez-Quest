@@ -1,0 +1,92 @@
+[
+  {
+    "name": "John Doe",
+    "noOfCrimes": 15,
+    "photo": "https://example.com/photos/john_doe.jpg",
+    "pricepool": 50000,
+    "gender": "male",
+    "height": 180,
+    "description": "John Doe is a notorious criminal with a lengthy record of multiple counts of robbery. Known for his meticulous planning and execution, he has successfully eluded law enforcement on numerous occasions. His criminal activities span over a decade, making him one of the most wanted individuals. Despite numerous efforts to apprehend him, John continues to operate under the radar, posing a significant threat to public safety."
+  },
+  {
+    "name": "Jane Smith",
+    "noOfCrimes": 20,
+    "photo": "https://example.com/photos/jane_smith.jpg",
+    "pricepool": 75000,
+    "gender": "female",
+    "height": 165,
+    "description": "Jane Smith is infamous for her involvement in several high-profile heists. With a sharp intellect and exceptional skills in planning and executing complex robberies, she has amassed a significant fortune. Her criminal career is marked by daring escapes and the ability to stay one step ahead of the authorities. Jane is known for her ruthless efficiency and has earned a reputation as one of the most dangerous criminals at large.Involved in several high-profile heists."
+  },
+  {
+    "name": "Bill Jones",
+    "noOfCrimes": 8,
+    "photo": "https://example.com/photos/bill_jones.jpg",
+    "pricepool": 30000,
+    "gender": "male",
+    "height": 170,
+    "description": "Bill Jones specializes in burglary and theft, with a record that includes numerous break-ins and property crimes. He is known for his stealth and ability to bypass security systems, making him a master of his craft. Bill's criminal activities have caused significant financial losses to his victims. Despite his lower profile compared to other criminals, his actions have had a considerable impact on the communities he targets."
+  },
+  {
+    "name": "Anna Brown",
+    "noOfCrimes": 12,
+    "photo": "https://example.com/photos/anna_brown.jpg",
+    "pricepool": 45000,
+    "gender": "female",
+    "height": 160,
+    "description": "Anna Brown is a notorious fraudster and embezzler, responsible for orchestrating complex financial schemes. Her ability to manipulate financial systems and exploit loopholes has allowed her to steal vast sums of money. Anna's criminal activities have devastated many lives, leaving victims in financial ruin. Her intelligence and cunning make her a formidable adversary for law enforcement agencies trying to bring her to justice."
+  },
+  {
+    "name": "Tom Wilson",
+    "noOfCrimes": 25,
+    "photo": "https://example.com/photos/tom_wilson.jpg",
+    "pricepool": 100000,
+    "gender": "male",
+    "height": 185,
+    "description": "Tom Wilson is wanted for multiple armed robberies, with a criminal career marked by violence and intimidation. Known for his aggression and willingness to use force, Tom has carried out numerous high-stakes robberies, often leaving a trail of chaos in his wake. His brazen approach and lack of regard for human life make him extremely dangerous. Law enforcement considers him a top priority for capture."
+  },
+  {
+    "name": "Lisa Johnson",
+    "noOfCrimes": 10,
+    "photo": "https://example.com/photos/lisa_johnson.jpg",
+    "pricepool": 35000,
+    "gender": "female",
+    "height": 170,
+    "description": "Lisa Johnson is involved in identity theft, using her skills to assume multiple identities and commit various forms of fraud. Her actions have resulted in significant financial losses for her victims, who often face long and difficult battles to reclaim their identities. Lisa's ability to seamlessly blend in and evade detection has made her a particularly challenging target for law enforcement agencies across multiple jurisdictions."
+  },
+  {
+    "name": "Mark Davis",
+    "noOfCrimes": 18,
+    "photo": "https://example.com/photos/mark_davis.jpg",
+    "pricepool": 60000,
+    "gender": "male",
+    "height": 175,
+    "description": "Mark Davis is engaged in drug trafficking, operating as a major player in the illegal drug trade. His network spans several regions, and he is responsible for distributing large quantities of narcotics. Mark's operations are marked by violence and coercion, often involving other criminal elements to maintain his dominance. His activities contribute significantly to the proliferation of drugs and associated crime in affected areas."
+  },
+  {
+    "name": "Emma Taylor",
+    "noOfCrimes": 22,
+    "photo": "https://example.com/photos/emma_taylor.jpg",
+    "pricepool": 80000,
+    "gender": "female",
+    "height": 165,
+    "description": "Emma Taylor is wanted for a series of high-profile kidnappings, where she has targeted affluent individuals for ransom. Her criminal activities are characterized by meticulous planning and execution, ensuring minimal traceability. Emma's ability to stay hidden and her ruthless tactics have made her a significant threat. The fear and trauma inflicted on her victims and their families have made her one of the most feared criminals at large."
+  },
+  {
+    "name": "Gary Harris",
+    "noOfCrimes": 7,
+    "photo": "https://example.com/photos/gary_harris.jpg",
+    "pricepool": 25000,
+    "gender": "male",
+    "height": 178,
+    "description": "Gary Harris is known for car theft and vandalism, with a history of stealing vehicles and causing significant property damage. His actions have led to substantial financial losses for car owners and businesses. Gary's expertise in bypassing vehicle security systems and his willingness to destroy property for personal gain make him a persistent problem for law enforcement. Despite his relatively lower profile, his impact on the community is considerable."
+  },
+  {
+    "name": "Olivia Martin",
+    "noOfCrimes": 14,
+    "photo": "https://example.com/photos/olivia_martin.jpg",
+    "pricepool": 55000,
+    "gender": "female",
+    "height": 162,
+    "description": "Olivia Martin is involved in money laundering schemes, using her skills to clean illegally obtained money. Her operations are complex and involve multiple layers to evade detection. Olivia's actions facilitate other criminal activities by providing a means to legitimize illicit gains. Her intelligence and sophistication make her a particularly challenging target for financial crime units. Her schemes have had far-reaching implications, affecting businesses and economies."
+  }
+]

@@ -1,0 +1,234 @@
+body{
+    background: #000;
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    width: 100vw;
+    background-image: url('/Img/Gta_world_5.png');
+    /* background-color: #000; */
+    background-size: cover; /* Ensures the background image covers the whole page */
+    background-position: center; /* Centers the background image */
+    background-repeat: no-repeat; /* Prevents the background image from repeating */
+    font-family: sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+@font-face{
+    font-family: police-fonts;
+    src:url(/Fonts/Furore.otf)
+}
+
+@font-face{
+    font-family: gta-fonts;
+    src:url(/Fonts/Gta-fonts.ttf)
+}
+
+.container{
+    margin-top: 20px;
+    width: min(450px,90%);
+    /* height: 65%; */
+    /* height: max(400px,65%); */
+    height: 400px;
+    border-radius: 14px;
+    background: #30303027;
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    display: flex;
+    justify-content: center ;
+    border: 1px solid rgba(255, 255, 255, 0.588);
+}
+
+h1{
+    color: white;
+    text-align: center;
+    margin: 10px;
+}
+
+form{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    padding: 10px 10px;
+}
+
+label{
+    margin-top: 2%;
+    color: rgb(0, 0, 0);
+    margin-bottom: 1%;
+    font-size: 110%;
+}
+
+input{
+    /* background-color: rgb(219, 219, 219); */
+    background: transparent;
+    border-radius: 4px;
+    width: 100%;
+    /* background-color: blue; */
+    font-family: sans-serif;
+    cursor: default
+}
+
+.input-group{
+    display: flex;
+    justify-content: center;
+    position: relative;
+    margin-top: 50px;
+    /* margin-bottom: 20px; */
+    width: 75%;
+}
+
+.input-group label{
+    position: absolute;
+    top: 60%;
+    left: 10px;
+    transform: translateY(-50%);
+    font-size: 18px;
+    /* background-color: red; */
+    color: rgb(255, 255, 255);
+    padding: 0 5px;
+    pointer-events: none;
+    transition: 0.4s;
+}
+
+.input-group input{
+    height: 180%;
+    font-size: 17px;
+    color: rgb(255, 255, 255);
+    padding: 1px 10px;
+    border: 1.2px solid rgba(255, 255, 255, 0.741);
+    outline: none;
+    border-radius: 4px;
+}
+
+#password{
+    padding-right: 40px;
+}
+
+.input-group input:focus~label,
+.input-group input:valid~label{
+    top: -45%;
+    font-size: 14px;
+    background: #ffffff;
+    border-radius: 2px;
+    color: rgb(23, 23, 23);
+}
+
+#Submit{
+    width: auto;
+    padding: 1% 1.5%;
+    border-radius: 4px;
+    border: 2px solid white;
+    background: transparent;
+    color: white;
+    margin-top: 40px;
+    font-size: 105%;
+}
+
+.sign_in{
+    color: white;
+    font-size: 90%;
+    margin-top: 20px;
+    width: 75%;
+    text-align: right;
+    cursor: pointer;
+}
+
+#Submit{
+    width: 75%;
+    border-radius: 4px;
+    background-color: white;
+    color: black;
+    cursor: pointer;
+}
+
+p{
+    text-align: center;
+    font-size: 90%;
+    margin-top: 15px;
+    width: 75%;
+}
+
+button {
+    position: absolute;
+    right: 0;
+    top: 30%;
+    bottom: 0;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 0 10px;
+    font-size: 16px;
+}
+
+#togglePassword {
+    position: absolute;
+    right: 3px;
+    top: 50%;
+    transform: translateY(-50%);
+    background: none;
+    border: none;
+    cursor: pointer;
+    color: white; /* Make the icon white */
+    font-size: 18px;
+}
+
+#togglePassword i {
+    pointer-events: none;
+}
+
+.con{
+    margin-top: 120px;  
+    display: inline-block;
+}
+
+.text{
+    font-size: 4em;
+    letter-spacing: 5px;
+    font-family: gta-fonts;
+    border-radius: 5px solid;
+    color: rgb(243, 184, 57);
+    text-shadow:
+                -1px -1px 0 #000000,  
+                 1px -1px 0 #000000,
+                -5px  5px 0 #000000,
+                 1px  1px 0 #000000;
+    width: 100%;
+    white-space: nowrap;
+    overflow: hidden;
+    animation: 
+        typing 2s steps(18),
+        cursor 0.4s step-end infinite alternate;
+}
+
+@keyframes cursor{
+    50% {border-color: transparent;}
+}
+
+@keyframes typing {
+    from  {width: 0}
+}
+
+@media (max-width: 1000px){
+    .text{
+        font-size: 3em;
+        text-shadow:
+                    -1px -1px 0 #000000,  
+                     1px -1px 0 #000000,
+                    -5px  5px 0 #000000,
+                     1px  1px 0 #000000;
+    }
+}
+
+@media (max-width: 590px){
+    .text{
+        font-size: 2.5em;
+        text-shadow:
+                    -1px -1px 0 #000000,  
+                     1px -1px 0 #000000,
+                    -3px  3px 0 #000000,
+                     1px  1px 0 #000000;
+    }
+}

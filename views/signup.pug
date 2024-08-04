@@ -1,0 +1,77 @@
+//- doctype html
+//- html(lang="en")
+//-   head
+//-     meta(charset="UTF-8")
+//-     meta(name="viewport" content="width=device-width, initial-scale=1.0")
+//-     title=title 
+//-     //- link(rel="stylesheet" href="/css/register.css")
+//-   body
+//-     section
+//-       .login-box
+//-         form(action="")
+//-           h2 Register
+//-           .input-box
+//-             span.icon
+//-               ion-icon(name="mail")
+//-             input(type="text" required)#name
+//-             label Name
+//-           .input-box
+//-             span.icon
+//-               ion-icon(name="mail")
+//-             input(type="email" required)#email
+//-             label E-Mail Address
+//-           .input-box
+//-             span.icon
+//-               ion-icon(name="lock-closed")
+//-             input(type="password" required)#password
+//-             label Password
+//-           .input-box
+//-             span.icon
+//-               ion-icon(name="lock-closed")
+//-             input(type="password" required)#cf
+//-             label Confirm Password
+//-           button(type="submit").btnsubmit Register
+          
+//-     script(type="module" src="/js/signup.js") 
+
+doctype html
+html(lang="en")
+  head
+    meta(charset="UTF-8")
+    meta(name="viewport" content="width=device-width, initial-scale=1.0")
+    title Document
+    link(rel="stylesheet" href="/CSS/navbar.css")
+    link(rel="stylesheet" href="/CSS/sign_up.css")
+    link(rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css")
+    link(rel="stylesheet" href="/CSS/popUp.css")
+    link(rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css")
+
+  body
+    include popUp
+    .container
+      form
+        h1 Sign Up
+        .input-group
+          input(type="text" name="" id="name" required)
+          label(for="") Name
+        .input-group
+          input(type="email" name="" id="email" required)
+          label(for="") Email
+        .input-group
+          input(type="password" name="" id="password" class="password" required)
+          button(type="button" id="togglePassword1")
+            i
+              img(src="/Icons/eye.png" alt="")
+          label(for="") Password
+        .input-group
+          input(type="password" name="" id="cf" class="password" required)
+          button(type="button" id="togglePassword2")
+            i
+              img(src="/Icons/eye.png" alt="")
+          label(for="") Confirm Password
+        a.sign_in Forget Password ?
+        input.btnsubmit#Submit(type="submit" value="SIGN UP")
+        p Already have your account ?
+          a.sign_in(href="/login") Sign In
+
+    script(src="/js/signup.js") 
