@@ -3,10 +3,62 @@ const catchAsync = require('./../utils/catchAsync');
 const AppError = require('./../utils/appError');
 const factory = require('./handlerFactory');
 const Application = require('./../models/applicationsModel');
-const { application } = require('express');
 const Applications = require('./../models/applicationsModel');
+const sharp = require('sharp');
+const multer = require('multer');
 
-exports.createNewJob = factory.createOne(Career);
+const multerStorage = multer.memoryStorage();
+
+const multerfilter = (req, file, cb) => {
+  if (file.mimetype.startsWith('image')) {
+    cb(null, true);
+  } else {
+    cb(new AppError('Please Upload a image', 400), false);
+  }
+};
+
+const upload = multer({
+  storage: multerStorage,
+  fileFilter: multerfilter,
+});
+
+exports.uploadUserPhoto = upload.single('photo');
+
+exports.resizeUserPhoto = catchAsync(async (req, res, next) => {
+  if (!req.file) {
+    console.log('no file found');
+    return next();
+  }
+
+  req.file.filename = `jobs-${req.user.id}-${Date.now()}.jpeg`;
+
+  await sharp(req.file.buffer)
+    // .resize(500, 500)
+    .toFormat('jpeg')
+    .jpeg({ quality: 90 })
+    .toFile(`public/images/jobs/${req.file.filename}`);
+
+  next();
+});
+
+exports.createNewJob = catchAsync(async (req, res, next) => {
+  if (req.file) {
+    req.body.photo = req.file.filename;
+  }
+
+  const createNewJob = await Career.create(req.body);
+
+  if (!createNewJob) {
+    return new AppError('Please fill correct information', 404);
+  }
+
+  res.status(202).json({
+    status: 'success',
+    data: {
+      createNewJob,
+    },
+  });
+});
 
 exports.getalljob = factory.getAll(Career);
 

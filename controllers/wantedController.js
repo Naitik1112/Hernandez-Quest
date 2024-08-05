@@ -103,3 +103,5 @@ exports.deleteOne = catchAsync(async (req, res, next) => {
 exports.getpublishform = catchAsync(async (req, res, next) => {
   res.status(200).render('publish_criminal');
 });
+
+exports.updatecriminal = factory.updateOne(Criminal);

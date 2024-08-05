@@ -108,7 +108,7 @@ html(lang="en")
     .carrers_info
       .carrer_nav
         .carrer_img
-          img(src="/Img/car.jpg" alt="")
+          img(src=`/images/jobs/${job.photo}` alt="")
         .carrer_links
           a(href="#job-description") Job Description
           a(href="#salary-benefits") Salary and Benefits
@@ -125,38 +125,38 @@ html(lang="en")
         p Lorem ipsum dolor sit amet.
 
         h2#salary-benefits Salary and Benefits
-        p= `Salary: ${job.salary.base}`
+        p= `Salary: ${job.salary}`
         h3 Benifits
             p
-            each x in job.salary.benefits 
+            each x in job.benefits 
                 li= x 
 
         h2#requirements Requirements
         button.accordion Education
         .panel
           p 
-            li= job.requirements.education
+            li= job.education
 
         button.accordion Experience
         .panel
           p 
-            li= job.requirements.experience
+            li= job.experience
 
         button.accordion Skills Required
         .panel
           p
-          each x in job.requirements.skills 
+          each x in job.skills 
             li= x
 
         button.accordion Other Information
         .panel
           p 
-            each x in job.requirements.otherreq
+            each x in job.otherreq
                 li= x
 
         h2#application-procedure Application Procedure
         p
-        each x in job.application_process.steps
+        each x in job.application_process
             li= x
         a#Apply(href=`${job.slug}/applyform`) Apply
         .space

@@ -50,6 +50,8 @@ exports.getOneNews = catchAsync(async (req, res, next) => {
   });
 });
 
+exports.editnews = factory.updateOne(News);
+
 exports.createone = factory.createOne(News);
 
 exports.likeNews = factory.likeNews;
