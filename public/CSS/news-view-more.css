@@ -33,6 +33,30 @@ body{
   margin-top: 1%;
 }
 
+.back1{
+  display: flex;
+  align-items: center;
+  justify-content: start;
+  width: 85%;
+  height: 50px;
+  margin-top: 1%;
+}
+
+.back1 a{
+  /* width: 80px; */
+  border: 3px solid rgb(222, 222, 222);
+  background: rgb(0, 0, 0);
+  border-radius: 4px;
+  padding: 0.6% 1.5%;
+  font-size: 100%;
+  letter-spacing: 0.5px;
+  color: rgb(222, 222, 222); 
+  cursor: pointer;
+  /* font-weight: bold; */
+  text-decoration: none;
+  font-family: police-fonts;
+}
+
 .back a{
   /* width: 80px; */
   border: 3px solid rgb(222, 222, 222);
