@@ -19,7 +19,7 @@ router.get('/me/getallappliedjobs', careerController.getallapplications);
 router.get('/me/getappliedjobs', careerController.getapplicationbyuser);
 router.patch('/acceptrequest/:id', careerController.accept);
 router.patch('/rejectrequest/:id', careerController.reject);
-// router.post('/apply', careerController.createApplication);
+router.patch('/:id/updatecareer', careerController.update);
 
 router.post('/submit', careerController.createApplication);
 

@@ -18,4 +18,6 @@ router.post(
   wantedController.deleteOne
 );
 
+router.patch('/updatecriminal/:id', wantedController.updatecriminal);
+
 module.exports = router;

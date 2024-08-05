@@ -13,5 +13,6 @@ router.get('/:id', newsController.getOneNews);
 router.put('/:id/like', newsController.likeNews);
 
 router.get('/getallnews/publishnews', viewController.getpublishnews);
+router.patch('/:id/editnews', newsController.editnews);
 
 module.exports = router;
