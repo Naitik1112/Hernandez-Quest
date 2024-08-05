@@ -89,5 +89,5 @@ careerSchema.pre('save', function (next) {
 });
 
 const Career = mongoose.model('Career', careerSchema);
-
+// this is module for career
 module.exports = Career;
