@@ -7,6 +7,7 @@ const ratelimit = require('express-rate-limit');
 const helmet = require('helmet');
 const mongosanitise = require('express-mongo-sanitize');
 const xss = require('xss-clean');
+const cors = require('cors');
 const hpp = require('hpp');
 const cookieParser = require('cookie-parser');
 
@@ -19,6 +20,7 @@ const careerRouter = require('./routes/careerRoutes');
 const publishRouter = require('./routes/publishRoutes');
 
 const app = express();
+app.use(cors());
 
 app.set('view engine', 'pug');
 app.set('views', path.join(__dirname, 'views'));
