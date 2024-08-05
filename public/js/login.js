@@ -38,12 +38,11 @@ const login = async (email, password) => {
         email,
         password,
       }),
-    }).catch((error) => {
-      title.innerHTML = `Error!`;
-      description.innerHTML = error;
     });
 
     const data = await res.json();
+
+
 
     if (res.ok && data.status === 'success') {
       description.innerHTML = `Logged In Successfully.`;
@@ -51,13 +50,13 @@ const login = async (email, password) => {
         location.assign('/');
       }, 500);
       flag = true;
-    } else {
+    } else {  
       title.innerHTML = `Error!`;
       description.innerHTML = `${data.message}`;
       flag = false;
     }
   } catch (err) {
-    // showAlert('error', err.response.data.message);
+    console.log('error', err.response.data.message);
     title.innerHTML = `Error`;
     description.innerHTML = `Something went wrong!! Try again Later.`;
     flag = false;
