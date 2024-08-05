@@ -29,7 +29,7 @@ togglePassword.addEventListener('click', function (e) {
 const login = async (email, password) => {
   change();
   try {
-    const res = await fetch('http://127.0.0.1:3100/api/users/login', {
+    const res = await fetch('http://localhost:3100/api/users/login', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
