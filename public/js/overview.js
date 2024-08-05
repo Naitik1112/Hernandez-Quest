@@ -116,3 +116,59 @@ window.addEventListener('load', adjustSliderWidth);
 
 // Adjust the width when the window is resized
 window.addEventListener('resize', adjustSliderWidth);
+
+
+
+const swiper_2 = new Swiper('.slider-wrapper_3', {
+
+  loop: true,
+  grabCursor:true,
+  spaceBetween:30,
+
+  // If we need pagination
+  pagination: {
+    el: '.swiper-pagination',
+    clickable:true,
+    dynamicBullets:true
+  },
+
+  // Navigation arrows
+  navigation: {
+    nextEl: '.swiper-button-next',
+    prevEl: '.swiper-button-prev',
+  },
+
+  breakpoints: {
+      0: {
+          slidesPerView:1
+      },
+      568: {
+          slidesPerView:2
+      },
+      924: {
+          slidesPerView:3
+      },
+      1024: {
+          slidesPerView:4
+      },
+      1224: {
+          slidesPerView:4
+      }
+  }
+
+
+});  
+
+function adjustSliderWidth2() {
+  const slider = document.querySelector('.slider-wrapper_3');
+  if (slider) {
+      const newWidth = window.innerWidth - 200;
+      slider.style.maxWidth = `${newWidth}px`;
+  }
+}
+
+// Adjust the width on page load
+window.addEventListener('load', adjustSliderWidth2);
+
+// Adjust the width when the window is resized
+window.addEventListener('resize', adjustSliderWidth2);  
