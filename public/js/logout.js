@@ -1,6 +1,6 @@
 const logout = async () => {
   try {
-    const res = await fetch('http://127.0.0.1:3100/api/users/logout', {
+    const res = await fetch('/api/users/logout', {
       method: 'GET',
     });
     const data = await res.json();

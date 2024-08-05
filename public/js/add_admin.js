@@ -38,7 +38,7 @@ addAdminbtn.addEventListener('click', async (e) => {
   const passwordConfirm = document.getElementById('confirmPassword').value;
 
   try {
-    const res = await fetch('http://127.0.0.1:3100/api/users/createAdmin', {
+    const res = await fetch('/api/users/createAdmin', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',

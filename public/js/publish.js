@@ -32,7 +32,7 @@ if (user === 'Admin') {
   const createnewcriminal = async (form) => {
     try {
       const res = await fetch(
-        'http://127.0.0.1:3100/api/publish/createnewwanted',
+        '/api/publish/createnewwanted',
         {
           method: 'POST',
           body: form,

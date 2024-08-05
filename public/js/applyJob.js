@@ -40,7 +40,7 @@ const applyforjob = async (
 ) => {
   change();
   try {
-    const res = await fetch('http://127.0.0.1:3100/api/career/submit', {
+    const res = await fetch('/api/career/submit', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',

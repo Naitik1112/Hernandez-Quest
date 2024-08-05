@@ -30,7 +30,7 @@ document
 const submit_tip = async (title, description) => {
   change();
   try {
-    const res = await fetch('http://127.0.0.1:3100/api/publish/submit-tip', {
+    const res = await fetch('/api/publish/submit-tip', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',

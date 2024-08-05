@@ -5,7 +5,7 @@ if (USer === 'Admin') {
     const tbody = document.getElementById(tableId);
     tbody.innerHTML = ''; // Clear any existing rows
 
-    await fetch('http://127.0.0.1:3100/api/career/me/getallappliedjobs')
+    await fetch('/api/career/me/getallappliedjobs')
       .then((response) => response.json())
       .then((data) => {
         for (let i = 0; i < data.data.length; i++) {
@@ -31,7 +31,7 @@ if (USer === 'Admin') {
     const tbody = document.getElementById(tableId);
     tbody.innerHTML = ''; // Clear any existing rows
 
-    await fetch('http://127.0.0.1:3100/api/users/getalluser')
+    await fetch('/api/users/getalluser')
       .then((response) => response.json())
       .then((data) => {
         for (let row in data.data.doc) {
@@ -58,7 +58,7 @@ if (USer === 'Admin') {
     const tbody = document.getElementById(tableId);
     tbody.innerHTML = '';
 
-    await fetch('http://127.0.0.1:3100/api/users/getalluser')
+    await fetch('/api/users/getalluser')
       .then((response) => response.json())
       .then((data) => {
         for (let row in data.data.doc) {
@@ -85,7 +85,7 @@ if (USer === 'Admin') {
     const tbody = document.getElementById(tableId);
     tbody.innerHTML = '';
 
-    await fetch('http://127.0.0.1:3100/api/tip/getalltip')
+    await fetch('/api/tip/getalltip')
       .then((response) => response.json())
       .then((data) => {
         for (let row in data.data.doc) {
@@ -115,7 +115,7 @@ if (USer === 'Admin') {
   async function populateTable5(tableId) {
     const tbody = document.getElementById(tableId);
     tbody.innerHTML = '';
-    await fetch('http://127.0.0.1:3100/api/career/me/getappliedjobs')
+    await fetch('/api/career/me/getappliedjobs')
       .then((response) => response.json())
       .then((data) => {
         console.log(data.data.applications);

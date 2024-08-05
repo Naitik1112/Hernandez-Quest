@@ -28,7 +28,7 @@ document.getElementById('accept').addEventListener('click', async (e) => {
   change();
   try {
     const res = await fetch(
-      `http://127.0.0.1:3100/api/career/acceptrequest/${tempID}`,
+      `/api/career/acceptrequest/${tempID}`,
       {
         method: 'PATCH',
         headers: {
@@ -70,7 +70,7 @@ document.getElementById('reject').addEventListener('click', async (e) => {
   change();
   try {
     const res = await fetch(
-      `http://127.0.0.1:3100/api/career/rejectrequest/${tempID}`,
+      `/api/career/rejectrequest/${tempID}`,
       {
         method: 'PATCH',
         headers: {

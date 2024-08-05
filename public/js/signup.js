@@ -30,7 +30,7 @@ document
 const signup = async (name, email, password) => {
   change();
   try {
-    const res = await fetch('http://127.0.0.1:3100/api/users/signup', {
+    const res = await fetch('/api/users/signup', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',

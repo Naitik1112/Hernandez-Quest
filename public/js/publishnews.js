@@ -30,7 +30,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
 const createnewNews = async (form) => {
   try {
-    const res = await fetch('http://127.0.0.1:3100/api/publish/createnewnews', {
+    const res = await fetch('/api/publish/createnewnews', {
       method: 'POST',
       body: form,
     });
