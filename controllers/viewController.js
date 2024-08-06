@@ -148,6 +148,7 @@ exports.getdashinfo = catchAsync(async (req, res, next) => {
   const recentnews = await News.aggregate([
     {
       $project: {
+        photo: 1,
         date: 1,
         truncatedHeadline: 1,
         time: 1,
@@ -182,12 +183,15 @@ exports.getdashinfo = catchAsync(async (req, res, next) => {
     },
   ]);
 
+  const highestPaidJobs = await Career.find().sort({ salary: -1 }).limit(10);
+
   res.status(200).render('overview', {
     title: 'LSPD',
     top2criminals,
     top3newss,
     recentnews,
     topcriminals,
+    highestPaidJobs,
   });
 
   // res.status(200).json({

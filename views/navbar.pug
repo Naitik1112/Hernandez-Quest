@@ -1,42 +1,3 @@
-//- header.navbar
-//-       if user 
-//-         if user.role === 'admin'
-//-           nav 
-//-             .nav1
-//-               a
-//-               a LOS ANGELES POLICE DEPARTMENT
-//-             .nav2
-//-               a(href="/") Home
-//-               a(href="/") Welcome Admin
-//-               a(href="/api/wanted/wantedlist") Criminals
-//-               a(href="/api/news/getallnews") News
-//-               a(href="/api/tip/getalltip") View Tip
-//-               a(href="/api/users/me") profile 
-
-//-         else
-//-           nav
-//-             .nav1
-//-               a
-//-               a LOS ANGELES POLICE DEPARTMENT
-//-             .nav2
-//-               a(href="/") Home
-//-               a(href="/api/wanted/wantedlist") Criminals
-//-               a(href="/api/news/getallnews") News
-//-               a(href="/api/tip/submit-tip") Submit Tip
-//-               a(href="/api/users/me") Profile 
-//-       else 
-//-         nav
-//-           .nav1
-//-             a
-//-             a LOS ANGELES POLICE DEPARTMENT
-//-           .nav2
-//-             a(href="/") Home
-//-             a(href="/api/wanted/wantedlist") Criminals
-//-             a(href="/api/news/getallnews") News
-//-             a(href="/api/tip/submit-tip") Submit Tip
-//-             a(href="/login") Log In
-//-             a(href="/api/users/signup") Sign In
-
 nav
   if user
     //- user is admin
@@ -56,8 +17,8 @@ nav
           a(href="/api/news/getallnews") News
         li
           a(href="/api/career/getalljobs") Carrers
-        //- li
-        //-   a(href="/api/tip/getalltip") View Tips
+        li
+          a(href="/api/tip/submit-tip") Submit Tip
         li#Profile_log
             a#Profile(href="/api/users/me")
               img(src=`/images/users/${user.photo}` alt="")

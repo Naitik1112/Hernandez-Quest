@@ -112,7 +112,7 @@ exports.getallcomments = catchAsync(async (req, res, next) => {
   try {
     const news = await News.findById(newsId).populate(
       'comments.user',
-      'name email'
+      'name email photo'
     );
 
     if (!news) {

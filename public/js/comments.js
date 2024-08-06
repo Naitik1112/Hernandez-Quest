@@ -24,7 +24,11 @@ new Vue({
         const data = await response.json();
         console.log(data.comments);
         this.comments = data.comments;
-        console.log(this.comments);
+        for (let i = 0; i < this.comments.length; i++) {
+          const x = this.comments[i].user.photo;
+          this.comments[i].user.photo = `/images/users/${x}`;
+        }
+        // console.log(x);
       } catch (error) {
         console.error('Error fetching comments:', error);
       }
@@ -35,7 +39,6 @@ new Vue({
           userId: user_id,
           text: this.newComment,
         };
-
         try {
           const response = await fetch(`/api/news/${idd}/comments`, {
             method: 'POST',
