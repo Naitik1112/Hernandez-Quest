@@ -97,11 +97,9 @@ function adjustSliderWidth1() {
   }
 }
 
-// Adjust the width on page load
-window.addEventListener('load', adjustSliderWidth1);
+// window.addEventListener('load', adjustSliderWidth1);
 
-// Adjust the width when the window is resized
-window.addEventListener('resize', adjustSliderWidth1);
+// window.addEventListener('resize', adjustSliderWidth1);
 
 function adjustSliderWidth() {
   const slider = document.querySelector('.slider-wrapper_1');
@@ -111,11 +109,9 @@ function adjustSliderWidth() {
   }
 }
 
-// Adjust the width on page load
-window.addEventListener('load', adjustSliderWidth);
+// window.addEventListener('load', adjustSliderWidth);
 
-// Adjust the width when the window is resized
-window.addEventListener('resize', adjustSliderWidth);
+// window.addEventListener('resize', adjustSliderWidth);
 
 
 
@@ -167,8 +163,6 @@ function adjustSliderWidth2() {
   }
 }
 
-// Adjust the width on page load
-window.addEventListener('load', adjustSliderWidth2);
+// window.addEventListener('load', adjustSliderWidth2);
 
-// Adjust the width when the window is resized
-window.addEventListener('resize', adjustSliderWidth2);  
+// window.addEventListener('resize', adjustSliderWidth2);  

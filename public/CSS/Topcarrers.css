@@ -17,9 +17,14 @@ body{
     background-color: black;
 }
 
+.container {
+    max-width: 100vw;
+    box-sizing: border-box; 
+}
+
 .slider-wrapper_3{
     overflow: hidden;
-    max-width: 1400px;
+    /* max-width: 1400px; */
     margin: 0 70px 55px;
 }
 
