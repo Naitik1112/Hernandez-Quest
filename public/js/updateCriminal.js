@@ -75,14 +75,14 @@ document.addEventListener('DOMContentLoaded', () => {
         console.log(data);
         if (data.status === 'success') {
           nameElem.textContent = updatedData.name;
-          totalCrimesElem.textContent = updatedData.totalCrimes;
+          totalCrimesElem.textContent = updatedData.noOfCrimes;
           heightElem.textContent = updatedData.height;
           genderElem.textContent = updatedData.gender;
           pricepoolElem.textContent = updatedData.pricepool;
           descriptionElem.textContent = updatedData.description;
           cancelEditing();
         } else {
-          alert('Failed to update. Please try again.');
+          console.log(data.message);
         }
       })
       .catch((error) => console.error('Error:', error));

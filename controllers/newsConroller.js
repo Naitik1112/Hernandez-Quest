@@ -1,4 +1,4 @@
-const News = require('./../models/newsModel');
+const { News, Comment } = require('./../models/newsModel');
 const catchAsync = require('./../utils/catchAsync');
 const appError = require('./../utils/appError');
 const AppError = require('./../utils/appError');
@@ -68,4 +68,61 @@ exports.incrementviews = catchAsync(async (req, res, next) => {
   await news.save();
 
   res.send({ success: true, views: news.views });
+});
+
+exports.postcomments = catchAsync(async (req, res, next) => {
+  const { newsId } = req.params;
+  const { userId, text } = req.body;
+
+  try {
+    const news = await News.findOne({ _id: newsId });
+    // console.log(news);
+    if (!news) {
+      return res.status(404).json({ message: 'News item not found' });
+    }
+
+    const newComment = new Comment({
+      user: userId,
+      text: text,
+    });
+
+    news.comments.push(newComment);
+    await news.save();
+
+    res
+      .status(201)
+      .json({ message: 'Comment added successfully', comment: newComment });
+  } catch (err) {
+    res
+      .status(500)
+      .json({ message: 'Error adding comment', error: err.message });
+  }
+  // try {
+  //   const newComment = new Comment(req.body);
+  //   const savedComment = await newComment.save();
+  //   res.json(savedComment);
+  // } catch (err) {
+  //   res.status(500).send(err);
+  // }
+});
+
+exports.getallcomments = catchAsync(async (req, res, next) => {
+  const { newsId } = req.params;
+
+  try {
+    const news = await News.findById(newsId).populate(
+      'comments.user',
+      'name email'
+    );
+
+    if (!news) {
+      return res.status(404).json({ message: 'News item not found' });
+    }
+
+    res.status(200).json({ comments: news.comments });
+  } catch (err) {
+    res
+      .status(500)
+      .json({ message: 'Error retrieving comments', error: err.message });
+  }
 });

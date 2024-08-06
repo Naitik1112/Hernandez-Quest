@@ -15,6 +15,36 @@ function formatTime(date) {
   return `${hours}:${minutes}`;
 }
 
+const commentSchema = new mongoose.Schema({
+  user: {
+    type: mongoose.Schema.Types.ObjectId,
+    ref: 'User',
+  },
+  text: {
+    type: String,
+    required: [true, 'A comment must have text'],
+  },
+  date: {
+    type: String,
+    default: () => formatDate(new Date()),
+  },
+  time: {
+    type: String,
+    default: () => formatTime(new Date()),
+  },
+});
+
+// Middleware to trim text and validate
+commentSchema.pre('save', function (next) {
+  this.text = this.text.trim();
+
+  if (this.text.length === 0) {
+    return next(new Error('Comment text cannot be empty'));
+  }
+
+  next();
+});
+
 const newsSchema = new mongoose.Schema({
   headline: {
     type: String,
@@ -56,6 +86,7 @@ const newsSchema = new mongoose.Schema({
   truncatedHeadline: {
     type: String,
   },
+  comments: [commentSchema],
 });
 
 // this middleware is for showing only first 20 words in dashboard and in news card back section
@@ -85,5 +116,6 @@ newsSchema.pre('save', function (next) {
 });
 
 const News = mongoose.model('News', newsSchema);
+const Comment = mongoose.model('Comment', commentSchema);
 
-module.exports = News;
+module.exports = { News, Comment };

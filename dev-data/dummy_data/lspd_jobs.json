@@ -1,263 +1,149 @@
 [
-    {
-        "title": "Police Officer",
-        "description": "Police Officers are responsible for patrolling assigned areas, responding to emergency calls, conducting investigations, and ensuring public safety. They play a crucial role in maintaining law and order within the community.",
-        "role": "Law Enforcement",
-        "department": "Patrol Division",
-        "requirements": {
-            "education": "High School Diploma or GED",
-            "experience": "No prior experience required, Police Academy training required",
-            "certifications": [
-                "Police Academy Graduate",
-                "CPR Certification"
-            ],
-            "skills": [
-                "Strong communication skills",
-                "Physical fitness",
-                "Problem-solving skills"
-            ],
-            "other": [
-                "Must be a U.S. citizen",
-                "Valid driver's license",
-                "Background check required"
-            ]
-        },
-        "salary": {
-            "base": 60000,
-            "benefits": [
-                "Health Insurance",
-                "Retirement Plan",
-                "Paid Time Off"
-            ]
-        },
-        "employment_type": "Full-time",
-        "application_process": {
-            "steps": [
-                "Submit online application",
-                "Complete written exam",
-                "Pass physical fitness test",
-                "Interview with hiring panel",
-                "Background check",
-                "Medical examination"
-            ]
-        },
-        "closing_date": "2024-08-20T00:00:00Z"
-    },
-    {
-        "title": "Detective",
-        "description": "Detectives investigate complex cases such as homicides, robberies, and other serious crimes. They gather evidence, interview witnesses, and work closely with other law enforcement agencies to solve cases and ensure justice.",
-        "role": "Investigations",
-        "department": "Detective Bureau",
-        "requirements": {
-            "education": "Associate's Degree in Criminal Justice or related field",
-            "experience": "Minimum 3 years as a Police Officer",
-            "certifications": [
-                "Detective Training Program"
-            ],
-            "skills": [
-                "Analytical thinking",
-                "Attention to detail",
-                "Interviewing skills"
-            ],
-            "other": [
-                "Must be a U.S. citizen",
-                "Valid driver's license",
-                "Background check required"
-            ]
-        },
-        "salary": {
-            "base": 75000,
-            "benefits": [
-                "Health Insurance",
-                "Retirement Plan",
-                "Paid Time Off"
-            ]
-        },
-        "employment_type": "Full-time",
-        "application_process": {
-            "steps": [
-                "Submit online application",
-                "Complete written exam",
-                "Pass physical fitness test",
-                "Interview with hiring panel",
-                "Background check",
-                "Medical examination"
-            ]
-        },
-        "closing_date": "2024-08-20T00:00:00Z"
-    },
-    {
-        "title": "Traffic Officer",
-        "description": "Traffic Officers enforce traffic laws, investigate traffic accidents, and manage traffic flow during incidents. They play a vital role in ensuring the safety of motorists and pedestrians on the roads.",
-        "role": "Traffic Enforcement",
-        "department": "Traffic Division",
-        "requirements": {
-            "education": "High School Diploma or GED",
-            "experience": "No prior experience required, Police Academy training required",
-            "certifications": [
-                "Police Academy Graduate",
-                "CPR Certification"
-            ],
-            "skills": [
-                "Attention to detail",
-                "Strong communication skills",
-                "Physical fitness"
-            ],
-            "other": [
-                "Must be a U.S. citizen",
-                "Valid driver's license",
-                "Background check required"
-            ]
-        },
-        "salary": {
-            "base": 58000,
-            "benefits": [
-                "Health Insurance",
-                "Retirement Plan",
-                "Paid Time Off"
-            ]
-        },
-        "employment_type": "Full-time",
-        "application_process": {
-            "steps": [
-                "Submit online application",
-                "Complete written exam",
-                "Pass physical fitness test",
-                "Interview with hiring panel",
-                "Background check",
-                "Medical examination"
-            ]
-        },
-        "closing_date": "2024-08-20T00:00:00Z"
-    },
-    {
-        "title": "Community Policing Officer",
-        "description": "Community Policing Officers build and maintain relationships between the police and the community. They focus on crime prevention, community engagement, and fostering trust and cooperation between law enforcement and the public.",
-        "role": "Community Engagement",
-        "department": "Community Policing",
-        "requirements": {
-            "education": "High School Diploma or GED",
-            "experience": "No prior experience required, Police Academy training required",
-            "certifications": [
-                "Police Academy Graduate",
-                "CPR Certification"
-            ],
-            "skills": [
-                "Strong communication skills",
-                "Problem-solving skills",
-                "Community engagement"
-            ],
-            "other": [
-                "Must be a U.S. citizen",
-                "Valid driver's license",
-                "Background check required"
-            ]
-        },
-        "salary": {
-            "base": 62000,
-            "benefits": [
-                "Health Insurance",
-                "Retirement Plan",
-                "Paid Time Off"
-            ]
-        },
-        "employment_type": "Full-time",
-        "application_process": {
-            "steps": [
-                "Submit online application",
-                "Complete written exam",
-                "Pass physical fitness test",
-                "Interview with hiring panel",
-                "Background check",
-                "Medical examination"
-            ]
-        },
-        "closing_date": "2024-08-20T00:00:00Z"
-    },
-    {
-        "title": "SWAT Team Member",
-        "description": "SWAT Team Members handle high-risk operations, including hostage rescues, counter-terrorism, and armed standoffs. They undergo specialized training to manage critical situations and protect public safety.",
-        "role": "Special Operations",
-        "department": "Special Operations",
-        "requirements": {
-            "education": "High School Diploma or GED",
-            "experience": "Minimum 2 years as a Police Officer",
-            "certifications": [
-                "SWAT Training Program",
-                "CPR Certification"
-            ],
-            "skills": [
-                "Physical fitness",
-                "Tactical skills",
-                "Decision-making under pressure"
-            ],
-            "other": [
-                "Must be a U.S. citizen",
-                "Valid driver's license",
-                "Background check required"
-            ]
-        },
-        "salary": {
-            "base": 80000,
-            "benefits": [
-                "Health Insurance",
-                "Retirement Plan",
-                "Paid Time Off"
-            ]
-        },
-        "employment_type": "Full-time",
-        "application_process": {
-            "steps": [
-                "Submit online application",
-                "Complete written exam",
-                "Pass physical fitness test",
-                "Interview with hiring panel",
-                "Background check",
-                "Medical examination"
-            ]
-        },
-        "closing_date": "2024-08-20T00:00:00Z"
-    },
-    {
-        "title": "Training Instructor",
-        "description": "Training Instructors provide education and training to new recruits and ongoing training for current officers. They ensure that all personnel are well-equipped with the knowledge and skills needed for effective law enforcement.",
-        "role": "Training",
-        "department": "Training Division",
-        "requirements": {
-            "education": "Bachelor's Degree in Criminal Justice or related field",
-            "experience": "Minimum 5 years as a Police Officer",
-            "certifications": [
-                "Training Certification"
-            ],
-            "skills": [
-                "Instructional skills",
-                "Communication skills",
-                "Knowledge of policing tactics"
-            ],
-            "other": [
-                "Must be a U.S. citizen",
-                "Valid driver's license",
-                "Background check required"
-            ]
-        },
-        "salary": {
-            "base": 70000,
-            "benefits": [
-                "Health Insurance",
-                "Retirement Plan",
-                "Paid Time Off"
-            ]
-        },
-        "employment_type": "Full-time",
-        "application_process": {
-            "steps": [
-                "Submit online application",
-                "Complete written exam",
-                "Interview with hiring panel",
-                "Background check",
-                "Medical examination"
-            ]
-        },
-        "closing_date": "2024-08-20T00:00:00Z"
-    }
+  {
+    "title": "Police Officer",
+    "description": "Maintain law and order, protect the public, and prevent crime.",
+    "department": "Patrol",
+    "education": "High School Diploma or GED",
+    "experience": "No experience needed",
+    "skills": ["Physical fitness", "Attention to detail", "Problem-solving"],
+    "otherreq": ["Valid driver's license"],
+    "salary": 55000,
+    "benefits": ["Health insurance", "Retirement plan"],
+    "employement_type": "Full Time",
+    "application_process": [
+      "Submit application",
+      "Pass physical test",
+      "Interview"
+    ],
+    "posted_date": "2024-08-05",
+    "truncatedDescription": "Maintain law and order, protect the public...",
+    "slug": "police-officer",
+    "photo": "police-officer.jpg"
+  },
+  {
+    "title": "Detective",
+    "description": "Investigate crimes, gather evidence, and solve cases.",
+    "department": "Detective Bureau",
+    "education": "Bachelor's degree in Criminal Justice",
+    "experience": "2 years in law enforcement",
+    "skills": ["Analytical thinking", "Communication", "Observation"],
+    "otherreq": ["Background check"],
+    "salary": 70000,
+    "benefits": ["Paid time off", "Dental insurance"],
+    "employement_type": "Full Time",
+    "application_process": [
+      "Submit application",
+      "Pass background check",
+      "Interview"
+    ],
+    "posted_date": "2024-08-05",
+    "truncatedDescription": "Investigate crimes, gather evidence, and solve cases...",
+    "slug": "detective",
+    "photo": "detective.jpg"
+  },
+  {
+    "title": "Forensic Scientist",
+    "description": "Analyze crime scene evidence to aid investigations.",
+    "department": "Forensics",
+    "education": "Bachelor's degree in Forensic Science",
+    "experience": "1 year in a laboratory setting",
+    "skills": [
+      "Analytical skills",
+      "Attention to detail",
+      "Scientific knowledge"
+    ],
+    "otherreq": ["Lab certification"],
+    "salary": 60000,
+    "benefits": ["Health insurance", "Retirement plan"],
+    "employement_type": "Full Time",
+    "application_process": [
+      "Submit application",
+      "Interview",
+      "Lab skills test"
+    ],
+    "posted_date": "2024-08-05",
+    "truncatedDescription": "Analyze crime scene evidence to aid investigations...",
+    "slug": "forensic-scientist",
+    "photo": "forensic-scientist.jpg"
+  },
+  {
+    "title": "Crime Analyst",
+    "description": "Analyze data to support crime reduction strategies.",
+    "department": "Crime Analysis Unit",
+    "education": "Bachelor's degree in Criminal Justice or related field",
+    "experience": "1 year in data analysis",
+    "skills": ["Data analysis", "Critical thinking", "Communication"],
+    "otherreq": [],
+    "salary": 50000,
+    "benefits": ["Health insurance", "Retirement plan"],
+    "employement_type": "Full Time",
+    "application_process": [
+      "Submit application",
+      "Interview",
+      "Data analysis test"
+    ],
+    "posted_date": "2024-08-05",
+    "truncatedDescription": "Analyze data to support crime reduction strategies...",
+    "slug": "crime-analyst",
+    "photo": "crime-analyst.jpg"
+  },
+  {
+    "title": "Community Liaison Officer",
+    "description": "Build and maintain relationships between the police and the community.",
+    "department": "Community Outreach",
+    "education": "Associate degree in Communications or related field",
+    "experience": "Experience in community service preferred",
+    "skills": ["Communication", "Interpersonal skills", "Problem-solving"],
+    "otherreq": ["Bilingual preferred"],
+    "salary": 45000,
+    "benefits": ["Health insurance", "Retirement plan"],
+    "employement_type": "Full Time",
+    "application_process": ["Submit application", "Interview"],
+    "posted_date": "2024-08-05",
+    "truncatedDescription": "Build and maintain relationships between the police and the community...",
+    "slug": "community-liaison-officer",
+    "photo": "community-liaison-officer.jpg"
+  },
+  {
+    "title": "IT Specialist",
+    "description": "Manage and maintain the police department's IT infrastructure.",
+    "department": "Information Technology",
+    "education": "Bachelor's degree in Information Technology",
+    "experience": "2 years in IT support",
+    "skills": ["Technical skills", "Problem-solving", "Attention to detail"],
+    "otherreq": ["Security clearance"],
+    "salary": 65000,
+    "benefits": ["Health insurance", "Retirement plan"],
+    "employement_type": "Full Time",
+    "application_process": [
+      "Submit application",
+      "Technical test",
+      "Interview"
+    ],
+    "posted_date": "2024-08-05",
+    "truncatedDescription": "Manage and maintain the police department's IT infrastructure...",
+    "slug": "it-specialist",
+    "photo": "it-specialist.jpg"
+  },
+  {
+    "title": "K-9 Handler",
+    "description": "Work with police dogs to support law enforcement activities.",
+    "department": "K-9 Unit",
+    "education": "High School Diploma or GED",
+    "experience": "1 year in law enforcement",
+    "skills": ["Animal handling", "Physical fitness", "Observation"],
+    "otherreq": ["K-9 training certification"],
+    "salary": 52000,
+    "benefits": ["Health insurance", "Retirement plan"],
+    "employement_type": "Full Time",
+    "application_process": [
+      "Submit application",
+      "Pass physical test",
+      "K-9 handling test"
+    ],
+    "posted_date": "2024-08-05",
+    "truncatedDescription": "Work with police dogs to support law enforcement...",
+    "slug": "k-9-handler",
+    "photo": "k-9-handler.jpg"
+  }
 ]

@@ -52,6 +52,7 @@ document.addEventListener('DOMContentLoaded', () => {
     })
       .then((response) => response.json())
       .then((data) => {
+        console.log(data);
         if (data.status === 'success') {
           headlineElem.textContent = updatedData.headline;
           //   dateElem.textContent = updatedData.date;

@@ -17,47 +17,37 @@ const careerSchema = new mongoose.Schema({
     type: String,
     required: [true, 'A job must have a description'],
   },
-  role: {
-    type: String,
-    required: [true, 'A job must have a role'],
-  },
   department: {
     type: String,
     required: [true, 'A job must have a department'],
   },
-  requirements: {
-    education: {
-      type: String,
-      required: [true, 'A job must have education requirement'],
-    },
-    experience: {
-      type: String,
-      default: 'No experience needed',
-    },
-    skills: {
-      type: [],
-      required: [true, 'A job must have some skill set'],
-    },
-    otherreq: {
-      type: [],
-    },
+  education: {
+    type: String,
+    required: [true, 'A job must have education requirement'],
+  },
+  experience: {
+    type: String,
+    default: 'No experience needed',
+  },
+  skills: {
+    type: [],
+    required: [true, 'A job must have some skill set'],
+  },
+  otherreq: {
+    type: [],
   },
   salary: {
-    base: {
-      type: Number,
-      required: [true, 'A job must have salary'],
-    },
-    benefits: {
-      type: [],
-    },
+    type: Number,
+    required: [true, 'A job must have salary'],
+  },
+  benefits: {
+    type: [],
   },
   employement_type: {
     type: String,
     default: 'Full Time',
   },
-  application_process: {
-    steps: [],
-  },
+  application_process: [],
   posted_date: {
     type: String,
     default: () => formatDate(new Date()),
@@ -66,6 +56,10 @@ const careerSchema = new mongoose.Schema({
     type: String,
   },
   slug: String,
+  photo: {
+    type: String,
+    required: [true, 'A job must have photo'],
+  },
 });
 
 careerSchema.index({ slug: 1 });
@@ -89,5 +83,5 @@ careerSchema.pre('save', function (next) {
 });
 
 const Career = mongoose.model('Career', careerSchema);
-// this is module for career
+
 module.exports = Career;

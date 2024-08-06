@@ -3,7 +3,7 @@ const User = require('./../models/userModel');
 const catchAsync = require('./../utils/catchAsync');
 const AppError = require('./../utils/appError');
 const Tip = require('./../models/tipModel');
-const News = require('./../models/newsModel');
+const { News, Comment } = require('./../models/newsModel');
 const Career = require('./../models/careerModel');
 const application = require('./../models/applicationsModel');
 
@@ -141,18 +141,57 @@ exports.getdashinfo = catchAsync(async (req, res, next) => {
     },
   ]);
 
+  const recentnews = await News.aggregate([
+    {
+      $project: {
+        date: 1,
+        truncatedHeadline: 1,
+        time: 1,
+        likes: 1,
+        views: 1,
+        // Convert string to date for sorting
+        publishedDate: {
+          $dateFromString: {
+            dateString: '$date',
+            format: '%d-%m-%Y', // Adjust format as per your date string format
+          },
+        },
+      },
+    },
+    { $sort: { publishedDate: -1, time: -1 } },
+    {
+      $project: {
+        // Remove the temporary field from the final output
+        publishedDate: 0,
+      },
+    },
+  ]);
+
+  const topcriminals = await Criminal.aggregate([
+    {
+      $sort: {
+        noOfCrimes: -1,
+      },
+    },
+    {
+      $limit: 9,
+    },
+  ]);
+
   res.status(200).render('overview', {
     title: 'LSPD',
     top2criminals,
     top3newss,
+    recentnews,
+    topcriminals,
   });
 
   // res.status(200).json({
   //   status: 'success',
   //   top2criminals,
   //   top3newss,
+  //   recentnews,
   // });
-  // when admin update anything it will also update
 });
 
 exports.getcareerinfo = catchAsync(async (req, res, next) => {
@@ -184,30 +223,71 @@ exports.newadmin = catchAsync(async (req, res, next) => {
 });
 
 exports.getalljobapplications = catchAsync(async (req, res, next) => {
+  // const doc = await application.find({
+  //   user_id: req.params.id,
+  //   status: 'In Progress',
+  // });
+
+  // const jobSlugs = doc.map((app) => app.job_slug);
+
+  // const results = await application.aggregate([
+  //   { $match: { job_slug: { $in: jobSlugs }, status: 'In Progress' } },
+  //   {
+  //     $lookup: {
+  //       from: Career.collection.name, // The name of the Career collection
+  //       localField: 'job_slug', // The field in the Application collection
+  //       foreignField: 'slug', // The field in the Career collection
+  //       as: 'careerDetails', // The name of the output array field
+  //     },
+  //   },
+  //   {
+  //     $unwind: '$careerDetails', // Unwind the array to get individual objects
+  //   },
+  //   {
+  //     $project: {
+  //       job_slug: 1, // Include the job_slug field
+  //       title: '$careerDetails.title', // Include the title field from the Career collection
+  //     },
+  //   },
+  // ]);
+
+  // const slugTitleMap = results.reduce((acc, item) => {
+  //   acc[item.job_slug] = item.title;
+  //   return acc;
+  // }, {});
+
+  // // Step 4: Attach titles to the original applications
+  // const app = doc.map((app) => ({
+  //   ...app.toObject(),
+  //   title: slugTitleMap[app.job_slug],
+  // }));
+
+  const userId = req.params.id;
+
+  // Step 1: Fetch application documents for the specified user
   const doc = await application.find({
-    user_id: req.params.id,
+    user_id: userId,
     status: 'In Progress',
   });
 
   const jobSlugs = doc.map((app) => app.job_slug);
 
+  // Step 2: Perform aggregation to join the Career collection and retrieve job titles
   const results = await application.aggregate([
     { $match: { job_slug: { $in: jobSlugs }, status: 'In Progress' } },
     {
       $lookup: {
-        from: Career.collection.name, // The name of the Career collection
-        localField: 'job_slug', // The field in the Application collection
-        foreignField: 'slug', // The field in the Career collection
-        as: 'careerDetails', // The name of the output array field
+        from: Career.collection.name,
+        localField: 'job_slug',
+        foreignField: 'slug',
+        as: 'careerDetails',
       },
     },
-    {
-      $unwind: '$careerDetails', // Unwind the array to get individual objects
-    },
+    { $unwind: '$careerDetails' },
     {
       $project: {
-        job_slug: 1, // Include the job_slug field
-        title: '$careerDetails.title', // Include the title field from the Career collection
+        job_slug: 1,
+        title: '$careerDetails.title',
       },
     },
   ]);
@@ -217,12 +297,23 @@ exports.getalljobapplications = catchAsync(async (req, res, next) => {
     return acc;
   }, {});
 
-  // Step 4: Attach titles to the original applications
+  // Step 3: Fetch user photo from the User collection
+  const user = await User.findOne({ _id: userId }, 'photo'); // Assuming 'photo' is the field name for the user's photo
+
+  if (!user) {
+    throw new Error('User not found');
+  }
+
+  const userPhoto = user.photo;
+
+  // Step 4: Attach titles and user photo to the original applications
   const app = doc.map((app) => ({
     ...app.toObject(),
     title: slugTitleMap[app.job_slug],
+    photo: userPhoto,
   }));
 
+  console.log(app);
   res.status(200).render('viewApplications', {
     doc,
     app,
@@ -250,6 +341,17 @@ exports.getacceptedpug = catchAsync(async (req, res, next) => {
       $unwind: '$job_info',
     },
     {
+      $lookup: {
+        from: User.collection.name,
+        localField: 'user_id',
+        foreignField: '_id',
+        as: 'user_info',
+      },
+    },
+    {
+      $unwind: '$user_info',
+    },
+    {
       $project: {
         name: 1,
         email: 1,
@@ -261,9 +363,11 @@ exports.getacceptedpug = catchAsync(async (req, res, next) => {
         status: 1,
         date: 1,
         job_name: '$job_info.title',
+        photo: '$user_info.photo',
       },
     },
   ]);
+
   res.status(200).render('getAccepted', {
     data: {
       app,
@@ -279,7 +383,7 @@ exports.getacceptedpug = catchAsync(async (req, res, next) => {
 exports.getrejectedpug = catchAsync(async (req, res, next) => {
   const app = await application.aggregate([
     {
-      $match: { status: 'Rejected' },
+      $match: { status: 'Accepted' },
     },
     {
       $lookup: {
@@ -293,6 +397,17 @@ exports.getrejectedpug = catchAsync(async (req, res, next) => {
       $unwind: '$job_info',
     },
     {
+      $lookup: {
+        from: User.collection.name,
+        localField: 'user_id',
+        foreignField: '_id',
+        as: 'user_info',
+      },
+    },
+    {
+      $unwind: '$user_info',
+    },
+    {
       $project: {
         name: 1,
         email: 1,
@@ -304,6 +419,7 @@ exports.getrejectedpug = catchAsync(async (req, res, next) => {
         status: 1,
         date: 1,
         job_name: '$job_info.title',
+        photo: '$user_info.photo',
       },
     },
   ]);

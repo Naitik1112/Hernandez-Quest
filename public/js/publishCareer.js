@@ -37,7 +37,7 @@ document.addEventListener('click', function () {
 
 const createnewJobs = async (form) => {
   try {
-    const res = await fetch('http://127.0.0.1:3100/api/publish/createnewjob', {
+    const res = await fetch('/api/publish/createnewjob', {
       method: 'POST',
       body: form,
     });
@@ -86,7 +86,6 @@ document.getElementById('Submit').addEventListener('click', (e) => {
   for (i = 0; i < ele.length; i++) {
     if (ele[i].checked) gender = ele[i].value;
   }
-
   form.append('title', title);
   form.append('description', description);
   form.append('department', department);

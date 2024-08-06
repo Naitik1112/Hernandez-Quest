@@ -27,15 +27,12 @@ const tempID = document.querySelector('.application').getAttribute('ID');
 document.getElementById('accept').addEventListener('click', async (e) => {
   change();
   try {
-    const res = await fetch(
-      `/api/career/acceptrequest/${tempID}`,
-      {
-        method: 'PATCH',
-        headers: {
-          'Content-Type': 'application/json',
-        },
-      }
-    );
+    const res = await fetch(`/api/career/acceptrequest/${tempID}`, {
+      method: 'PATCH',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+    });
     const data = await res.json();
 
     if (res.ok && data.status === 'success') {
@@ -69,15 +66,12 @@ document.getElementById('accept').addEventListener('click', async (e) => {
 document.getElementById('reject').addEventListener('click', async (e) => {
   change();
   try {
-    const res = await fetch(
-      `/api/career/rejectrequest/${tempID}`,
-      {
-        method: 'PATCH',
-        headers: {
-          'Content-Type': 'application/json',
-        },
-      }
-    );
+    const res = await fetch(`/api/career/rejectrequest/${tempID}`, {
+      method: 'PATCH',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+    });
     const data = await res.json();
 
     if (res.ok && data.status === 'success') {

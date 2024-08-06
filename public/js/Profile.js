@@ -58,7 +58,6 @@ document.getElementById('Edit_image').addEventListener('click', function () {
   for (var i = 0; i < uploads.length; i++) {
     uploads[i].style.display = 'flex';
   }
-  console.log(oldImageSrc);
 });
 
 document.getElementById('Cancel').addEventListener('click', function () {
@@ -68,7 +67,6 @@ document.getElementById('Cancel').addEventListener('click', function () {
   for (var i = 0; i < uploads.length; i++) {
     uploads[i].style.display = 'none';
   }
-  console.log(oldImageSrc);
 });
 
 document.getElementById('Confrim').addEventListener('click', function () {
@@ -242,7 +240,7 @@ document.getElementById('Confrim').addEventListener('click', async (e) => {
     e.preventDefault();
     const form = new FormData();
     form.append('photo', document.getElementById('fileInput').files[0]);
-    const res = await fetch('/api/users/updateMe', {
+    const res = await fetch('http://127.0.0.1:3100/api/users/updateMe', {
       method: 'PATCH',
       body: form,
     });
@@ -273,7 +271,7 @@ document.getElementById('Confrim_1').addEventListener('click', async (e) => {
     form.append('name', document.getElementById('namee').innerHTML);
     form.append('email', document.getElementById('emaill').innerHTML);
 
-    const res = await fetch('/api/users/updateMe', {
+    const res = await fetch('http://127.0.0.1:3100/api/users/updateMe', {
       method: 'PATCH',
       body: form,
     });

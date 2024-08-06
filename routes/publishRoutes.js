@@ -21,7 +21,12 @@ router.post(
   newsController.createone
 );
 
-router.post('/createnewjob', careerController.createNewJob);
+router.post(
+  '/createnewjob',
+  careerController.uploadUserPhoto,
+  careerController.resizeUserPhoto,
+  careerController.createNewJob
+);
 
 router.post(
   '/createnewwanted',

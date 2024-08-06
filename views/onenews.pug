@@ -28,20 +28,23 @@ html(lang="en")
     title View More
     link(rel="stylesheet" href="https://unpkg.com/swiper@8/swiper-bundle.min.css")
     link(rel="stylesheet" href="/CSS/news-view-more.css")
-    link(rel="stylesheet" href="/CSS/navbar.css")
+    link(rel="stylesheet" href="/CSS/comments.css")
 
   body
-    .center
-      .back1
-        a#btnback Back
+    if user.role === 'Admin'
+      .center(ID=news._id)
+        .back
+          a#btnback Back
+          button#edit-btn Edit
+          button#confirm-btn(style="display: none;") Confirm
+          button#cancel-btn(style="display: none;") Cancel
+    else 
+      .center(ID=news._id)
+        .back
+          a#btnback Back
 
-    .center
-      .back
-        a#btnback Back
-        a Edit
-
-    .title
-      h2= news.headline
+    .title(USERID=user._id)
+      h2#headline= news.headline
 
     .center
       .like_view_date
@@ -50,13 +53,45 @@ html(lang="en")
           div Views
           div Date
         .lower
-          div= news.likes.length
-          div= news.views
-          div= news.date
+          div#likes= news.likes.length
+          div#views= news.views
+          div#date= news.date
 
     .center
     .content 
-      div= news.description
+      div#description= news.description
+
+    section#Comments
+      h2#comment_title Comments
+      .rt-container
+        .col-rt-12
+          .Scriptcontent
+            section#app
+              .container
+                .row
+                  .col-6
+                    .comment-container#commentBox
+                      .comment-box(v-for="(comment, index) in comments" :key="index")
+                        .content1
+                          img(@click="showPopup" src="/Img/fotor-ai-20240801193131.jpg" alt="")
+                        .content2
+                          button.user-name
+                            p#Name {{ comment.user.name }}
+                            p#date {{comment.time}} | {{ comment.date}} 
+                          p.comment-text {{ comment.text }}            
+                .row
+                  .col-6
+                    textarea.input(type="text" placeholder="Write a comment" v-model="newComment" @keyup.enter="addComment")
+                    button.primaryContained.float-right#addcomment(type="submit" @click="addComment") Add Comment
+      div(v-show="isPopupVisible" class="popup center1")
+        .icon
+          img(src="/Img/fotor-ai-20240801193131.jpg" alt="")
+        .title Name - Naitik Shah
+        .description Email Id - naitik.s@ahduni.edu.in
+        .dismiss-btn
+          button#dismiss-popup-btn Dismiss
+
+
 
     .center
       h2.tag Most Liked News
@@ -129,8 +164,13 @@ html(lang="en")
               ion-icon(name="arrow-forward-outline")
             .swiper-pagination
 
-    script(type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js")
     script(nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js")
+    script(type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js")
     script(src="https://unpkg.com/swiper@8/swiper-bundle.min.js")
     script(src="/view-more.js")
     script(src="/js/wanted.js")
+    script(src="/js/updateNews.js")
+
+    script(src='https://cdnjs.cloudflare.com/ajax/libs/vue/2.5.17/vue.min.js')
+    script(src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js')
+    script(src="/js/comments.js")

@@ -170,3 +170,5 @@ exports.reject = catchAsync(async (req, res, next) => {
     doc,
   });
 });
+
+exports.update = factory.updateOne(Career);
