@@ -3,7 +3,7 @@ const User = require('./../models/userModel');
 const catchAsync = require('./../utils/catchAsync');
 const AppError = require('./../utils/appError');
 const Tip = require('./../models/tipModel');
-const News = require('./../models/newsModel');
+const { News, Comment } = require('./../models/newsModel');
 const Career = require('./../models/careerModel');
 const application = require('./../models/applicationsModel');
 

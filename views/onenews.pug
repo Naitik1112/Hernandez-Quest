@@ -43,7 +43,7 @@ html(lang="en")
         .back
           a#btnback Back
 
-    .title
+    .title(USERID=user._id)
       h2#headline= news.headline
 
     .center
@@ -61,8 +61,8 @@ html(lang="en")
     .content 
       div#description= news.description
 
-    section
-      h2#comment_title Add Comments
+    section#Comments
+      h2#comment_title Comments
       .rt-container
         .col-rt-12
           .Scriptcontent
@@ -71,24 +71,27 @@ html(lang="en")
                 .row
                   .col-6
                     .comment-container#commentBox
-                      div(v-for="(items, index) in item" :key="index" class="comment-box")
-                        button.user-name(@click="showPopup")
-                          p Naitik Shah
-                          p 12:00 | 3rd August 2024
-                        p.comment-text {{ items }}
+                      .comment-box(v-for="(comment, index) in comments" :key="index")
+                        .content1
+                          img(@click="showPopup" src="/Img/fotor-ai-20240801193131.jpg" alt="")
+                        .content2
+                          button.user-name
+                            p#Name {{ comment.user.name }}
+                            p#date {{comment.time}} | {{ comment.date}} 
+                          p.comment-text {{ comment.text }}            
                 .row
                   .col-6
-                    textarea.input(type="text" placeholder="Write a comment" v-model="newItem" @keyup.enter="addItem")
-                    button.primaryContained.float-right(v-on:click="addItem" type="submit") Add Comment
-    .popup.center(v-show="isPopupVisible")
-      .icon
-        img(src="/fotor-ai-20240801193131.jpg" alt="")
-      .title
-        | Name - Naitik Shah
-      .description
-        | Email Id - naitik.s@ahduni.edu.in
-      .dismiss-btn
-        button#dismiss-popup-btn Dismiss
+                    textarea.input(type="text" placeholder="Write a comment" v-model="newComment" @keyup.enter="addComment")
+                    button.primaryContained.float-right#addcomment(type="submit" @click="addComment") Add Comment
+      div(v-show="isPopupVisible" class="popup center1")
+        .icon
+          img(src="/Img/fotor-ai-20240801193131.jpg" alt="")
+        .title Name - Naitik Shah
+        .description Email Id - naitik.s@ahduni.edu.in
+        .dismiss-btn
+          button#dismiss-popup-btn Dismiss
+
+
 
     .center
       h2.tag Most Liked News
@@ -161,8 +164,8 @@ html(lang="en")
               ion-icon(name="arrow-forward-outline")
             .swiper-pagination
 
-    script(type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js")
     script(nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js")
+    script(type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js")
     script(src="https://unpkg.com/swiper@8/swiper-bundle.min.js")
     script(src="/view-more.js")
     script(src="/js/wanted.js")
@@ -170,4 +173,4 @@ html(lang="en")
 
     script(src='https://cdnjs.cloudflare.com/ajax/libs/vue/2.5.17/vue.min.js')
     script(src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js')
-    script(src="js/script.js")
+    script(src="/js/comments.js")

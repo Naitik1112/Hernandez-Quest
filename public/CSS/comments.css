@@ -1,0 +1,371 @@
+#Comments .rt-container {
+  margin: 0 auto;
+  padding-left: 12px;
+  padding-right: 12px;
+}
+#Comments .rt-row:before,
+.rt-row:after {
+  display: table;
+  line-height: 0;
+  content: '';
+}
+
+#Comments .rt-row:after {
+  clear: both;
+}
+[class^='col-rt-'] {
+  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -o-box-sizing: border-box;
+  -ms-box-sizing: border-box;
+  padding: 0 15px;
+  min-height: 1px;
+  position: relative;
+}
+
+@media (min-width: 768px) {
+  #Comments .rt-container {
+    width: 750px;
+  }
+  [class^='col-rt-'] {
+    float: left;
+    width: 49.9999999999%;
+  }
+  #Comments .col-rt-6,
+  .col-rt-12 {
+    width: 100%;
+  }
+}
+
+@media (min-width: 1200px) {
+  #Comments .rt-container {
+    width: 1170px;
+  }
+  #Comments .col-rt-1 {
+    width: 16.6%;
+  }
+  #Comments .col-rt-2 {
+    width: 30.33%;
+  }
+  #Comments .col-rt-3 {
+    width: 50%;
+  }
+  #Comments .col-rt-4 {
+    width: 67.664%;
+  }
+  #Comments .col-rt-5 {
+    width: 83.33%;
+  }
+}
+
+#center #comment_title {
+  width: 60%;
+  text-align: center;
+  margin: 5% 20%;
+  color: rgb(224, 174, 44);
+  margin-bottom: 10px;
+}
+
+#Comments .container {
+  max-width: 740px;
+  margin: 30px auto;
+  background: #1c1c1c;
+  border-radius: 8px;
+  padding: 20px;
+}
+
+#Comments .comment {
+  display: block;
+  transition: all 1s;
+}
+
+#Comments .commentClicked {
+  min-height: 200px;
+  border: 1px solid #eee;
+  border-radius: 5px;
+  padding: 5px 10px;
+}
+
+#Comments textarea {
+  width: 100%;
+  border: none;
+  color: white;
+  padding: 5px 10px;
+  height: 50%;
+  border-radius: 5px 5px 0px 0px;
+  /* border-bottom: 2px solid #016BA8; */
+  transition: all 0.5s;
+  margin-top: 15px;
+  margin-bottom: 10px;
+  background: #070707;
+}
+
+#Comments button.primaryContained {
+  background: transparent;
+  color: rgb(244, 174, 44);
+  padding: 10px 10px;
+  border: none;
+  margin-top: 0px;
+  cursor: pointer;
+  text-transform: uppercase;
+  letter-spacing: 4px;
+  transition: 0.4s all;
+  font-size: 10px;
+  border-radius: 5px;
+  border: 2px solid rgb(244, 174, 44);
+}
+
+#Comments button.primaryContained:hover {
+  box-shadow: 0px 2px 10px 0px rgba(244, 174, 44);
+}
+
+#Comments .comment-container {
+  display: block;
+  transition: all 1s;
+}
+
+#Comments .comment-box {
+  display: flex;
+  flex-direction: row;
+  align-items: start;
+  justify-content: space-between;
+  background-color: #1b1b1b;
+  border: 1px solid #626262;
+  border-radius: 5px;
+  padding: 10px;
+  margin-bottom: 10px;
+  max-width: 100%;
+  word-wrap: break-word;
+}
+
+#Comments #commentBox {
+  min-height: 300px;
+  max-height: 300px;
+  font-family: sans-serif;
+  overflow-y: auto;
+}
+#Comments #commentBox::-webkit-scrollbar {
+  width: 12px;
+}
+
+#Comments #commentBox::-webkit-scrollbar-track {
+  background: #5e5e5e;
+  border-radius: 10px;
+}
+
+#Comments #commentBox::-webkit-scrollbar-thumb {
+  background: #353535;
+  border-radius: 10px;
+}
+
+#Comments #commentBox::-webkit-scrollbar-thumb:hover {
+  background: #353535;
+}
+
+#Comments #commentBox::-webkit-scrollbar-corner {
+  background: #f1f1f1;
+}
+#Comments .user-name {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 0px;
+  width: 100%;
+  font-size: 0.7em;
+  color: rgb(244, 174, 44);
+  border: 0px solid black;
+  background-color: transparent;
+  margin-bottom: 0px;
+  padding-left: 0px;
+  margin: 0px;
+}
+
+#Comments #Name {
+  cursor: pointer;
+}
+
+#Comments .content1 {
+  /* background-color: #078907; */
+  width: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: start;
+}
+
+#Comments .content1 img {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+#Comments .content2 {
+  padding: 0 10px;
+  width: calc(100% - 30px);
+}
+
+#Comments .comment-text {
+  margin: 2px 0;
+  overflow-wrap: break-word;
+}
+
+#Comments textarea {
+  width: 100%;
+  border: none;
+  background: #1f1f1f;
+  color: white;
+  padding: 5px 10px;
+  height: 50px;
+  border-radius: 5px 5px 0px 0px;
+  margin-top: 15px;
+}
+
+#Comments button.primaryContained {
+  background: transparent;
+  color: rgb(244, 174, 44);
+  padding: 10px 10px;
+  border: none;
+  margin-top: 0px;
+  cursor: pointer;
+  text-transform: uppercase;
+  letter-spacing: 4px;
+  transition: 0.4s all;
+  font-size: 10px;
+  border-radius: 5px;
+  border: 2px solid rgb(244, 174, 44);
+}
+
+#Comments button.primaryContained:hover {
+  box-shadow: 0px 2px 10px 0px rgba(244, 174, 44);
+}
+
+.center1 {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.popup {
+  width: min(350px, 80%);
+  height: 280px;
+  padding: 30px 20px;
+  background: #171717;
+  border-radius: 10px;
+  box-sizing: border-box;
+  z-index: 2;
+  text-align: center;
+  opacity: 0;
+  top: -200%;
+  font-family: sans-serif;
+  box-shadow: 2px 2px 30px 10px rgb(224, 174, 44);
+  transform: translate(-50%, -50%) scale(0.5);
+  transition: opacity 300ms ease-in-out, top 1000ms ease-in-out,
+    transform 1000ms ease-in-out;
+}
+
+.no-scroll {
+  overflow: hidden;
+}
+
+.popup.active {
+  position: fixed;
+  opacity: 1;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(1);
+  transition: transform 300ms cubic-bezier(0.18, 0.89, 0.43, 1.19);
+}
+
+.popup .icon {
+  margin: 5px 0px;
+  width: 100px;
+  height: 100px;
+  border: 4px solid #fefefe;
+  text-align: center;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  line-height: 60px;
+}
+
+.popup .icon img {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  object-fit: contain;
+}
+
+.popup .icon i.fa {
+  font-size: 30px; /* Adjust the size here */
+  color: #078907; /* Adjust the color here */
+}
+
+.popup .title {
+  color: rgb(204, 204, 204);
+  margin: 5px 0px;
+  font-size: 20px;
+  font-weight: 600;
+}
+
+.popup .description {
+  color: #919191;
+  font-size: 15px;
+  padding: 5px;
+}
+
+.popup .dismiss-btn {
+  margin-top: 15px;
+}
+
+.popup .dismiss-btn button {
+  padding: 10px 20px;
+  background: #b1b1b1;
+  color: #000000;
+  border: 2px solid #b1b1b1;
+  font-size: 16px;
+  font-weight: 600;
+  outline: none;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: all 300ms ease-in-out;
+}
+
+.popup .dismiss-btn button:hover {
+  color: #d5d5d5;
+  background: transparent;
+}
+
+.popup > div {
+  position: relative;
+  top: 10px;
+  opacity: 0;
+}
+
+.popup.active > div {
+  top: 0px;
+  opacity: 1;
+}
+
+.popup.active .icon {
+  transition: all 300ms ease-in-out 250ms;
+}
+
+.popup.active .title {
+  transition: all 300ms ease-in-out 300ms;
+}
+
+.popup.active .description {
+  transition: all 300ms ease-in-out 350ms;
+}
+
+.popup.active .dismiss-btn {
+  transition: all 300ms ease-in-out 400ms;
+}
+
+.blur {
+  background-color: #00000083;
+  filter: blur(15px);
+  transition: filter 300ms ease-in-out;
+}
