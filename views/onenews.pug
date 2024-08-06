@@ -60,43 +60,11 @@ html(lang="en")
     .content 
       div#description= news.description
 
-<<<<<<< HEAD
-    //- section#Comments
-    //-   h2#comment_title Comments
-    //-   .rt-container
-    //-     .col-rt-12
-    //-       .Scriptcontent
-    //-         section#app
-    //-           .container
-    //-             .row
-    //-               .col-6
-    //-                 .comment-container#commentBox
-    //-                   .comment-box(v-for="(comment, index) in comments" :key="index")
-    //-                     .content1
-    //-                       img(@click="showPopup" src="/Img/fotor-ai-20240801193131.jpg" alt="")
-    //-                     .content2
-    //-                       button.user-name
-    //-                         p#Name {{ comment.user.name }}
-    //-                         p#date {{comment.time}} | {{ comment.date}} 
-    //-                       p.comment-text {{ comment.text }}            
-    //-             .row
-    //-               .col-6
-    //-                 textarea.input(type="text" placeholder="Write a comment" v-model="newComment" @keyup.enter="addComment")
-    //-                 button.primaryContained.float-right#addcomment(type="submit" @click="addComment") Add Comment
-    //-   div(v-show="isPopupVisible" class="popup center1")
-    //-     .icon
-    //-       img(src="/Img/fotor-ai-20240801193131.jpg" alt="")
-    //-     .title Name - {{ comment.user.name }}
-    //-     .description Email Id - {{ comment.user.eamil }}
-    //-     .dismiss-btn
-    //-       button#dismiss-popup-btn Dismiss
-=======
 
     #confrim_cancel(style="display: none;")
       button#confirm-btn Confirm
       button#cancel-btn Cancel
 
->>>>>>> 7ba3fa37ffc8122b4d258a53144fe817da7e7dfe
     section#Comments
       h2#comment_title Comments
       .rt-container

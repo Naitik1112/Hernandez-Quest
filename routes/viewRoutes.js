@@ -12,6 +12,7 @@ router.use(authController.isLoggedIn);
 router.get('/', viewsController.getdashinfo);
 router.get('/login', viewsController.getLoginForm);
 router.get('/signup', viewsController.createAccount);
+router.get('/loginerror', viewsController.loginerror);
 
 router.get('/api/wanted/getallwanted', viewsController.getAllCriminal);
 router.get('/wanted/:slug', viewsController.getCriminal);

@@ -114,15 +114,17 @@ html(lang="en")
           .content
             .topic CRIME RATES ARE INCREASING
             .des= top3newss[0].truncatedHeadline
-            .buttons
-              button SEE MORE
+            a(href=`/api/news/${top3newss[0]._id}`) 
+              .buttons
+                button SEE MORE
         .item
           img(src="/Img/car_1.jpg")
           .content
             .topic CRIME RATES ARE INCREASING
             .des= top3newss[1].truncatedHeadline
-            .buttons
-              button SEE MORE
+            a(href=`/api/news/${top3newss[1]._id}`) 
+              .buttons
+                button SEE MORE
       // list thumbnail
       .thumbnail
         .item

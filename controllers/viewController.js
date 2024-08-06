@@ -230,6 +230,10 @@ exports.newadmin = catchAsync(async (req, res, next) => {
   res.status(200).render('addAdmin');
 });
 
+exports.loginerror = catchAsync(async (req, res, next) => {
+  res.status(200).render('template');
+});
+
 exports.getalljobapplications = catchAsync(async (req, res, next) => {
   // const doc = await application.find({
   //   user_id: req.params.id,
