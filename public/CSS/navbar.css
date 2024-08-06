@@ -12,12 +12,12 @@
 nav {
   position: fixed;
   top: 0;
-  background: #101010ca;
+  background: #101010a0;
   height: 80px;
   width: 100%;
   z-index: 5;
-  backdrop-filter: blur(15px);
-  -webkit-backdrop-filter: blur(15px);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
   font-family: police-fonts;
   border-bottom: 1px solid rgb(147, 147, 147);
 }

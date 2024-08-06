@@ -9,7 +9,7 @@ body {
   .back {
     display: flex;
     align-items: center;
-    justify-content: start;
+    justify-content: space-between;
     width: 85%;
     height: 50px;
     margin: 0% 7.5%;
@@ -29,7 +29,43 @@ body {
     cursor: pointer;
     font-family: police-fonts;
   }
+
+  .confrim_cancel {
+    display: flex;
+    align-items: center;
+    height: 60px;
+    padding: 0% 1%;
+    gap: 5%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
   
+  .confrim_cancel  button{
+    height: auto;
+    border: 2px solid rgb(147, 147, 147);
+  
+    border-radius: 4px;
+    padding: 0.6% 1%;
+    font-size: 90%;
+    letter-spacing: 0.5px;
+    background: #000;
+    color: rgb(148, 148, 148);
+    cursor: pointer;
+    font-family: police-fonts;
+  }
+
+  #confirm-btn{
+    border-color: green;
+    color: green;
+  }
+  
+  #cancel-btn{
+    border-color: red;
+    color: red;
+  }
+
   .container {
     margin-top: 3%;
     width: 100%;
@@ -54,7 +90,7 @@ body {
     flex-direction: column;
     align-items: center;
     width: 22%;
-    height: 90%;
+    height: 100%;
     padding: 1% 1.5%;
     background: rgb(40, 40, 40);
   }
@@ -93,6 +129,7 @@ body {
   .content_1 {
     flex-direction: column;
     gap: 10px;
+    height: 60%;
   }
   
   .details {
@@ -112,11 +149,18 @@ body {
   .content_2 {
     flex-direction: column;
     padding: 1.5% 2%;
+    height: 40%;
   }
   
   .content_2 p {
     margin: 2% 0;
     text-align: left;
+  }
+
+  #description,#name,#total-crimes,#height,#gender,#pricepool{
+    overflow-y: auto;
+    /* background-color: rgb(74, 74, 74);
+    color: black; */
   }
   
   @media (max-width: 1110px) {
@@ -177,5 +221,21 @@ body {
   
     .content_2 {
       padding: 1.5% 2%;
+    }
+  }
+
+  @media (max-width: 500px) {
+    .container {
+      flex-direction: column;
+      align-items: center;
+      height: 600px;
+    }
+    .box1{
+      width: 80%;
+      height: 200px;
+    }
+    .box2{
+      width: 80%;
+      height: 400px;
     }
   }

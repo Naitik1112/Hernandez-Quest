@@ -50,8 +50,9 @@ html(lang="en")
     link(rel="stylesheet" href="/CSS/criminals-info.css")
     link(rel="stylesheet" href="/CSS/navbar.css")
   body
-    .back
+    .back.edit-buttons
       button#btnback Back
+      button#edit-btn Edit
     .container(ID=tour._id)
       .box1
         img(src=`/images/criminals/${tour.photo}` alt="Criminal Photo")
@@ -69,16 +70,17 @@ html(lang="en")
             p.tag Gender
             p#gender= tour.gender
           .details
-            p.tag Pricepool
+            p.tag Bounty
             p#pricepool= tour.pricepool
         .content_2
           h3 Description
           p#description= tour.description
-      
-        .edit-buttons
-          button#edit-btn Edit
-          button#confirm-btn(style="display: none;") Confirm
-          button#cancel-btn(style="display: none;") Cancel
+
+    .edit-buttons 
+      div.confrim_cancel 
+        button#confirm-btn(style="display: none;")  Confrim 
+        button#cancel-btn(style="display: none;")  Cancel
+          
 
     script(src="/js/wanted.js") 
     script(src="/js/criminals.js") 

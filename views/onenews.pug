@@ -34,11 +34,9 @@ html(lang="en")
   body
     if user.role === 'Admin'
       .center(ID=news._id)
-        .back
+        .back1
           a#btnback Back
           button#edit-btn Edit
-          button#confirm-btn(style="display: none;") Confirm
-          button#cancel-btn(style="display: none;") Cancel
     else 
       .center(ID=news._id)
         .back
@@ -62,6 +60,7 @@ html(lang="en")
     .content 
       div#description= news.description
 
+<<<<<<< HEAD
     //- section#Comments
     //-   h2#comment_title Comments
     //-   .rt-container
@@ -91,6 +90,13 @@ html(lang="en")
     //-     .description Email Id - {{ comment.user.eamil }}
     //-     .dismiss-btn
     //-       button#dismiss-popup-btn Dismiss
+=======
+
+    #confrim_cancel(style="display: none;")
+      button#confirm-btn Confirm
+      button#cancel-btn Cancel
+
+>>>>>>> 7ba3fa37ffc8122b4d258a53144fe817da7e7dfe
     section#Comments
       h2#comment_title Comments
       .rt-container

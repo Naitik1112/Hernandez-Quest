@@ -30,8 +30,32 @@ document.addEventListener('DOMContentLoaded', () => {
   const descriptionInput = document.createElement('textarea');
   descriptionInput.value = descriptionElem.textContent;
 
+  // Function to copy styles from one element to another
+  function copyStyles(fromElem, toElem) {
+    const computedStyle = window.getComputedStyle(fromElem);
+    toElem.style.fontFamily = computedStyle.fontFamily;
+    toElem.style.fontSize = computedStyle.fontSize;
+    toElem.style.fontWeight = computedStyle.fontWeight;
+    toElem.style.lineHeight = computedStyle.lineHeight;
+    toElem.style.letterSpacing = computedStyle.letterSpacing;
+    toElem.style.margin = computedStyle.margin;
+    toElem.style.padding = computedStyle.padding;
+    toElem.style.backgroundColor = 'rgb(74, 74, 74)';
+    toElem.style.color = 'black';
+  }
+
   // Function to handle editing
   function startEditing() {
+    // Set the height and styles of descriptionInput to match descriptionElem
+    descriptionInput.style.height = `${descriptionElem.clientHeight}px`;
+    nameInput.style.textAlign = "center"
+    copyStyles(descriptionElem, descriptionInput);
+    copyStyles(nameElem, nameInput);
+    copyStyles(totalCrimesElem, totalCrimesInput);
+    copyStyles(heightElem, heightInput);
+    copyStyles(genderElem, genderInput);
+    copyStyles(pricepoolElem, pricepoolInput);
+
     nameElem.style.display = 'none';
     totalCrimesElem.style.display = 'none';
     heightElem.style.display = 'none';
