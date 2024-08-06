@@ -41,8 +41,8 @@ This project aims to assist the Los Santos Police Department (LSPD) in apprehend
 - Perform all actions available to logged-in users
 
 ## Installation
-1. Clone the repository: `git clone https://github.com/your-repository.git`
-2. Navigate to the project directory: `cd your-repository`
+1. Clone the repository: `git clone https://github.com/Hernandez-Quest.git`
+2. Navigate to the project directory: `cd Hernandez-Quest`
 3. Install dependencies: `npm install`
 4. Configure environment variables: Create a `.env` file and add necessary environment variables
 5. Run the application: `npm start` 
@@ -63,4 +63,4 @@ This project aims to assist the Los Santos Police Department (LSPD) in apprehend
 This project is licensed under the MIT License. See the `LICENSE` file for details.
 
 ## Contact
-For questions or support, please contact [naitik.s@ahduni.edu.in](mailto:naitik.s@ahduni.edu.in).
+For questions or support, please contact [naitik.s@ahduni.edu.in](mailto:naitik.s@ahduni.edu.in) or [parth.r2@ahduni.edu.in ](mailto:parth.r2@ahduni.edu.in ).
