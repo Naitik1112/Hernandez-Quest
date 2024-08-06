@@ -52,7 +52,8 @@ html(lang="en")
   body
     .back.edit-buttons
       button#btnback Back
-      button#edit-btn Edit
+      if user.role === "Admin"
+        button#edit-btn Edit
     .container(ID=tour._id)
       .box1
         img(src=`/images/criminals/${tour.photo}` alt="Criminal Photo")
@@ -75,7 +76,7 @@ html(lang="en")
         .content_2
           h3 Description
           p#description= tour.description
-
+          
     .edit-buttons 
       div.confrim_cancel 
         button#confirm-btn(style="display: none;")  Confrim 
