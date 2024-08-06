@@ -12,9 +12,10 @@ This project aims to assist the Los Santos Police Department (LSPD) in apprehend
 ### General
 - User and Admin Authorization
 - Most Wanted Criminals List
+- News and Announcements
+- Careers at Los Angeles Police Department
 
 ### Non-Logged-In Users
-- View the Top 7 Criminals List by crimes
 - View the Most Wanted Criminals List
 
 ### Logged-In Users
