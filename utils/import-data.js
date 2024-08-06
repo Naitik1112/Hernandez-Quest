@@ -46,6 +46,7 @@ const importData = async () => {
     // await News.create(news);
     // await User.create(user, { validateBeforeSave: false });
     // await Review.create(reviews);
+    // await criminal.create(criminals);
     console.log('Data Successfully Loaded...');
   } catch (err) {
     console.log(err);

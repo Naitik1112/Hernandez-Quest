@@ -2,7 +2,7 @@
   {
     "name": "John Doe",
     "noOfCrimes": 15,
-    "photo": "https://example.com/photos/john_doe.jpg",
+    "photo": "c:\\Users\\Lenovo\\Desktop\\New folder (2)\\Screenshots\\Screenshot 2024-08-06 134809.png",
     "pricepool": 50000,
     "gender": "male",
     "height": 180,
@@ -11,7 +11,7 @@
   {
     "name": "Jane Smith",
     "noOfCrimes": 20,
-    "photo": "https://example.com/photos/jane_smith.jpg",
+    "photo": "C:UsersLenovoDesktopNew folder (2)ScreenshotsScreenshot 2024-08-06 134834.png",
     "pricepool": 75000,
     "gender": "female",
     "height": 165,
@@ -20,7 +20,7 @@
   {
     "name": "Bill Jones",
     "noOfCrimes": 8,
-    "photo": "https://example.com/photos/bill_jones.jpg",
+    "photo": "C:UsersLenovoDesktopNew folder (2)ScreenshotsScreenshot 2024-08-06 134848.png",
     "pricepool": 30000,
     "gender": "male",
     "height": 170,
@@ -29,7 +29,7 @@
   {
     "name": "Anna Brown",
     "noOfCrimes": 12,
-    "photo": "https://example.com/photos/anna_brown.jpg",
+    "photo": "C:UsersLenovoDesktopNew folder (2)ScreenshotsScreenshot 2024-08-06 134848.png",
     "pricepool": 45000,
     "gender": "female",
     "height": 160,
@@ -38,7 +38,7 @@
   {
     "name": "Tom Wilson",
     "noOfCrimes": 25,
-    "photo": "https://example.com/photos/tom_wilson.jpg",
+    "photo": "C:UsersLenovoDesktopNew folder (2)ScreenshotsScreenshot 2024-08-06 134933.png",
     "pricepool": 100000,
     "gender": "male",
     "height": 185,
@@ -47,7 +47,7 @@
   {
     "name": "Lisa Johnson",
     "noOfCrimes": 10,
-    "photo": "https://example.com/photos/lisa_johnson.jpg",
+    "photo": "C:UsersLenovoDesktopNew folder (2)ScreenshotsScreenshot 2024-08-06 134933.png",
     "pricepool": 35000,
     "gender": "female",
     "height": 170,
@@ -56,7 +56,7 @@
   {
     "name": "Mark Davis",
     "noOfCrimes": 18,
-    "photo": "https://example.com/photos/mark_davis.jpg",
+    "photo": "c:UsersLenovoDesktopNew folder (2)ScreenshotsScreenshot 2024-08-06 135102.png",
     "pricepool": 60000,
     "gender": "male",
     "height": 175,
