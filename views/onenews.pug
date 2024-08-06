@@ -34,11 +34,9 @@ html(lang="en")
   body
     if user.role === 'Admin'
       .center(ID=news._id)
-        .back
+        .back1
           a#btnback Back
           button#edit-btn Edit
-          button#confirm-btn(style="display: none;") Confirm
-          button#cancel-btn(style="display: none;") Cancel
     else 
       .center(ID=news._id)
         .back
@@ -61,6 +59,11 @@ html(lang="en")
     .center
     .content 
       div#description= news.description
+
+
+    #confrim_cancel(style="display: none;")
+      button#confirm-btn Confirm
+      button#cancel-btn Cancel
 
     section#Comments
       h2#comment_title Comments
