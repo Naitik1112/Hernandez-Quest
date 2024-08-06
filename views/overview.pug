@@ -154,68 +154,16 @@ html(lang="en")
       h1 Most Recent News
       .slider-wrapper_1
         .card-list_1.swiper-wrapper
-          .card-item_1.swiper-slide
-            .card_1
-              .imgBx_1
-                img(src="/Img/car.jpg" alt="")
-              .content
-                h3 Lorem, ipsum dolor sit amet consectetur adipisicing elit. Vero, saepe.
-                h4 Likes 10 | views 20
-                a(href="") Read More
+          each x1 in recentnews
+            .card-item_1.swiper-slide
+              .card_1
+                .imgBx_1
+                  img(src="/Img/car.jpg" alt="")
+                .content
+                  h3 #{x1.truncatedHeadline}
+                  h4 Likes #{x1.likes.length} | views #{x1.views}
+                  a(href=`/api/news/${x1._id}`) Read More
 
-          .card-item_1.swiper-slide
-            .card_1
-              .imgBx_1
-                img(src="/Img/car.jpg" alt="")
-              .content
-                h3 Taj-Mahal
-                h4 Likes 10 | views 20
-                a(href="") Read More
-
-          .card-item_1.swiper-slide
-            .card_1
-              .imgBx_1
-                img(src="/Img/car.jpg" alt="")
-              .content
-                h3 Taj-Mahal
-                h4 Likes 10 | views 20
-                a(href="") Read More
-
-          .card-item_1.swiper-slide
-            .card_1
-              .imgBx_1
-                img(src="/Img/car.jpg" alt="")
-              .content
-                h3 Taj-Mahal
-                h4 Likes 10 | views 20
-                a(href="") Read More
-
-          .card-item_1.swiper-slide
-            .card_1
-              .imgBx_1
-                img(src="/Img/car.jpg" alt="")
-              .content
-                h3 Taj-Mahal
-                h4 Likes 10 | views 20
-                a(href="") Read More
-
-          .card-item_1.swiper-slide
-            .card_1
-              .imgBx_1
-                img(src="/Img/car.jpg" alt="")
-              .content
-                h3 Taj-Mahal
-                h4 Likes 10 | views 20
-                a(href="") Read More
-
-          .card-item_1.swiper-slide
-            .card_1
-              .imgBx_1
-                img(src="/Img/car.jpg" alt="")
-              .content
-                h3 Taj-Mahal Lorem ipsum dolor sit amet.
-                h4 Likes 10 | views 20
-                a(href="") Read More
 
         .swiper-pagination
         .swiper-slider-button.swiper-button-prev
@@ -225,86 +173,15 @@ html(lang="en")
       h1 Top Criminals
       .slider-wrapper
         .card-list.swiper-wrapper
-          .card-item.swiper-slide
-            .card
-              .number
-              .circle
-              .content
-                h3 Lorem, ipsum dolor.
-                a(href="#") Read More
-              img(src="/Img/World16.png" alt="")
-
-          .card-item.swiper-slide
-            .card
-              .number
-              .circle
-              .content
-                h3 Criminals Name
-                a(href="#") Read More
-              img(src="/Img/World16.png" alt="")
-
-          .card-item.swiper-slide
-            .card
-              .number
-              .circle
-              .content
-                h3 Criminals Name
-                a(href="#") Read More
-              img(src="/Img/World16.png" alt="")
-
-          .card-item.swiper-slide
-            .card
-              .number
-              .circle
-              .content
-                h3 Criminals Name
-                a(href="#") Read More
-              img(src="/Img/World16.png" alt="")
-
-          .card-item.swiper-slide
-            .card
-              .number
-              .circle
-              .content
-                h3 Criminals Name
-                a(href="#") Read More
-              img(src="/Img/World16.png" alt="")
-
-          .card-item.swiper-slide
-            .card
-              .number
-              .circle
-              .content
-                h3 Criminals Name
-                a(href="#") Read More
-              img(src="/Img/World16.png" alt="")
-
-          .card-item.swiper-slide
-            .card
-              .number
-              .circle
-              .content
-                h3 Criminals Name
-                a(href="#") Read More
-              img(src="/Img/World16.png" alt="")
-
-          .card-item.swiper-slide
-            .card
-              .number
-              .circle
-              .content
-                h3 Criminals Name
-                a(href="#") Read More
-              img(src="/Img/World16.png" alt="")
-
-          .card-item.swiper-slide
-            .card
-              .number
-              .circle
-              .content
-                h3 Criminals Name
-                a(href="#") Read More
-              img(src="/Img/World16.png" alt="")
+          each x2 in topcriminals
+            .card-item.swiper-slide
+              .card
+                .number
+                .circle
+                .content
+                  h3 #{x2.name}
+                  a(href=`/api/wanted/${x2.slug}`) Read More
+                img(src=`/images/criminals/${x2.photo}` alt="")
 
         .swiper-pagination
         .swiper-slider-button.swiper-button-prev

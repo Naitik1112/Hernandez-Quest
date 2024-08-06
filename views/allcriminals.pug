@@ -116,7 +116,7 @@ html(lang="en")
             each x in tour
               tr
                 td
-                  img(src="/Img/Gta_world_3.jpg" alt="")
+                  img(src=`/images/criminals/${x.photo}` alt="Criminal Photo")
                 td=x.name
                 td= x.noOfCrimes
                 td= x.pricepool
