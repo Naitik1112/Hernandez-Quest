@@ -1,240 +1,236 @@
-
-@font-face{
-    font-family: gta-fonts;
-    src:url(/Fonts/Gta-fonts.ttf)
+@font-face {
+  font-family: gta-fonts;
+  src: url(/Fonts/Gta-fonts.ttf);
 }
 
-.News-Ann{
-    width: 95%;
-    /* height: 7vw; */
-    margin: 1% 2.5%;
-    margin-top: 100px;
-    margin-bottom: 1%;
-    /* margin-right: 20px; */
-    justify-content: center;
-    align-items: center;
-    display: flex;
-    background-image: url('/Img/Robbers_in_car.jpg');
-    background-size: cover; /* Ensures the background image covers the whole page */
-    background-position: center; /* Centers the background image horizontally and aligns it to the bottom */
-    background-repeat: no-repeat; /* Prevents the background image from repeating */
-    /* background-color: #0a0a0e; */
-    background-color: #0a0a0ebd;
-    padding: 2% 0%;
-    font-size: 230%;
-    text-align: center;
-    font-family: gta-fonts;
-    border-radius: 7px;
-    text-shadow: 
-    -1px -1px 0 rgb(230, 231, 236),  
-    1px -1px 0 rgb(230, 231, 236),
-    -3px 3px 0 rgb(230, 231, 236),
-    1px 1px 0 black;
-    letter-spacing: 0px;
-    color: rgb(9, 9, 9);
-    border: 0px solid white;
-    /* box-shadow: -10px 10px 90px rgb(62, 62, 62); */
-    /* font-family: police-fonts; */
+.News-Ann {
+  width: 95%;
+  /* height: 7vw; */
+  margin: 1% 2.5%;
+  margin-top: 100px;
+  margin-bottom: 1%;
+  /* margin-right: 20px; */
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  background-image: url('/Img/Robbers_in_car.jpg');
+  background-size: cover; /* Ensures the background image covers the whole page */
+  background-position: center; /* Centers the background image horizontally and aligns it to the bottom */
+  background-repeat: no-repeat; /* Prevents the background image from repeating */
+  /* background-color: #0a0a0e; */
+  background-color: #0a0a0ebd;
+  padding: 2% 0%;
+  font-size: 250%;
+  text-align: center;
+  font-family: gta-fonts;
+  border-radius: 7px;
+  text-shadow: -1px -1px 0 rgb(230, 231, 236), 1px -1px 0 rgb(230, 231, 236),
+    -3px 3px 0 rgb(230, 231, 236), 1px 1px 0 black;
+  letter-spacing: 0px;
+  color: rgb(9, 9, 9);
+  border: 0px solid white;
+  /* box-shadow: -10px 10px 90px rgb(62, 62, 62); */
+  /* font-family: police-fonts; */
 }
 
-.fliter_add_news{
-    width: 85%;
-    height: 50px;
-    margin: 1%;
-    margin-top: 0%;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin: 0% 7.5%;
+.fliter_add_news {
+  width: 85%;
+  height: 50px;
+  margin: 1%;
+  margin-top: 0%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0% 7.5%;
 }
 
-.add{
-    border: 2px solid rgb(244, 178, 97);
-    font-size: 120%;
-    font-weight: bold;
-    width: 10%;
-    height: 80%;
-    border-radius: 7px;
-    background-color: #202021;
-    color: rgb(255, 209, 154);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 4px;
-    padding: 0 3%;
-    cursor: pointer;
+.add {
+  border: 2px solid rgb(244, 178, 97);
+  font-size: 120%;
+  font-weight: bold;
+  width: 10%;
+  height: 80%;
+  border-radius: 7px;
+  background-color: #202021;
+  color: rgb(255, 209, 154);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 4px;
+  padding: 0 3%;
+  cursor: pointer;
 }
 
-.add{
-    padding: 0.5% 1%;
-    font-size: 100%;
-    width: auto;
-    height: auto;
-    /* width: 10%; */
+.add {
+  padding: 0.5% 1%;
+  font-size: 100%;
+  width: auto;
+  height: auto;
+  /* width: 10%; */
 }
 
-.add img{
-    width: 25px;
-    height: 25px;
+.add img {
+  width: 25px;
+  height: 25px;
 }
 
-.criminals_sorting,.criminals_publish{
-    width: 10%;
-    background: #202021;
-    border-radius: 7px;
-    border: 3px solid rgb(255, 181, 90);
-    display: flex;
-    /* height: 70%; */
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-weight: bold;
-    font-size: 110%;
-    gap: 4%;
-    padding: 0.5% 0;
-    cursor: pointer;
-    color: rgb(255, 209, 154);
+.criminals_sorting,
+.criminals_publish {
+  width: 10%;
+  background: #202021;
+  border-radius: 7px;
+  border: 3px solid rgb(255, 181, 90);
+  display: flex;
+  /* height: 70%; */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  font-size: 110%;
+  gap: 4%;
+  padding: 0.5% 0;
+  cursor: pointer;
+  color: rgb(255, 209, 154);
 }
 
-.criminals_sorting img,.criminals_publish img{
-    width: 25px;
-    height: auto;
+.criminals_sorting img,
+.criminals_publish img {
+  width: 25px;
+  height: auto;
 }
-
 
 /* Practice */
 
-.criminals_publish img{
-    width: 25px;
-    height: auto;
+.criminals_publish img {
+  width: 25px;
+  height: auto;
 }
 
-.criminals_sorting{
-    width: 100%;
-    height: 100%;
-    background-color: #202021;
-    border: 0px solid saddlebrown;
+.criminals_sorting {
+  width: 100%;
+  height: 100%;
+  background-color: #202021;
+  border: 0px solid saddlebrown;
 }
 
 /* Style the dropdown container */
 .dropdown {
-    /* position: relative; */
-    display: inline-flex;
-    position: relative;
-    width: 10%;
-    align-items: center;
-    justify-content: center;
-    height: 65%;
-    border-radius: 7px;
-    border: 2px solid rgb(244, 178, 97);
+  /* position: relative; */
+  display: inline-flex;
+  position: relative;
+  width: 10%;
+  align-items: center;
+  justify-content: center;
+  height: 65%;
+  border-radius: 7px;
+  border: 2px solid rgb(244, 178, 97);
 }
 
 /* Style the dropdown button */
 .dropbtn {
-    width: 60%;
-    font-weight: bold;
-    background-color: #202021;
-    color: rgb(255, 209, 154);
-    height: 100%;
-    font-size: 100%;
-    border: none;
-    cursor: pointer;
-    border-top-right-radius: 7px;
-    border-bottom-right-radius: 7px;
+  width: 60%;
+  font-weight: bold;
+  background-color: #202021;
+  color: rgb(255, 209, 154);
+  height: 100%;
+  font-size: 100%;
+  border: none;
+  cursor: pointer;
+  border-top-right-radius: 7px;
+  border-bottom-right-radius: 7px;
 }
 
 /* Style the dropdown content (hidden by default) */
 .dropdown-content {
-    display: none;
-    position: absolute;
-    background-color: #929292;
-    min-width: 200px;
-    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-    z-index: 1;
-    top: 2%;
-    left: 24%;
-    border-radius: 7px;
+  display: none;
+  position: absolute;
+  background-color: #929292;
+  min-width: 200px;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+  top: 2%;
+  left: 24%;
+  border-radius: 7px;
 }
 
 /* Style the links inside the dropdown */
 .dropdown-content a {
-    color: black;
-    padding: 12px 16px;
-    text-decoration: none;
-    display: block;
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
 }
 
 /* Change color of dropdown links on hover */
 .dropdown-content a:hover {
-    background-color: #f1f1f1;
-    border-radius: 5px;
+  background-color: #f1f1f1;
+  border-radius: 5px;
 }
 
 /* Show the dropdown menu on hover */
 .dropdown:hover .dropdown-content {
-    display: block;
+  display: block;
 }
 
-@media (max-width: 1300px){
-    .dropdown{
-        width: 30%;
-        /* height: 40%; */
-    } 
+@media (max-width: 1300px) {
+  .dropdown {
+    width: 30%;
+    /* height: 40%; */
+  }
 
-    .criminals_publish{
-        width: 13%;
-        height: 40%;
-        padding: 0% 3%;
-    }
+  .criminals_publish {
+    width: 13%;
+    height: 40%;
+    padding: 0% 3%;
+  }
 }
 
-@media (max-width: 950px){
-    .dropdown{
-        width: 34%;
-        font-size: 90%;
-        /* height: 40%; */
-    }
+@media (max-width: 950px) {
+  .dropdown {
+    width: 34%;
+    font-size: 90%;
+    /* height: 40%; */
+  }
 
-    .criminals_publish{
-        width: 15%;
-        font-size: 90%;
-        height: 40%;
-    }
+  .criminals_publish {
+    width: 15%;
+    font-size: 90%;
+    height: 40%;
+  }
 }
 
-@media (max-width: 750px){
-    .dropdown{
-        width: 20%;
-        font-size: 85%;
-        /* height: 50%; */
-    } 
+@media (max-width: 750px) {
+  .dropdown {
+    width: 20%;
+    font-size: 85%;
+    /* height: 50%; */
+  }
 
-    .dropbtn{
-        display: none;
-    }
+  .dropbtn {
+    display: none;
+  }
 
-    .criminals_sorting{
-        width: 100%;
-        border-radius: 7px;
-    }
+  .criminals_sorting {
+    width: 100%;
+    border-radius: 7px;
+  }
 
-    .criminals_publish{
-        width: 18%;
-        font-size: 85%;
-        height: 60%;
-    }
+  .criminals_publish {
+    width: 18%;
+    font-size: 85%;
+    height: 60%;
+  }
 }
 
-@media (max-width: 550px){ 
+@media (max-width: 550px) {
+  .criminals_publish {
+    width: 24%;
+    font-size: 80%;
+    /* height: 45%; */
+  }
 
-    .criminals_publish{
-        width: 24%;
-        font-size: 80%;
-        /* height: 45%; */
-    }
-
-    .criminals_publish img{
-        width: 20px;
-        height: auto;
-    }
+  .criminals_publish img {
+    width: 20px;
+    height: auto;
+  }
 }
