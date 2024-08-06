@@ -1,3 +1,66 @@
+const title = document.getElementsByClassName('title')[0];
+const description = document.getElementsByClassName('description')[0];
+let flag = false;
+
+function change() {
+  document.getElementsByClassName('popup')[0].classList.add('active');
+  for (let i = 0; i < document.getElementsByClassName('center').length; i++) {
+    document.getElementsByClassName('center')[i].classList.add('blur');
+  }
+  document.body.classList.add('no-scroll');
+}
+
+function customizePopup(message, descriptionn) {
+  if (message === 'success') {
+    const popup = document.getElementsByClassName('popup')[0];
+    popup.style.boxShadow = `2px 2px 30px 10px '#078907'`;
+
+    const icon = document.querySelector('.popup .icon');
+    icon.style.borderColor = '#078907';
+
+    const iconElement = icon.querySelector('i');
+    iconElement.className = 'fa fa-check';
+    iconElement.style.color = '#078907';
+
+    const title = document.querySelector('.popup .title');
+    title.textContent = 'Success';
+
+    const description = document.querySelector('.popup .description');
+    description.textContent = descriptionn;
+  } else if (message === 'error') {
+    const popup = document.getElementsByClassName('popup')[0];
+    popup.style.boxShadow = `2px 2px 30px 10px #FF5733`;
+
+    const icon = document.querySelector('.popup .icon');
+    icon.style.borderColor = '#FF5733';
+
+    const iconElement = icon.querySelector('i');
+    iconElement.className = 'fa fa-times';
+    iconElement.style.color = '#FF5733';
+
+    const title = document.querySelector('.popup .title');
+    title.textContent = 'Wasted!!';
+
+    const description = document.querySelector('.popup .description');
+    description.textContent = descriptionn;
+  }
+}
+
+document
+  .getElementById('dismiss-popup-btn')
+  .addEventListener('click', function () {
+    if (flag) {
+      window.setTimeout(() => {
+        location.assign('/api/career/getalljobs');
+      }, 200);
+    } else {
+      window.setTimeout(() => {
+        location.assign('');
+      }, 200);
+    }
+    document.body.classList.remove('no-scroll');
+  });
+
 document.addEventListener('DOMContentLoaded', () => {
   const editBtn = document.getElementById('edit-btn');
   const confirmBtn = document.getElementById('confirm-btn');

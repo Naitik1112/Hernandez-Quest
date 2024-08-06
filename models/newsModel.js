@@ -12,6 +12,7 @@ function formatDate(date) {
 function formatTime(date) {
   const hours = String(date.getHours()).padStart(2, '0');
   const minutes = String(date.getMinutes()).padStart(2, '0');
+  console.log(`${hours}:${minutes}`);
   return `${hours}:${minutes}`;
 }
 

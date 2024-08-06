@@ -1,4 +1,4 @@
-const News = require('../models/newsModel');
+const { News, Comment } = require('../models/newsModel');
 const Criminal = require('../models/wantedModel');
 const AppError = require('../utils/appError');
 const catchAsync = require('./../utils/catchAsync');

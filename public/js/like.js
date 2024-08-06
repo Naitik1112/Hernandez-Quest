@@ -28,6 +28,7 @@ document.addEventListener('DOMContentLoaded', () => {
         frontLikesElement.textContent = news.likesCount;
       } else {
         console.error('Failed to update likes');
+        console.log(response);
       }
     });
   });

@@ -33,7 +33,11 @@ html(lang="en")
     meta(name="viewport" content="width=device-width, initial-scale=1.0")
     title Document
     link(rel="stylesheet", href="/CSS/News_Publish.css")
+    link(rel="stylesheet", href="/CSS/News_Publish.css")
+    link(rel="stylesheet" href="/CSS/popUp.css")
+    link(rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css")
   body
+    
     .back
       button#btnback Back
     .container.containern(User=user.role)
@@ -52,6 +56,7 @@ html(lang="en")
               label(for="") Description
         #input_submit
           input.Submitnews#Submitnews(type="submit", value="Submit")
-    
+    include popUp 
+
     script(src="/js/wanted.js") 
     script(src="/js/publishnews.js") 

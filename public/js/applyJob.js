@@ -11,6 +11,43 @@ function change() {
   ) {
     document.getElementsByClassName('container')[i].classList.add('blur');
   }
+  document.body.classList.add('no-scroll');
+}
+
+function customizePopup(message, descriptionn) {
+  if (message === 'success') {
+    const popup = document.getElementsByClassName('popup')[0];
+    popup.style.boxShadow = `2px 2px 30px 10px '#078907'`;
+
+    const icon = document.querySelector('.popup .icon');
+    icon.style.borderColor = '#078907';
+
+    const iconElement = icon.querySelector('i');
+    iconElement.className = 'fa fa-check';
+    iconElement.style.color = '#078907';
+
+    const title = document.querySelector('.popup .title');
+    title.textContent = 'Success';
+
+    const description = document.querySelector('.popup .description');
+    description.textContent = descriptionn;
+  } else if (message === 'error') {
+    const popup = document.getElementsByClassName('popup')[0];
+    popup.style.boxShadow = `2px 2px 30px 10px #FF5733`;
+
+    const icon = document.querySelector('.popup .icon');
+    icon.style.borderColor = '#FF5733';
+
+    const iconElement = icon.querySelector('i');
+    iconElement.className = 'fa fa-times';
+    iconElement.style.color = '#FF5733';
+
+    const title = document.querySelector('.popup .title');
+    title.textContent = 'Wasted!!';
+
+    const description = document.querySelector('.popup .description');
+    description.textContent = descriptionn;
+  }
 }
 
 document
@@ -25,6 +62,7 @@ document
         location.assign('');
       }, 200);
     }
+    document.body.classList.remove('no-scroll');
   });
 
 const btnsubmit = document.getElementById('Submit');
@@ -58,17 +96,17 @@ const applyforjob = async (
     const data = await res.json();
 
     if (res.ok && data.status === 'success') {
-      description.innerHTML = `Thank you for applying. You can chech your response in Profile.`;
+      customizePopup(
+        'success',
+        'Thank you for applying. You can chech your response in Profile.'
+      );
       flag = true;
     } else {
-      title.innerHTML = `Error`;
-      description.innerHTML = `${data.message}`;
       console.log(data.message);
+      customizePopup('error', `${data.message}`);
     }
   } catch (err) {
-    console.log('Error', err);
-    title.innerHTML = `Error`;
-    description.innerHTML = `Something went wrong!! Try again later.`;
+    customizePopup('error', `Something went wrong!! Try again later.`);
   }
 };
 

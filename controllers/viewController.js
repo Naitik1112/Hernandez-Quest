@@ -81,6 +81,10 @@ exports.getme = catchAsync(async (req, res, next) => {
     userr,
     doc,
   });
+  // res.status(200).json({
+  //   userr,
+  //   doc,
+  // });
 });
 
 exports.getAllCriminal = catchAsync(async (req, res, next) => {

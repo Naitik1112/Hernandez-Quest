@@ -240,7 +240,7 @@ document.getElementById('Confrim').addEventListener('click', async (e) => {
     e.preventDefault();
     const form = new FormData();
     form.append('photo', document.getElementById('fileInput').files[0]);
-    const res = await fetch('http://127.0.0.1:3100/api/users/updateMe', {
+    const res = await fetch('/api/users/updateMe', {
       method: 'PATCH',
       body: form,
     });
@@ -271,7 +271,7 @@ document.getElementById('Confrim_1').addEventListener('click', async (e) => {
     form.append('name', document.getElementById('namee').innerHTML);
     form.append('email', document.getElementById('emaill').innerHTML);
 
-    const res = await fetch('http://127.0.0.1:3100/api/users/updateMe', {
+    const res = await fetch('/api/users/updateMe', {
       method: 'PATCH',
       body: form,
     });
@@ -293,5 +293,6 @@ document.getElementById('Confrim_1').addEventListener('click', async (e) => {
 });
 
 document.querySelector('.add').addEventListener('click', (e) => {
+  e.preventDefault();
   location.assign('/api/users/addadmin');
 });
