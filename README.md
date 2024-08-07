@@ -4,6 +4,19 @@ Police Department Website
 ## Link
 https://hernandez-quest.onrender.com/
 
+## You can login with the following credentials
+
+### Admin
+
+Email - [Admin.1@gmail.com](mailto:Admin.1@gmail.com)
+Password - adminadmin
+
+### User
+
+Email - [user.1@gmail.com](mailto:user.1@gmail.com)
+Password - user123456
+
+
 ## Overview
 This project aims to assist the Los Santos Police Department (LSPD) in apprehending the city's most wanted criminals. It includes features for both users and administrators to interact with the system, view and manage content, and engage with various functionalities.
 
