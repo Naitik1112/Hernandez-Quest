@@ -19,7 +19,7 @@ body
     .main_container
     each x in doc
         .box
-            img.image(src="/Img/Gta_world_1.jpg" alt="")
+            img.image(src=`${x.photo}` alt="")
             .heading
                 p= x.title 
             .content
