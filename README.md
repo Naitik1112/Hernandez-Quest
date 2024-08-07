@@ -13,7 +13,7 @@ https://hernandez-quest.onrender.com/
 
 ### User
 
-- Email - [user.1@gmail.com](mailto:user.1@gmail.com)
+- Email - [user@gmail.com](mailto:user@gmail.com)
 - Password - user123456
 
 
