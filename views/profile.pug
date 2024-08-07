@@ -55,9 +55,9 @@ html(lang="en")
       #add_button
         img(src="/Icons/add_1.png" alt="")
         .add_links
-          a(href="/publishNews.pug") Publish News
-          a(href="/publish_Criminals.pug") Add Criminals
-          a(href="/publish_career.pug") Post Carrers
+          a(href="/api/wanted/publishcriminal") Publish News
+          a(href="/api/news/getallnews/publishnews") Add Criminals
+          a(href="/api/career/getalljobs") Post Carrers
 
 
     if user.role !== 'Admin'
