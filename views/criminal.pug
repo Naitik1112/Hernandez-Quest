@@ -52,8 +52,9 @@ html(lang="en")
   body
     .back.edit-buttons
       button#btnback Back
-      if user.role === "Admin"
-        button#edit-btn Edit
+      if user
+        if user.role === "Admin"
+          button#edit-btn Edit
     .container(ID=tour._id)
       .box1
         img(src=`/images/criminals/${tour.photo}` alt="Criminal Photo")
