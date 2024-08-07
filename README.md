@@ -8,13 +8,13 @@ https://hernandez-quest.onrender.com/
 
 ### Admin
 
-Email - [Admin.1@gmail.com](mailto:Admin.1@gmail.com)
-Password - adminadmin
+- Email - [Admin.1@gmail.com](mailto:Admin.1@gmail.com)
+- Password - adminadmin
 
 ### User
 
-Email - [user.1@gmail.com](mailto:user.1@gmail.com)
-Password - user123456
+- Email - [user.1@gmail.com](mailto:user.1@gmail.com)
+- Password - user123456
 
 
 ## Overview
