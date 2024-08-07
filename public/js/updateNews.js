@@ -34,18 +34,18 @@ function customizePopup(message, descriptionn) {
   description.textContent = descriptionn;
 }
 
-document.getElementById('dismiss-popup-btn').addEventListener('click', function () {
-  if (flag) {
-    setTimeout(() => {
-      location.assign('/api/career/getalljobs');
-    }, 200);
-  } else {
-    setTimeout(() => {
-      location.assign('');
-    }, 200);
-  }
-  document.body.classList.remove('no-scroll');
-});
+// document.getElementById('dismiss-popup-btn').addEventListener('click', function () {
+//   if (flag) {
+//     setTimeout(() => {
+//       location.assign('/api/career/getalljobs');
+//     }, 200);
+//   } else {
+//     setTimeout(() => {
+//       location.assign('');
+//     }, 200);
+//   }
+//   document.body.classList.remove('no-scroll');
+// });
 
 document.addEventListener('DOMContentLoaded', () => {
   const editBtn = document.getElementById('edit-btn');
@@ -70,6 +70,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
   // Function to handle editing
   function startEditing() {
+    console.log("edit clicked")
     copyStyles(headlineElem, headlineInput);
     copyStyles(descriptionElem, descriptionInput);
 

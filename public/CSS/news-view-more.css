@@ -616,24 +616,24 @@ body {
   padding: 0.5% 1%;
   border-radius: 4px;
   background: #0000004b;
-  gap: 3px;
+  gap: 7px;
   top: 2rem;
   left: 2rem;
-  font-size: 95%;
+  font-size: 75%;
   backdrop-filter: blur(10px);
   -webkit-backdrop-filter: blur(10px);
   color: var(--primary);
 }
 
 .tranding-slide-content .food-price img {
-  scale: 0.85;
+  scale: 0.75;
   object-fit: cover;
 }
 
 .tranding-slide-content .tranding-slide-content-bottom {
   position: absolute;
   display: flex;
-  width: 100%;
+  width: 90%;
   justify-content: center;
   bottom: 6rem;
   /* left: 2rem; */
@@ -646,7 +646,7 @@ body {
   background: #0000006e;
   backdrop-filter: blur(10px);
   -webkit-backdrop-filter: blur(10px);
-  font-size: 120%;
+  font-size: 80%;
 }
 
 .food-rating {
@@ -902,7 +902,8 @@ h2 {
   .tranding-slide-content .tranding-slide-content-bottom {
     position: absolute;
     display: flex;
-    width: 100%;
+    width: 90%;
+    font-size: 60%;
     justify-content: center;
     bottom: 2rem;
     /* left: 2rem; */

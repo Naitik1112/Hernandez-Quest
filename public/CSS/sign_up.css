@@ -148,7 +148,7 @@ p{
     width: 75%;
 }
 
-button {
+#togglePassword1,#togglePassword2 {
     position: absolute;
     right: 0;
     top: 25%;

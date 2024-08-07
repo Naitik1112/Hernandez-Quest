@@ -484,10 +484,10 @@ tbody td.active {
 /* Change the background color of the dropdown button when the dropdown content is shown */
 
 @media (max-width: 1300px){
-    .dropdown{
+    /* .dropdown{
         width: 30%;
         height: 40%;
-    } 
+    }  */
 
     .table__header .input-group{
         height: 35px;
@@ -502,11 +502,11 @@ tbody td.active {
 }
 
 @media (max-width: 950px){
-    .dropdown{
+    /* .dropdown{
         width: 34%;
         font-size: 90%;
         height: 40%;
-    }
+    } */
     
     thead th span.icon-arrow{
         display: none;
@@ -539,16 +539,16 @@ tbody td.active {
 }
 
 @media (max-width: 750px){
-    .dropdown{
+    /* .dropdown{
         width: 20%;
         font-size: 75%;
         border-width: 2px;
-        /* height: 50%; */
+        height: 50%;
     } 
 
     .dropbtn{
         display: none;
-    }
+    } */
 
     .criminals_sorting{
         width: 100%;
@@ -560,11 +560,10 @@ tbody td.active {
         width: 40%;
     }
 
-    .criminals_publish{
+    /* .criminals_publish{
         width: 18%;
         font-size: 85%;
-        /* height: 60%; */
-    }
+    } */
 
     
     tbody tr td img{
@@ -592,7 +591,7 @@ tbody td.active {
         font-size: 50%;
     }
 
-    .criminals_publish{
+    /* .criminals_publish{
         width: 24%;
         font-size: 80%;
         height: 45%;
@@ -601,7 +600,7 @@ tbody td.active {
     .criminals_publish img{
         width: 20px;
         height: auto;
-    }
+    } */
     
     tbody tr td{
         font-size: 100%;

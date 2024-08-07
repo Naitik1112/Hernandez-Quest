@@ -71,16 +71,16 @@ new Vue({
   },
 });
 
-document
-  .getElementById('dismiss-popup-btn')
-  .addEventListener('click', function () {
-    document.getElementsByClassName('popup')[0].classList.remove('active');
-    document.querySelector('.rt-container').classList.remove('blur');
-    document.querySelector('.center').classList.remove('blur');
-    document.querySelector('.content').classList.remove('blur');
-    document.querySelector('.title').classList.remove('blur');
-    document.querySelector('#tranding').classList.remove('blur');
-    document.querySelector('#comment_title').classList.remove('blur');
-    document.querySelector('.tag').classList.remove('blur');
-    document.body.classList.remove('no-scroll'); // Enable scrolling
-  });
+// document
+//   .getElementById('dismiss-popup-btn')
+//   .addEventListener('click', function () {
+//     document.getElementsByClassName('popup')[0].classList.remove('active');
+//     document.querySelector('.rt-container').classList.remove('blur');
+//     document.querySelector('.center').classList.remove('blur');
+//     document.querySelector('.content').classList.remove('blur');
+//     document.querySelector('.title').classList.remove('blur');
+//     document.querySelector('#tranding').classList.remove('blur');
+//     document.querySelector('#comment_title').classList.remove('blur');
+//     document.querySelector('.tag').classList.remove('blur');
+//     document.body.classList.remove('no-scroll'); // Enable scrolling
+//   });
