@@ -196,7 +196,7 @@ html(lang="en")
             each item in highestPaidJobs
               .card-item_3.swiper-slide
                 .card_3
-                  img(src="/Img/car.jpg" alt="")
+                  img(src=`${item.photo}` alt="")
                   .content
                     h3= item.title
                     h4 Salary - #{item.salary}
