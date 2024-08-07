@@ -24,7 +24,7 @@ searchInput.addEventListener('input', function () {
         const row = document.createElement('tr');
 
         row.innerHTML = `
-          <td><img src="/Img/Gta_world_3.jpg" alt=""></td>
+          <td><img src=/images/news/${criminal.photo} alt="User Photo"></td>
           <td>${criminal.name}</td>
           <td>${criminal.noOfCrimes}</td>
           <td>${criminal.pricepool}</td>

@@ -28,11 +28,18 @@ exports.resizeUserPhoto = catchAsync(async (req, res, next) => {
 
   req.file.filename = `user-${req.user.id}-${Date.now()}.jpeg`;
 
+  const uploadPath = path.resolve(__dirname, '..', 'public', 'images', 'users');
+
+  // Ensure directory exists
+  if (!fs.existsSync(uploadPath)) {
+    fs.mkdirSync(uploadPath, { recursive: true });
+  }
+
   await sharp(req.file.buffer)
     .resize(500, 500)
     .toFormat('jpeg')
     .jpeg({ quality: 90 })
-    .toFile(`public/images/users/${req.file.filename}`);
+    .toFile(`${uploadPath}/${req.file.filename}`);
 
   next();
 });
