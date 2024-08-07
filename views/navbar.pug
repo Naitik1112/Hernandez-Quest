@@ -1,42 +1,3 @@
-//- header.navbar
-//-       if user 
-//-         if user.role === 'admin'
-//-           nav 
-//-             .nav1
-//-               a
-//-               a LOS ANGELES POLICE DEPARTMENT
-//-             .nav2
-//-               a(href="/") Home
-//-               a(href="/") Welcome Admin
-//-               a(href="/api/wanted/wantedlist") Criminals
-//-               a(href="/api/news/getallnews") News
-//-               a(href="/api/tip/getalltip") View Tip
-//-               a(href="/api/users/me") profile 
-
-//-         else
-//-           nav
-//-             .nav1
-//-               a
-//-               a LOS ANGELES POLICE DEPARTMENT
-//-             .nav2
-//-               a(href="/") Home
-//-               a(href="/api/wanted/wantedlist") Criminals
-//-               a(href="/api/news/getallnews") News
-//-               a(href="/api/tip/submit-tip") Submit Tip
-//-               a(href="/api/users/me") Profile 
-//-       else 
-//-         nav
-//-           .nav1
-//-             a
-//-             a LOS ANGELES POLICE DEPARTMENT
-//-           .nav2
-//-             a(href="/") Home
-//-             a(href="/api/wanted/wantedlist") Criminals
-//-             a(href="/api/news/getallnews") News
-//-             a(href="/api/tip/submit-tip") Submit Tip
-//-             a(href="/login") Log In
-//-             a(href="/api/users/signup") Sign In
-
 nav
   if user
     //- user is admin
@@ -56,8 +17,8 @@ nav
           a(href="/api/news/getallnews") News
         li
           a(href="/api/career/getalljobs") Carrers
-        //- li
-        //-   a(href="/api/tip/getalltip") View Tips
+        li
+          a(href="/api/tip/submit-tip") Submit Tip
         li#Profile_log
             a#Profile(href="/api/users/me")
               img(src=`/images/users/${user.photo}` alt="")
@@ -104,11 +65,11 @@ nav
         li
           a(href="/api/wanted/getallwanted").menu Criminals
         li
-          a(href="/api/news/getallnews").menu News
+          a(href="/loginerror").menu News
         li
-          a(href="/api/career/getalljobs").menu Carrers
+          a(href="/loginerror").menu Carrers
         li
-          a(href="/api/tip/submit-tip").tip Submit Tip
+          a(href="/loginerror").tip Submit Tip
         li#sign_Up
           a(href="/signup") Sign Up
         li#sign_In

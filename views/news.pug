@@ -109,8 +109,6 @@ html(lang="en")
           //- button.dropbtn Name (Ascending)
           .dropdown-content
             a(href="/api/news/getallnews" data-sort="name-asc") Default
-            a(href="?sort=likes" data-sort="name-asc") Like (Ascending)
-            a(href="?sort=-likes" data-sort="name-desc") Like (Descending)
             a(href="?sort=date" data-sort="crimes-asc") Date (Ascending)
             a(href="?sort=-date" data-sort="crimes-desc") Date (Descending)
       if user.role === "Admin"
@@ -126,7 +124,7 @@ html(lang="en")
               span= x.likes.length 
               img(src="/Icons/heart-filled.png" alt="")
               
-            img(src="/Img/Gta_world_0.jpg" alt="")
+            img(src=`/images/news/${x.photo}` alt="")
             .news-content
               h3= x.headline
               p=`${x.date} | ${x.time}`

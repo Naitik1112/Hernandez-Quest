@@ -1,0 +1,62 @@
+body {
+  background: #000;
+  margin: 0;
+  padding: 0;
+  height: 100vh;
+  width: 100vw;
+  background-image: url('/Img/francisco\ downtown.webp');
+  background-size: cover; /* Ensures the background image covers the whole page */
+  background-position: center bottom; /* Centers the background image horizontally and aligns it to the bottom */
+  background-repeat: no-repeat; /* Prevents the background image from repeating */
+  font-family: sans-serif;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-family: sans-serif;
+  justify-content: center;
+}
+
+@font-face {
+  font-family: gta-fonts;
+  src: url(/Fonts/Gta-fonts.ttf);
+}
+
+.container {
+  width: min(300px, 90%);
+  height: 200px;
+  background-color: rgb(218, 218, 218);
+  border-radius: 14px;
+  box-shadow: 2px 2px 10px 10px rgb(215, 143, 9);
+  color: black;
+  text-align: center;
+  /* gap: 15px; */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  padding: 15px 20px;
+}
+
+h1 {
+  font-family: gta-fonts;
+  text-align: center;
+  color: rgb(51, 11, 11);
+  text-shadow: -1px -1px 0 #ffffff, 1px -1px 0 #ffffff, -3px 3px 0 #ffffff,
+    1px 1px 0 #ffffff;
+}
+
+h3 {
+  font-family: sans-serif;
+  text-align: center;
+  color: #282828;
+}
+
+a {
+  text-decoration: none;
+  color: rgb(0, 0, 0);
+  text-align: center;
+  border: 2px solid rgb(0, 0, 0);
+  background-color: transparent;
+  border-radius: 7px;
+  padding: 3px 8px;
+}

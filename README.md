@@ -1,6 +1,8 @@
 # Hernandez-Quest
 Police Department Website
 
+## Link
+https://hernandez-quest.onrender.com/
 
 ## Overview
 This project aims to assist the Los Santos Police Department (LSPD) in apprehending the city's most wanted criminals. It includes features for both users and administrators to interact with the system, view and manage content, and engage with various functionalities.
@@ -10,9 +12,10 @@ This project aims to assist the Los Santos Police Department (LSPD) in apprehend
 ### General
 - User and Admin Authorization
 - Most Wanted Criminals List
+- News and Announcements
+- Careers at Los Angeles Police Department
 
 ### Non-Logged-In Users
-- View the Top 7 Criminals List by crimes
 - View the Most Wanted Criminals List
 
 ### Logged-In Users
@@ -41,11 +44,11 @@ This project aims to assist the Los Santos Police Department (LSPD) in apprehend
 - Perform all actions available to logged-in users
 
 ## Installation
-1. Clone the repository: `git clone https://github.com/your-repository.git`
-2. Navigate to the project directory: `cd your-repository`
-3. Install dependencies: `npm install` or `pip install -r requirements.txt`
+1. Clone the repository: `git clone https://github.com/Hernandez-Quest.git`
+2. Navigate to the project directory: `cd Hernandez-Quest`
+3. Install dependencies: `npm install`
 4. Configure environment variables: Create a `.env` file and add necessary environment variables
-5. Run the application: `npm start` or `python app.py`
+5. Run the application: `npm start` 
 
 ## Usage
 - Register or log in to access all features
@@ -63,4 +66,4 @@ This project aims to assist the Los Santos Police Department (LSPD) in apprehend
 This project is licensed under the MIT License. See the `LICENSE` file for details.
 
 ## Contact
-For questions or support, please contact [your-email@example.com](mailto:your-email@example.com).
+For questions or support, please contact [naitik.s@ahduni.edu.in](mailto:naitik.s@ahduni.edu.in) or [parth.r2@ahduni.edu.in ](mailto:parth.r2@ahduni.edu.in ).
