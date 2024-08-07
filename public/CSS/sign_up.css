@@ -196,7 +196,7 @@ button {
     white-space: nowrap;
     overflow: hidden;
     animation: 
-        typing 2s steps(18),
+        typing 3s steps(30),
         cursor 0.4s step-end infinite alternate;
 }
 

@@ -8,6 +8,44 @@ body{
     align-items: center;
 }
 
+.back {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 85%;
+    height: 50px;
+    margin: 0% 7.5%;
+    margin-top: 1%;
+}
+
+.back button {
+/* width: 80px; */
+border: 2px solid rgb(147, 147, 147);
+
+border-radius: 4px;
+padding: 0.4% 1%;
+font-size: 90%;
+letter-spacing: 0.5px;
+background: #000;
+color: rgb(148, 148, 148);
+cursor: pointer;
+font-family: police-fonts;
+}
+
+.edit-buttons{
+    display: flex;
+    justify-content: right;
+    gap: 10px;
+    height: 65%;
+    width: 15%;
+}
+
+.edit-buttons button{
+    padding: 0% 6%;
+}
+
+
+
 .edit{
     display: flex;
     align-items: center;

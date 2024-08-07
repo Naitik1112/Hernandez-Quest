@@ -46,9 +46,10 @@ html(lang="en")
         h2#salary-benefits Salary and Benefits
         p#salary= `Salary: ${job.salary}`
         h3 Benefits
-            p#benefits
-            each x in job.benefits 
-                li= x 
+        p#benefits= job.benefits 
+            //- p#benefits
+            //- each x in job.benefits 
+            //-     li= x 
 
         h2#requirements Requirements
         button.accordion Education

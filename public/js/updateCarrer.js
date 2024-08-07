@@ -16,44 +16,46 @@ document.addEventListener('DOMContentLoaded', () => {
 
   // Create input elements for editing
   const descriptionInput = document.createElement('textarea');
-  descriptionInput.value = descriptionElem.textContent;
-
   const departmentInput = document.createElement('input');
-  departmentInput.value = departmentElem.textContent;
-
   const salaryInput = document.createElement('input');
-  salaryInput.value = salaryElem.textContent.replace('Salary: ', '');
-
   const benefitsInput = document.createElement('textarea');
-  benefitsInput.value = Array.from(benefitsElem.querySelectorAll('li'))
-    .map((li) => li.textContent)
-    .join('\n');
-
   const educationInput = document.createElement('textarea');
-  educationInput.value = educationElem.textContent;
-
   const experienceInput = document.createElement('textarea');
-  experienceInput.value = experienceElem.textContent;
-
   const skillsInput = document.createElement('textarea');
-  skillsInput.value = Array.from(skillsElem.querySelectorAll('li'))
-    .map((li) => li.textContent)
-    .join('\n');
-
   const otherreqInput = document.createElement('textarea');
-  otherreqInput.value = Array.from(otherreqElem.querySelectorAll('li'))
-    .map((li) => li.textContent)
-    .join('\n');
-
   const applicationProcessInput = document.createElement('textarea');
-  applicationProcessInput.value = Array.from(
-    applicationProcessElem.querySelectorAll('li')
-  )
-    .map((li) => li.textContent)
-    .join('\n');
+
+  // Function to copy styles from one element to another
+  function copyStyles(source, target) {
+    const computedStyle = window.getComputedStyle(source);
+    for (let key of computedStyle) {
+      target.style[key] = computedStyle[key];
+    }
+    target.style.border = '1px solid white'; // Adding white border
+  }
 
   // Function to handle editing
   function startEditing() {
+    copyStyles(descriptionElem, descriptionInput);
+    copyStyles(departmentElem, departmentInput);
+    copyStyles(salaryElem, salaryInput);
+    copyStyles(benefitsElem, benefitsInput);
+    copyStyles(educationElem, educationInput);
+    copyStyles(experienceElem, experienceInput);
+    copyStyles(skillsElem, skillsInput);
+    copyStyles(otherreqElem, otherreqInput);
+    copyStyles(applicationProcessElem, applicationProcessInput);
+
+    descriptionInput.value = descriptionElem.textContent;
+    departmentInput.value = departmentElem.textContent;
+    salaryInput.value = salaryElem.textContent.replace('Salary: ', '');
+    benefitsInput.value = Array.from(benefitsElem.querySelectorAll('li')).map((li) => li.textContent).join('\n');
+    educationInput.value = educationElem.textContent;
+    experienceInput.value = experienceElem.textContent;
+    skillsInput.value = Array.from(skillsElem.querySelectorAll('li')).map((li) => li.textContent).join('\n');
+    otherreqInput.value = Array.from(otherreqElem.querySelectorAll('li')).map((li) => li.textContent).join('\n');
+    applicationProcessInput.value = Array.from(applicationProcessElem.querySelectorAll('li')).map((li) => li.textContent).join('\n');
+
     descriptionElem.style.display = 'none';
     departmentElem.style.display = 'none';
     salaryElem.style.display = 'none';
@@ -72,10 +74,7 @@ document.addEventListener('DOMContentLoaded', () => {
     experienceElem.parentNode.insertBefore(experienceInput, experienceElem);
     skillsElem.parentNode.insertBefore(skillsInput, skillsElem);
     otherreqElem.parentNode.insertBefore(otherreqInput, otherreqElem);
-    applicationProcessElem.parentNode.insertBefore(
-      applicationProcessInput,
-      applicationProcessElem
-    );
+    applicationProcessElem.parentNode.insertBefore(applicationProcessInput, applicationProcessElem);
 
     editBtn.style.display = 'none';
     confirmBtn.style.display = 'inline';
@@ -107,7 +106,6 @@ document.addEventListener('DOMContentLoaded', () => {
       .then((response) => response.json())
       .then((data) => {
         if (data.status === 'success') {
-          console.log('working');
           descriptionElem.textContent = updatedData.description;
           departmentElem.textContent = updatedData.department;
           salaryElem.textContent = `Salary: ${updatedData.salary}`;
