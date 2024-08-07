@@ -296,3 +296,28 @@ document.querySelector('.add').addEventListener('click', (e) => {
   e.preventDefault();
   location.assign('/api/users/addadmin');
 });
+
+
+document.querySelector("#add_button").addEventListener("click", function() {
+  var addLinks = document.querySelector(".add_links");
+  var displayStyle = window.getComputedStyle(addLinks).visibility;
+  var icon = document.querySelector("#add_button img");
+
+  if (displayStyle == "hidden") {
+      addLinks.style.visibility = "visible";
+      addLinks.style.bottom = "90px";
+      addLinks.style.opacity = "1";
+  } else {
+      addLinks.style.visibility = "hidden";
+      addLinks.style.bottom = "0px";
+      addLinks.style.opacity = "0";
+  }
+  
+  // Add rotate class to icon
+  icon.classList.add("rotate");
+
+  // Remove rotate class after animation ends
+  setTimeout(function() {
+      icon.classList.remove("rotate");
+  }, 500);
+});
