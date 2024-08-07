@@ -30,7 +30,7 @@ body {
     width: min(450px,90%);
     /* height: 65%; */
     /* height: max(400px,65%); */
-    height: 400px;
+    height: min(80%,400px);
     border-radius: 14px;
     background: #30303027;
     backdrop-filter: blur(10px);
@@ -38,6 +38,7 @@ body {
     display: flex;
     justify-content: center ;
     border: 1px solid rgba(255, 255, 255, 0.588);
+    overflow-y: auto;
 }
 
 h1{
@@ -182,6 +183,8 @@ p{
 .con{
     margin-top: 70px;  
     display: inline-block;
+    max-width: 100%;
+    text-wrap: nowrap;
 }
 
 .text{

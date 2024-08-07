@@ -27,7 +27,7 @@ body {
     margin-top: 20px;
     width: min(450px,90%);
     /* height: max(480px,50%); */
-    height: 480px;
+    height: min(70%,480px);
     border-radius: 14px;
     background: #30303027;
     backdrop-filter: blur(10px);
@@ -35,6 +35,7 @@ body {
     display: flex;
     justify-content: center ;
     border: 1px solid rgba(255, 255, 255, 0.588);
+    overflow-y: auto;
 }
 
 h1{
@@ -179,6 +180,8 @@ p{
 .con{
     margin-top: 70px;  
     display: inline-block;
+    max-width: 90%;
+    text-wrap: wrap;
 }
 
 .text{

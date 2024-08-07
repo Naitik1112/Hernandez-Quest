@@ -51,6 +51,15 @@ html(lang="en")
               button#Confrim_1 Confrim
               button#Cancel_1 Cancel
 
+    if user.role === 'Admin'
+      #add_button
+        img(src="/Icons/add_1.png" alt="")
+        .add_links
+          a(href="/publishNews.pug") Publish News
+          a(href="/publish_Criminals.pug") Add Criminals
+          a(href="/publish_career.pug") Post Carrers
+
+
     if user.role !== 'Admin'
       .buttons
         .button5 Jobs-Applied
