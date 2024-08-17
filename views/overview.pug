@@ -164,7 +164,10 @@ html(lang="en")
                 .content
                   h3 #{x1.truncatedHeadline}
                   h4 Likes #{x1.likes.length} | views #{x1.views}
-                  a(href=`/api/news/${x1._id}`) Read More
+                  if user
+                    a(href=`/api/news/${x1._id}`) Read More
+                  else 
+                    a(href=`/loginerror`) Read More
 
 
         .swiper-pagination
@@ -200,7 +203,10 @@ html(lang="en")
                   .content
                     h3= item.title
                     h4 Salary - #{item.salary}
-                    a(href=`/api/career/${item.slug}`) Read More
+                    if user 
+                      a(href=`/api/career/${item.slug}`) Read More
+                    else 
+                      a(href=`/loginerror`) Read More
             
           .swiper-pagination
           .swiper-slider-button.swiper-button-prev

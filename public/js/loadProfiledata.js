@@ -42,7 +42,7 @@ if (USer === 'Admin') {
                                 <td>${data.data.doc[row].name}</td>
                                 <td>${data.data.doc[row].email}</td>
                                 <td id = "resize" >
-                                    <a href=/api/users/deleteadmin/${data.data.doc[row]._id}>
+                                    <a href="#" onclick="deleteAdmin('${data.data.doc[row]._id}'); return false;">
                                         <img src="/Icons/Delete.png" alt="">
                                     </a>
                                 </td>
@@ -69,7 +69,7 @@ if (USer === 'Admin') {
                                 <td>${data.data.doc[row].name}</td>
                                 <td>${data.data.doc[row].email}</td>
                                 <td id = "resize" >
-                                    <a href=/api/users/deleteuser/${data.data.doc[row]._id}>
+                                    <a href="#" onclick="deleteUser('${data.data.doc[row]._id}'); return false;">
                                         <img src="/Icons/Delete.png" alt="">
                                     </a>
                                 </td>
@@ -164,4 +164,40 @@ function searchTable(input, tableIndex) {
       visible_row.style.backgroundColor =
         i % 2 == 0 ? 'transparent' : '#0000000b';
     });
+}
+
+function deleteUser(userId) {
+  fetch(`/api/users/deleteuser/${userId}`, {
+      method: 'DELETE'
+  })
+  .then(response => {
+      if (response.ok) {
+          alert('User deleted successfully!');
+          location.assign('/api/users/me');
+      } else {
+          alert('Failed to delete user.');
+      }
+  })
+  .catch(error => {
+      console.error('Error:', error);
+      alert('Error deleting user.');
+  });
+}
+
+function deleteAdmin(adminId) {
+  fetch(`/api/users/deleteadmin/${adminId}`, {
+      method: 'DELETE'
+  })
+  .then(response => {
+      if (response.ok) {
+          alert('Admin deleted successfully!');
+          location.assign('/api/users/me');
+      } else {
+          alert('Failed to delete admin.');
+      }
+  })
+  .catch(error => {
+      console.error('Error:', error);
+      alert('Error deleting admin.');
+  });
 }

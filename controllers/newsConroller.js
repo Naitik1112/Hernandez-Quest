@@ -33,6 +33,7 @@ exports.getOneNews = catchAsync(async (req, res, next) => {
   const topNews = await News.aggregate([
     {
       $project: {
+        photo: 1,
         headline: 1,
         description: 1,
         likes: 1,
@@ -42,7 +43,7 @@ exports.getOneNews = catchAsync(async (req, res, next) => {
     { $sort: { likesCount: -1 } },
     { $limit: 5 },
   ]);
-
+  
   res.status(200).render('onenews', {
     title: 'News',
     news,

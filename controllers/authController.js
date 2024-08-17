@@ -114,9 +114,10 @@ exports.protect = catchAsync(async (req, res, next) => {
   }
 
   if (!token) {
-    return next(
-      new AppError('You are not logged in! Please log in to get access.', 401)
-    );
+    // return next(
+    //   new AppError('You are not logged in! Please log in to get access.', 401)
+    // );
+    res.render('template');
   }
   // 2) Verification token
   const decoded = await promisify(jwt.verify)(

@@ -801,7 +801,7 @@ h2 {
   text-align: center;
   font-size: 80%;
   line-height: 155%;
-  width: 80%;
+  width: min(900px,85%);
   color: var(--sec);
 }
 
