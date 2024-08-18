@@ -8,28 +8,32 @@ body{
     align-items: center;
 }
 
+
+#News{
+    margin-top: 10px;
+}
+
 .back {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    width: 85%;
-    height: 50px;
+    width: min(1300px,90%);
+    height: 40px;
     margin: 0% 7.5%;
     margin-top: 1%;
 }
 
 .back button {
-/* width: 80px; */
-border: 2px solid rgb(147, 147, 147);
-
-border-radius: 4px;
-padding: 0.4% 1%;
-font-size: 90%;
-letter-spacing: 0.5px;
-background: #000;
-color: rgb(148, 148, 148);
-cursor: pointer;
-font-family: police-fonts;
+    border: 2px solid rgb(147, 147, 147);
+    border-radius: 4px;
+    padding: 0.4% 1%;
+    height: 100%;
+    font-size: 100%;
+    letter-spacing: 0.5px;
+    background: #000;
+    color: rgb(148, 148, 148);
+    cursor: pointer;
+    font-family: police-fonts;
 }
 
 .edit-buttons{
@@ -63,12 +67,11 @@ font-family: police-fonts;
 }
 
 .carrers_info{
-    margin: 2% 0%;
     margin-top: 0%;
     padding: 2% 0%;
     padding-top: 1%;
-    width: min(1200px,90%);
-    height: 85vh;
+    width: min(1300px,90%);
+    height: 75vh;
     display: flex;
     align-items: center;
     gap: 1%;
@@ -78,7 +81,7 @@ font-family: police-fonts;
     width: 30%;
     height: 100%;
     border-radius: 7px;
-    background: #222222;
+    background: #1b1b1b;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -88,9 +91,9 @@ font-family: police-fonts;
 }
 
 .carrer_img{
-    width: 85%;
+    width: 80%;
     height: 55%;
-    border-radius: 14px;
+    border-radius: 7px;
 }
 
 .carrer_img img{
@@ -110,10 +113,10 @@ font-family: police-fonts;
 }
 
 .carrer_links a{
-    font-size: 100%;
+    font-size: 110%;
     color: rgb(173, 173, 173);
     text-decoration: none;
-    padding: 2% 5%;
+    padding: 1.5% 0%;
     font-weight: bold;
 }
 
@@ -135,7 +138,7 @@ font-family: police-fonts;
     width: 75%;
     height: 100%;
     border-radius: 7px;
-    background: #222222;
+    background: #1b1b1b;
     padding: 1% 4%; 
     color: gray;
     overflow-y: auto;

@@ -92,7 +92,7 @@ body {
     width: 22%;
     height: 100%;
     padding: 1% 1.5%;
-    background: rgb(40, 40, 40);
+    background: rgb(24, 24, 24);
   }
   
   .box1 h3 {
@@ -122,7 +122,7 @@ body {
     justify-content: flex-start;
     width: 100%;
     padding: 1.5% 1%;
-    background: rgb(40, 40, 40);
+    background: rgb(24, 24, 24);
     border-radius: 7px;
   }
   

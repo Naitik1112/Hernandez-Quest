@@ -22,13 +22,14 @@ body {
 }
 
 .container {
-  width: min(300px, 90%);
-  height: 200px;
-  background-color: rgba(200, 200, 200, 0.773);
+  width: min(350px, 90%);
+  height: 220px;
+  background-color: rgba(126, 126, 126, 0.773);
   border-radius: 14px;
-  box-shadow: 2px 2px 10px 10px rgb(215, 143, 9);
-    backdrop-filter: blur(10px);
-    -webkit-backdrop-filter: blur(10px);
+  /* box-shadow: 2px 2px 10px 10px rgb(215, 143, 9); */
+  background: #30303027;
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
   color: black;
   text-align: center;
   /* gap: 15px; */
@@ -36,6 +37,7 @@ body {
   flex-direction: column;
   align-items: center;
   justify-content: space-between;
+  border: 1px solid rgba(255, 255, 255, 0.588);
   padding: 15px 20px;
 }
 
@@ -45,19 +47,20 @@ h1 {
   color: rgb(51, 11, 11);
   text-shadow: -1px -1px 0 #ffffff, 1px -1px 0 #ffffff, -3px 3px 0 #ffffff,
     1px 1px 0 #ffffff;
+  font-size: 45px;
 }
 
 h3 {
   font-family: sans-serif;
   text-align: center;
-  color: #282828;
+  color: #d7d7d7;
 }
 
-a {
+.container a {
   text-decoration: none;
-  color: rgb(0, 0, 0);
+  color: #d7d7d7;
   text-align: center;
-  border: 2px solid rgb(0, 0, 0);
+  border: 2px solid #d7d7d7;
   background-color: transparent;
   border-radius: 7px;
   padding: 3px 8px;
