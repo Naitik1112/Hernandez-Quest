@@ -3,6 +3,7 @@ ul {
     padding: 0px;
 }
 .footer-section {
+  margin-top: 5%;
   background: #151414;
   position: relative;
 }
@@ -142,8 +143,8 @@ ul {
   transform: rotate(-6deg);
 }
 .copyright-area{
-  background: #202020;
-  padding: 0px 0;
+  background: #1c1c1c;
+  padding: 20px 0;
   width: 100%;
 }
 .copyright-text p {

@@ -8,6 +8,7 @@ html(lang="en")
     link(rel="stylesheet" href="/CSS/navbar.css")
     link(rel="stylesheet" href="/CSS/utility.css")
     link(rel="stylesheet" href="/CSS/popUp.css")
+    link(rel="stylesheet", href="/CSS/footer.css")
     link(rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css")
   
   body
@@ -26,4 +27,85 @@ html(lang="en")
           label#text-box(for="") Description
         input#Submit.btnsubmit(type="submit" value="Submit")
 
+    footer.footer-section
+    .cont
+      .footer-cta.pt-5.pb-5
+        .row
+          .col-xl-4.col-lg-4.mb-50
+            .footer-widget
+              .footer-logo
+                a(href="#")
+                  img.img-fluid(src="/Logo_1.png" alt="logo")
+              .footer-text
+                p This project aims to assist the Los Santos Police Department (LSPD) in apprehending the city's most wanted criminals, recent news and career options. It includes features for both users and administrators to interact with the system, view and manage content, and engage with various functionalities.
+              //- .footer-social-icon
+              //-   span Follow us
+              //-   a(href="#")
+              //-     i.fab.fa-facebook-f.facebook-bg
+              //-   a(href="#")
+              //-     i.fab.fa-twitter.twitter-bg
+              //-   a(href="#")
+              //-     i.fab.fa-google-plus-g.google-bg
+          .col-xl-4.col-lg-4.col-md-6.mb-30
+            .footer-widget
+              .footer-widget-heading
+                h3 Useful Links
+              ul
+                li: a(href="/") Home
+                li: a(href="/api/wanted/getallwanted") Criminals
+                li: a(href="/api/news/getallnews") News
+                li: a(href="/api/career/getalljobs") Carreers
+                li: a(href="/api/tip/submit-tip") Submit Tip
+                li: a(href="/api/users/me") Your Profile
+                //- li: a(href="#") Our Services
+                //- li: a(href="#") Expert Team
+                //- li: a(href="#") Contact us
+                //- li: a(href="#") Latest News
+          //- .col-xl-4.col-lg-4.col-md-6.mb-50
+          //-   .footer-widget
+          //-     .footer-widget-heading
+          //-       h3 Subscribe
+          //-     .footer-text.mb-25
+          //-       p Don’t miss to subscribe to our new feeds, kindly fill the form below.
+          //-     .subscribe-form
+          //-       form(action="#")
+          //-         input(type="text" placeholder="Email Address")
+          //-         button 
+          //-           span  Submit
+        
+      .footer-content.pt-5.pb-5
+        .row
+          .col-xl-4.col-md-4.mb-30
+            .single-cta
+              i.fas.fa-user
+              .cta-text
+                h4 Created by
+                a(target= "_blank" href="https://www.linkedin.com/in/naitik-ajay-shah-019120257/") Naitik Shah
+                span  and 
+                a(target= "_blank" href="https://www.linkedin.com/in/parth-ranpariya-576523260/") Parth Ranpariya
+
+          //- .col-xl-4.col-md-4.mb-30
+          //-   .single-cta
+          //-     i.fas.fa-phone
+          //-     .cta-text
+          //-       h4 Special Thanks To
+          //-       a(target= "_blank" href="https://www.linkedin.com/in/sarthak-siddhpura-544389257/") Sarthak Siddhpura, 
+          //-       a(target= "_blank" href="#")  Shrey Badja
+          //-       span  and 
+          //-       a(target= "_blank" href="https://www.linkedin.com/in/tirthraj-raval-773422263/") Tirthraj Raval
+    .copyright-area
+      .cont
+        .row
+          .col-xl-6.col-lg-6.text-center.text-lg-left
+            .copyright-text
+              p Copyright &copy; 2024, All Right Reserved 
+                a(href="https://github.com/Naitik1112/Hernandez-Quest") Hernandez Quest
+          .col-xl-6.col-lg-6.d-none.d-lg-block.text-right
+            .footer-menu
+              ul
+                //- li: a(href="#") Home
+                //- li: a(href="#") Terms
+                //- li: a(href="#") Privacy
+                //- li: a(href="#") Policy
+                //- li: a(href="#") Contact
     script(type="module" src="/js/tip.js") 
