@@ -42,9 +42,6 @@ const login = async (password, token) => {
       title.innerHTML = `Success`;
       description.innerHTML = `Your password has been reset successfully.`;
       flag = true;
-      window.setTimeout(() => {
-        location.assign('/login');
-      }, 500);
     } else {
       const errorData = await res.json();
       throw new Error(errorData.message || 'Failed to reset password.');
@@ -74,5 +71,9 @@ document.querySelector('.btnsubmit').addEventListener('click', (e) => {
 });
 
 document.querySelector('#dismiss-popup-btn').addEventListener('click', () => {
-  window.location.reload(); // Reload the page
+  if (flag) {
+    window.location.href = '/login'; // Redirect to login page after successful password reset
+  } else {
+    window.location.reload(); // Reload the page if there was an error
+  }
 });
