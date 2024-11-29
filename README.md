@@ -8,7 +8,7 @@ https://hernandez-quest.onrender.com/
 
 ### Admin
 
-- Email - [Admin1@gmail.com](mailto:Admin1@gmail.com)
+- Email - [admin1@gmail.com](mailto:Admin1@gmail.com)
 - Password - adminadmin
 
 ### User
