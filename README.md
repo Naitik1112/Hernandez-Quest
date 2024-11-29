@@ -13,8 +13,8 @@ https://hernandez-quest.onrender.com/
 
 ### User
 
-- Email - [user@gmail.com](mailto:user@gmail.com)
-- Password - user123456
+- Email - [newuser@gmail.com](mailto:newuser@gmail.com)
+- Password - 12345678@
 
 
 ## Overview
