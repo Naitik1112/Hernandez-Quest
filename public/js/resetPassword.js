@@ -42,6 +42,9 @@ const login = async (password, token) => {
       title.innerHTML = `Success`;
       description.innerHTML = `Your password has been reset successfully.`;
       flag = true;
+      window.setTimeout(() => {
+        location.assign('/login');
+      }, 500);
     } else {
       const errorData = await res.json();
       throw new Error(errorData.message || 'Failed to reset password.');
