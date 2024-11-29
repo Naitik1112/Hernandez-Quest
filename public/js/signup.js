@@ -42,12 +42,13 @@ const signup = async (name, email, password) => {
       }),
     });
 
+    const data = await res.json();
+
     if (res.ok && data.status === 'success') {
       title.innerHTML = 'Welcome!';
       description.innerHTML = `Sign Up Successfully.`;
       flag = true;
     } else {
-      const data = await res.json();
       title.innerHTML = `Error`;
       description.innerHTML = `${data.message}`;
       flag = false;
