@@ -46,6 +46,18 @@ exports.createAccount = (req, res) => {
   });
 };
 
+exports.forgotPasswordroute = (req, res) => {
+  res.status(200).render('forgotPassword', {
+    title: 'forgot Password',
+  });
+};
+
+exports.resetPasswordroute = (req, res) => {
+  res.status(200).render('resetPassword', {
+    title: 'Reset Password',
+  });
+};
+
 exports.updateUserData = catchAsync(async (req, res, next) => {
   const updatedUser = await User.findByIdAndUpdate(
     req.user.id,

@@ -42,13 +42,12 @@ const signup = async (name, email, password) => {
       }),
     });
 
-    const data = await res.json();
-
     if (res.ok && data.status === 'success') {
       title.innerHTML = 'Welcome!';
       description.innerHTML = `Sign Up Successfully.`;
       flag = true;
     } else {
+      const data = await res.json();
       title.innerHTML = `Error`;
       description.innerHTML = `${data.message}`;
       flag = false;
@@ -100,4 +99,8 @@ togglePassword2.addEventListener('click', function (e) {
   // Toggle the eye icon
   this.querySelector('i').classList.toggle('fa-eye');
   this.querySelector('i').classList.toggle('fa-eye-slash');
+});
+
+document.querySelector('#dismiss-popup-btn').addEventListener('click', () => {
+  window.location.reload(); // Reload the page
 });

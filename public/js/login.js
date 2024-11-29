@@ -40,17 +40,14 @@ const login = async (email, password) => {
       }),
     });
 
-    const data = await res.json();
-
-
-
     if (res.ok && data.status === 'success') {
       description.innerHTML = `Logged In Successfully.`;
       window.setTimeout(() => {
         location.assign('/');
       }, 500);
       flag = true;
-    } else {  
+    } else {
+      const data = await res.json();
       title.innerHTML = `Error!`;
       description.innerHTML = `${data.message}`;
       flag = false;
@@ -68,4 +65,8 @@ document.querySelector('.btnsubmit').addEventListener('click', (e) => {
   const email = document.getElementById('email').value;
   const password = document.getElementById('password').value;
   login(email, password);
+});
+
+document.querySelector('#dismiss-popup-btn').addEventListener('click', () => {
+  window.location.reload(); // Reload the page
 });

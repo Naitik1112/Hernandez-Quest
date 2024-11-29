@@ -4,6 +4,7 @@ const jwt = require('jsonwebtoken');
 const User = require('../models/userModel');
 const catchAsync = require('../utils/catchAsync');
 const AppError = require('../utils/appError');
+const sendEmail = require('./../utils/email');
 
 const signToken = (id) => {
   return jwt.sign({ id }, process.env.JWT_SECRET_KEY, {
@@ -166,9 +167,15 @@ exports.restrictTo = (...roles) => {
   };
 };
 
+exports.print = catchAsync(async (req, res, next) => {
+  console.log(req.body);
+  next();
+});
+
 exports.forgotPassword = catchAsync(async (req, res, next) => {
   // 1) Get user based on POSTed email
   const user = await User.findOne({ email: req.body.email });
+  console.log(req.body);
   if (!user) {
     return next(new AppError('There is no user with email address.', 404));
   }
@@ -180,15 +187,15 @@ exports.forgotPassword = catchAsync(async (req, res, next) => {
   // 3) Send it to user's email
   const resetURL = `${req.protocol}://${req.get(
     'host'
-  )}/api/v1/users/resetPassword/${resetToken}`;
+  )}/resetPassword/${resetToken}`;
 
-  const message = `Forgot your password? Submit a PATCH request with your new password and passwordConfirm to: ${resetURL}.\nIf you didn't forget your password, please ignore this email!`;
-
+  const message = `Forgot your password?\n Submit a request with your new password to: ${resetURL}.\nIf you didn't forget your password, please ignore this email!`;
+  // console.log(resetURL, message);
   try {
     await sendEmail({
       email: user.email,
       subject: 'Your password reset token (valid for 10 min)',
-      message,
+      message: message,
     });
 
     res.status(200).json({
@@ -224,14 +231,17 @@ exports.resetPassword = catchAsync(async (req, res, next) => {
     return next(new AppError('Token is invalid or has expired', 400));
   }
   user.password = req.body.password;
-  user.passwordConfirm = req.body.passwordConfirm;
   user.passwordResetToken = undefined;
   user.passwordResetExpires = undefined;
   await user.save();
 
   // 3) Update changedPasswordAt property for the user
   // 4) Log the user in, send JWT
-  createSendToken(user, 200, res);
+  const token = signToken(user._id);
+  res.status(200).json({
+    status: 'sucess',
+    token,
+  });
 });
 
 // exports.updatePassword = catchAsync(async (req, res, next) => {
