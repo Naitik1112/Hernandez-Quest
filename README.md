@@ -23,10 +23,16 @@ This project aims to assist the Los Santos Police Department (LSPD) in apprehend
 ## Features
 
 ### General
-- User and Admin Authorization
+- Secure Authentication
 - Most Wanted Criminals List
 - News and Announcements
-- Careers at Los Angeles Police Department
+- Users can like news articles
+- Career Opportunities at LSPD (Los Angelos Police Department) 
+- Users can apply for careers
+- Admin Capabilities
+- View, accept, or reject job applications
+- Add and edit news, criminal lists, and career opportunities
+
 
 ### Non-Logged-In Users
 - View the Most Wanted Criminals List
