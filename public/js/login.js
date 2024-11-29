@@ -66,3 +66,7 @@ document.querySelector('.btnsubmit').addEventListener('click', (e) => {
   const password = document.getElementById('password').value;
   login(email, password);
 });
+
+document.querySelector('#dismiss-popup-btn').addEventListener('click', () => {
+  window.location.reload(); // Reload the page
+});

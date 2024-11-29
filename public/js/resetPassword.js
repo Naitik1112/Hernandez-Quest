@@ -67,7 +67,7 @@ document.querySelector('.btnsubmit').addEventListener('click', (e) => {
     alert('Please enter a password!');
     return;
   }
-  login(password, token);
+  login(password, token);   
 });
 
 document.querySelector('#dismiss-popup-btn').addEventListener('click', () => {
